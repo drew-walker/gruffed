@@ -76,7 +76,9 @@ crates/
 ├── gruffed-cli/               # the "gruffed" binary
 └── gruffed-node/              # napi-rs bindings
 packages/
-└── gruffed/                   # npm package: TS types + thin wrapper
+├── gruffed/                   # npm package: TS types + thin wrapper
+├── docs/                      # documentation site
+└── site/                      # product site
 ```
 
 Dependency graph is acyclic. See `docs/superpowers/specs/2026-06-24-gruffed-design.md` for the full design.
@@ -94,11 +96,12 @@ cargo tarpaulin          # coverage check (CI gate: 90%+)
 
 ## Roadmap
 
-| Milestone | Scope |
-|-----------|-------|
-| 0.1 | Full rebuild, CLI + lib API, module graph, 3 rules |
-| 0.2 | Package graph + TS project reference graph builders |
-| 0.3 | Graph cache + incremental updates |
-| 0.4 | Custom rule API + rule plugins |
-| 0.5 | Additional output formats + CI integrations |
-| 1.0 | API stabilization, performance hardening, full docs |
+| Milestone | Scope | Status |
+|-----------|-------|--------|
+| 0.1 | Alpha foundation: CLI + Rust API, module graph, 3 rules, docs site, product site | Done |
+| 0.1 release hardening | Installable packages, release workflows, license/security docs, CI quality gates | Planned |
+| 0.2 | Package graph + TS project reference graph builders | Planned |
+| 0.3 | Graph cache + incremental updates | Planned |
+| 0.4 | Custom rule API + rule plugins | Planned |
+| 0.5 | Additional output formats + CI integrations | Planned |
+| 1.0 | API stabilization, performance hardening, full docs | Planned |

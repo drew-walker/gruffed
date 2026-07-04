@@ -82,11 +82,12 @@ Rule values follow ESLint convention:
 
 | Milestone | Scope | Status |
 |-----------|-------|--------|
-| 0.1 | Full rebuild, CLI + lib API, module graph, 3 rules | ✅ Done |
+| 0.1 | Alpha foundation: CLI + Rust API, module graph, 3 rules, docs site, product site | Done |
+| 0.1 release hardening | Installable packages, release workflows, license/security docs, CI quality gates | Planned |
 | 0.2 | Package graph + TS project reference graph builders | Planned |
 | 0.3 | Graph cache + incremental updates | Planned |
-| 0.4 | Docs website (API reference) — `packages/docs/` | ✅ Done |
-| 0.5 | Product site (landing page + capability showcase) — `packages/site/` | ✅ Done |
+| 0.4 | Custom rule API + rule plugins | Planned |
+| 0.5 | Additional output formats + CI integrations | Planned |
 | 1.0 | API stabilization, performance hardening, full docs | Planned |
 
 ## Architecture
@@ -112,4 +113,4 @@ cargo run -- --root fixtures/simple  # test against a fixture
 
 ## License
 
-MIT
+MIT. See [LICENSE](LICENSE).

@@ -1,6 +1,12 @@
 {
   "name": "gruffed",
   "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drew-walker/gruffed.git",
+    "directory": "packages/gruffed"
+  },
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "bin": {

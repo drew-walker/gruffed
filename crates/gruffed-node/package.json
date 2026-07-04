@@ -1,6 +1,12 @@
 {
   "name": "@gruffed/node",
   "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drew-walker/gruffed.git",
+    "directory": "crates/gruffed-node"
+  },
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
