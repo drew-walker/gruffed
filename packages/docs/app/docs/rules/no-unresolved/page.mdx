@@ -1,0 +1,34 @@
+# no-unresolved
+
+`no-unresolved` reports imports that the builder could not resolve to a source file.
+
+## What it catches
+
+```ts
+import { thing } from "./missing";
+```
+
+If `./missing` cannot be resolved using the configured extensions and root, the builder records a warning. The analyzer turns that warning into a rule finding when `no-unresolved` is enabled.
+
+## Configuration
+
+```jsonc
+{
+  "rules": {
+    "no-unresolved": "error"
+  }
+}
+```
+
+## Output
+
+```text
+error  no-unresolved
+       Cannot resolve import "./missing" in src/index.ts:1
+```
+
+The finding includes the source file and line number reported by the parser.
+
+## Notes
+
+This rule checks module resolution, not package installation health or TypeScript declarations. It does not replace `tsc`, but it catches graph-level import holes quickly.

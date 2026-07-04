@@ -1,0 +1,48 @@
+# Node API
+
+The `gruffed` npm package is a thin wrapper around napi-rs bindings. The module graph stays in Rust memory and JavaScript receives an opaque graph handle.
+
+## Install
+
+```bash
+pnpm add gruffed
+```
+
+## Exports
+
+```ts
+export {
+  buildModuleGraph,
+  analyzeGraph,
+  renderReport,
+  freeGraph,
+} from "@gruffed/node";
+```
+
+Type exports include `BuildResultJs`, `JsReport`, `JsFinding`, `JsBuildStats`, `JsBuildWarning`, and `JsGraphStats`.
+
+## Usage
+
+```ts
+import { analyzeGraph, buildModuleGraph, freeGraph, renderReport } from "gruffed";
+
+const result = buildModuleGraph("./src", JSON.stringify({
+  entrypoints: ["src/index.ts"],
+}));
+
+const report = analyzeGraph(result.graphHandle, result.warnings, JSON.stringify({
+  rules: {
+    "no-cycles": "error",
+    "no-unresolved": "error",
+  },
+}));
+
+console.log(renderReport(report, result.graphHandle, true));
+freeGraph(result.graphHandle);
+```
+
+## Handles
+
+`buildModuleGraph` returns `graphHandle`, not a serialized graph. Pass that handle to `analyzeGraph` and `renderReport`, then call `freeGraph` when finished.
+
+This keeps the hot path in Rust and avoids pushing large graph structures through JavaScript.

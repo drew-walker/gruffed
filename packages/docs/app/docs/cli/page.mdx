@@ -1,0 +1,69 @@
+# CLI
+
+gruffed analyzes a JavaScript or TypeScript source tree, builds a module graph, runs enabled rules, and writes a terminal or JSON report.
+
+## Command
+
+```bash
+gruffed --root ./src
+```
+
+By default, gruffed looks for `gruffed.jsonc` or `gruffed.json` in the root it is analyzing. If no config file is found, it uses defaults and no rules are enabled.
+
+## Flags
+
+<table>
+  <thead>
+    <tr>
+      <th>Flag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--config &lt;path&gt;</code></td>
+      <td>Load a specific config file instead of auto-discovering one.</td>
+    </tr>
+    <tr>
+      <td><code>--root &lt;path&gt;</code></td>
+      <td>Analyze this root directory. This overrides <code>root</code> from config.</td>
+    </tr>
+    <tr>
+      <td><code>--format &lt;terminal|json&gt;</code></td>
+      <td>Select terminal output or JSON output. Defaults to <code>terminal</code>.</td>
+    </tr>
+    <tr>
+      <td><code>--color</code></td>
+      <td>Force color output.</td>
+    </tr>
+    <tr>
+      <td><code>--no-color</code></td>
+      <td>Disable color output.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Terminal output
+
+```text
+gruffed v0.1.0 - module graph analysis
+
+  Nodes:     42    Edges:     61    Build: 7ms    Analyze: 1ms
+
+  error  no-cycles
+         Circular dependency detected (3 nodes in cycle): src/a.ts -> src/b.ts -> src/c.ts
+```
+
+Terminal output is intended for humans during local development. It groups findings by rule and includes graph statistics and measured build/analyze time.
+
+## JSON output
+
+```bash
+gruffed --root ./src --format json
+```
+
+JSON output serializes the report shape from `gruffed-core`: findings plus graph stats. It is the preferred format for CI, dashboards, and automation.
+
+## Exit codes
+
+gruffed exits successfully when no enabled rule reports an error. It exits with failure if any finding has `error` severity or if configuration, root resolution, graph building, or report formatting fails.

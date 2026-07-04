@@ -1,0 +1,22 @@
+[package]
+name = "gruffed-node"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+gruffed-core = { workspace = true }
+gruffed-config = { workspace = true }
+gruffed-builder = { workspace = true }
+gruffed-analyzer = { workspace = true }
+gruffed-console-reporter = { workspace = true }
+napi = { version = "2", features = ["napi8"] }
+napi-derive = "2"
+serde_json = "1"
+
+[build-dependencies]
+napi-build = "2"

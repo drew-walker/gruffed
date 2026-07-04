@@ -1,0 +1,8 @@
+{
+  "root": "./src",
+  "entrypoints": ["src/index.ts"],
+  "rules": {
+    "no-cycles": "error",
+    "no-unresolved": "error"
+  }
+}

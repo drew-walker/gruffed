@@ -1,0 +1,62 @@
+# Architecture
+
+gruffed is a module-graph linter. It builds a graph, analyzes the immutable graph, then reports findings.
+
+## Flow
+
+```text
+source files -> gruffed-builder -> Graph -> gruffed-analyzer -> Report -> reporter
+```
+
+The phases are intentionally separate:
+
+- `gruffed-builder` creates the graph and build warnings.
+- `gruffed-analyzer` consumes `&Graph` and warnings without mutating the graph.
+- Reporters consume `&Report` and `&Graph`.
+
+## Crates
+
+<table>
+  <thead>
+    <tr>
+      <th>Crate</th>
+      <th>Responsibility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>gruffed-core</code></td>
+      <td>Graph data model, IDs, report types, and path interning primitives.</td>
+    </tr>
+    <tr>
+      <td><code>gruffed-config</code></td>
+      <td>JSONC config parsing and rule settings.</td>
+    </tr>
+    <tr>
+      <td><code>gruffed-builder</code></td>
+      <td>File discovery, import parsing, and module resolution.</td>
+    </tr>
+    <tr>
+      <td><code>gruffed-analyzer</code></td>
+      <td>Rules engine and built-in rules.</td>
+    </tr>
+    <tr>
+      <td><code>gruffed-console-reporter</code></td>
+      <td>Terminal and JSON report formatting.</td>
+    </tr>
+    <tr>
+      <td><code>gruffed-cli</code></td>
+      <td>Command-line interface.</td>
+    </tr>
+    <tr>
+      <td><code>gruffed-node</code></td>
+      <td>napi-rs bindings for JavaScript callers.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Design constraints
+
+Graph analysis must scale to large repositories. The core uses typed IDs, adjacency indexes, path interning, and Rust-owned graph memory. The Node binding remains a shim around Rust computation.
+
+Config enables built-in rules. It does not contain custom rule logic, and gruffed does not auto-fix findings.

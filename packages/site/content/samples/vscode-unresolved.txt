@@ -1,0 +1,9 @@
+gruffed v0.1.0 - module graph analysis
+
+  Nodes:  11482    Edges:  38641    Build: 1620ms    Analyze: 24ms
+
+  error  no-unresolved
+         Cannot resolve import "./missingContribution" in src/workbench/contrib/example.ts:17
+
+  error  no-unresolved
+         Cannot resolve import "../platform/unknownService" in src/editor/browser/controller.ts:42

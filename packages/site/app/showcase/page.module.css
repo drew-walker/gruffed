@@ -1,0 +1,41 @@
+.page {
+  background: #f6f8fa;
+}
+
+.inner {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 62px 24px 88px;
+  box-sizing: border-box;
+}
+
+.kicker {
+  margin: 0 0 12px;
+  color: #08736f;
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 800px;
+  margin: 0;
+  color: #101722;
+  font-size: 48px;
+  line-height: 1.05;
+}
+
+.copy {
+  max-width: 760px;
+  margin: 20px 0 32px;
+  color: #536273;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: 38px;
+  }
+}

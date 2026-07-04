@@ -1,0 +1,124 @@
+.hero {
+  position: relative;
+  min-height: min(670px, calc(100vh - 92px));
+  overflow: hidden;
+  border-bottom: 1px solid #d9e2ec;
+  background: #eef4f7;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wash {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(246, 248, 250, 0.98) 0%, rgba(246, 248, 250, 0.93) 34%, rgba(246, 248, 250, 0.32) 76%),
+    linear-gradient(180deg, rgba(246, 248, 250, 0.82), rgba(246, 248, 250, 0.18));
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: min(100%, 1180px);
+  min-height: inherit;
+  margin: 0 auto;
+  padding: 54px 24px 66px;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 690px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #08736f;
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: #101722;
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 0.92;
+  letter-spacing: 0;
+}
+
+.copy {
+  max-width: 610px;
+  margin: 22px 0 28px;
+  color: #2d3a4a;
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  border-radius: 8px;
+  background: #101722;
+  padding: 0 18px;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background: #253348;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.stat {
+  border: 1px solid rgba(16, 23, 34, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  padding: 10px 12px;
+  color: #405064;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .wash {
+    background: rgba(246, 248, 250, 0.9);
+  }
+
+  .inner {
+    min-height: 620px;
+    padding-top: 42px;
+  }
+
+  .copy {
+    font-size: 18px;
+  }
+}

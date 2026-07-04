@@ -1,0 +1,28 @@
+{
+  "name": "gruffed-workspace",
+  "private": true,
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": "11.9.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.9.0",
+      "onFail": "download"
+    }
+  },
+  "scripts": {
+    "docs:dev": "pnpm --filter @gruffed/docs dev",
+    "docs:build": "pnpm --filter @gruffed/docs build",
+    "docs:typecheck": "pnpm --filter @gruffed/docs typecheck",
+    "site:dev": "pnpm --filter @gruffed/site dev",
+    "site:build": "pnpm --filter @gruffed/site build",
+    "site:typecheck": "pnpm --filter @gruffed/site typecheck",
+    "typecheck": "pnpm -r --filter './packages/docs' --filter './packages/site' typecheck",
+    "build:sites": "pnpm -r --filter './packages/docs' --filter './packages/site' build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@gruffed/node",
+  "version": "0.1.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "gruffed-node",
+    "triples": {
+      "defaults": true
+    }
+  }
+}

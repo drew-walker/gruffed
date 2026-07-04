@@ -1,0 +1,22 @@
+[package]
+name = "gruffed-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "gruffed"
+path = "src/main.rs"
+
+[dependencies]
+gruffed-core = { workspace = true }
+gruffed-config = { workspace = true }
+gruffed-builder = { workspace = true }
+gruffed-analyzer = { workspace = true }
+gruffed-console-reporter = { workspace = true }
+clap = { version = "4", features = ["derive"] }
+serde_json = "1"
+
+[dev-dependencies]
+serde_json = "1"

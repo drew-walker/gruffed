@@ -1,0 +1,12 @@
+[package]
+name = "gruffed-analyzer"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+gruffed-core = { workspace = true }
+gruffed-builder = { workspace = true }
+gruffed-config = { workspace = true }
+rayon = "1"

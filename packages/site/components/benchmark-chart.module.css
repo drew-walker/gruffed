@@ -1,0 +1,9 @@
+.wrap {
+  width: 100%;
+  height: 360px;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 18px 12px 10px;
+  box-sizing: border-box;
+}

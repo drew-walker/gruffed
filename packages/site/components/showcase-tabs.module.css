@@ -1,0 +1,39 @@
+.root {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+.content {
+  min-width: 0;
+}
+
+.trigger {
+  min-height: 40px;
+  border: 1px solid #c9d6e2;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 0 13px;
+  color: #405064;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.trigger:hover {
+  border-color: #9fb2c4;
+}
+
+.trigger[data-state="active"] {
+  border-color: #08736f;
+  background: #e8f5f3;
+  color: #075b58;
+}

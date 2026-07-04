@@ -1,0 +1,36 @@
+# no-cycles
+
+`no-cycles` detects circular dependencies in the module graph.
+
+## What it catches
+
+```text
+src/a.ts -> src/b.ts -> src/c.ts -> src/a.ts
+```
+
+The analyzer uses strongly connected components to find groups of modules that can reach each other. Any component that represents a cycle becomes a finding.
+
+## Configuration
+
+```jsonc
+{
+  "rules": {
+    "no-cycles": "error"
+  }
+}
+```
+
+Use `"warning"` if cycles are allowed temporarily but should remain visible.
+
+## Output
+
+```text
+error  no-cycles
+       Circular dependency detected (3 nodes in cycle): src/a.ts -> src/b.ts -> src/c.ts
+```
+
+The finding location is the first module in the detected component. The context contains the cycle nodes so reporters can show the cycle path.
+
+## Notes
+
+Cycle detection is graph-structural. gruffed does not type-check imports or attempt to rewrite modules to break the cycle.

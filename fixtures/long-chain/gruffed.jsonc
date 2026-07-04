@@ -1,0 +1,7 @@
+{
+  "root": "./src",
+  "entrypoints": ["src/index.ts"],
+  "rules": {
+    "no-long-chains": ["warning", { "max": 3 }]
+  }
+}

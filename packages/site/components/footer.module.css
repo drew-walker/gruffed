@@ -1,0 +1,39 @@
+.footer {
+  border-top: 1px solid #d9e2ec;
+  background: #ffffff;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+  color: #657386;
+  font-size: 14px;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+.link {
+  color: #405064;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #08736f;
+}
+
+@media (max-width: 640px) {
+  .inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

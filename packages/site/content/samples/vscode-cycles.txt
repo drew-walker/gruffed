@@ -1,0 +1,9 @@
+gruffed v0.1.0 - module graph analysis
+
+  Nodes:  11482    Edges:  38641    Build: 1620ms    Analyze: 31ms
+
+  error  no-cycles
+         Circular dependency detected (3 nodes in cycle): src/editor/workbench.ts -> src/editor/services.ts -> src/editor/workbench.ts
+
+  error  no-cycles
+         Circular dependency detected (4 nodes in cycle): src/platform/configuration.ts -> src/platform/registry.ts -> src/platform/extensions.ts -> src/platform/configuration.ts

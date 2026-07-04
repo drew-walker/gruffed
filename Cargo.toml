@@ -1,0 +1,49 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/gruffed-core",
+    "crates/gruffed-config",
+    "crates/gruffed-builder",
+    "crates/gruffed-analyzer",
+    "crates/gruffed-console-reporter",
+    "crates/gruffed-cli",
+    "crates/gruffed-node",
+]
+
+[package]
+name = "gruffed"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+publish = false
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Drew Walker"]
+
+[workspace.dependencies]
+gruffed-core = { path = "crates/gruffed-core" }
+gruffed-config = { path = "crates/gruffed-config" }
+gruffed-builder = { path = "crates/gruffed-builder" }
+gruffed-analyzer = { path = "crates/gruffed-analyzer" }
+gruffed-console-reporter = { path = "crates/gruffed-console-reporter" }
+gruffed-node = { path = "crates/gruffed-node" }
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[dev-dependencies]
+gruffed-core = { workspace = true }
+gruffed-builder = { workspace = true }
+gruffed-analyzer = { workspace = true }
+criterion = { workspace = true }
+tempfile = "3"
+
+[[bench]]
+name = "graph_build"
+harness = false
+
+[[bench]]
+name = "scc"
+harness = false

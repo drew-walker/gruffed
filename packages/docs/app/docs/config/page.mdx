@@ -1,0 +1,91 @@
+# Config
+
+gruffed uses JSONC so config files can contain comments. The CLI auto-discovers `gruffed.jsonc` or `gruffed.json` from the analyzed root unless `--config` is provided.
+
+## Example
+
+```jsonc
+{
+  "root": "./src",
+  "entrypoints": ["src/index.ts"],
+  "exclude": ["**/*.test.ts", "node_modules/**"],
+  "extensions": [".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs"],
+  "rules": {
+    "no-cycles": "error",
+    "no-unresolved": "error",
+    "no-long-chains": ["warning", { "max": 10 }]
+  }
+}
+```
+
+## Fields
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>root</code></td>
+      <td>string</td>
+      <td>CLI working directory</td>
+      <td>Root directory to analyze. CLI <code>--root</code> wins when both are set.</td>
+    </tr>
+    <tr>
+      <td><code>entrypoints</code></td>
+      <td>string[]</td>
+      <td><code>[]</code></td>
+      <td>Files treated as entrypoints. Required for <code>no-long-chains</code> to compute depth.</td>
+    </tr>
+    <tr>
+      <td><code>exclude</code></td>
+      <td>string[]</td>
+      <td><code>[]</code></td>
+      <td>Glob-like path patterns skipped during graph building.</td>
+    </tr>
+    <tr>
+      <td><code>extensions</code></td>
+      <td>string[]</td>
+      <td>JS/TS extensions</td>
+      <td>File extensions included in discovery and resolution.</td>
+    </tr>
+    <tr>
+      <td><code>rules</code></td>
+      <td>object</td>
+      <td><code>{}</code></td>
+      <td>Enabled built-in rules and per-rule options.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Rule settings
+
+Rule settings follow an ESLint-like shape:
+
+```jsonc
+{
+  "rules": {
+    "no-cycles": "error",
+    "no-unresolved": "warning",
+    "no-long-chains": ["warning", { "max": 8 }],
+    "unused-rule": "off"
+  }
+}
+```
+
+Unknown rule names are ignored. Rules are disabled unless explicitly enabled.
+
+## Defaults
+
+The default extensions are:
+
+```json
+[".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs"]
+```
+
+No entrypoints and no rules are enabled by default. That makes a missing config safe, but it also means the analyzer will report no rule findings until a `rules` block is added.

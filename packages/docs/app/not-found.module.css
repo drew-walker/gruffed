@@ -1,0 +1,38 @@
+.page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+.panel {
+  max-width: 520px;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 32px;
+  box-shadow: 0 24px 70px rgba(24, 33, 47, 0.08);
+}
+
+.title {
+  margin: 0 0 10px;
+  color: #101722;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.copy {
+  margin: 0 0 22px;
+  color: #536273;
+  line-height: 1.6;
+}
+
+.link {
+  color: #086b68;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

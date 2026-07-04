@@ -1,0 +1,33 @@
+# no-long-chains
+
+`no-long-chains` flags modules whose import depth from an entrypoint exceeds a configured maximum.
+
+## Why it exists
+
+Very deep chains often hide architecture drift: low-level modules leaking upward, feature layers reaching across boundaries, or index files masking expensive dependency paths.
+
+## Configuration
+
+```jsonc
+{
+  "entrypoints": ["src/index.ts"],
+  "rules": {
+    "no-long-chains": ["warning", { "max": 10 }]
+  }
+}
+```
+
+If `max` is omitted, the rule uses `10`.
+
+## Output
+
+```text
+warning  no-long-chains
+         Import chain exceeds max depth (11 > 10): src/index.ts -> src/app.ts -> ...
+```
+
+The rule needs entrypoints. If no entrypoints are configured, it produces no findings because depth cannot be computed.
+
+## Notes
+
+Depth is computed over import edges in the graph. gruffed detects the condition; it does not suggest or apply refactors.

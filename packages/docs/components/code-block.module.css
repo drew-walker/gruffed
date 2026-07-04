@@ -1,0 +1,37 @@
+.frame {
+  position: relative;
+  margin: 24px 0;
+  border: 1px solid #263445;
+  border-radius: 8px;
+  background: #101722;
+  overflow: hidden;
+}
+
+.copy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #dce8f2;
+  cursor: pointer;
+}
+
+.copy:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.pre {
+  margin: 0;
+  padding: 18px 54px 18px 18px;
+  overflow-x: auto;
+  color: #dce8f2;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.7;
+}
