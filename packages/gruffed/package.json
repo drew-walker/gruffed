@@ -6,10 +6,7 @@
   "bin": {
     "gruffed": "../crates/gruffed-node/gruffed"
   },
-  "optionalDependencies": {
-    "@gruffed/node-darwin-arm64": "0.1.0",
-    "@gruffed/node-darwin-x64": "0.1.0",
-    "@gruffed/node-linux-x64-gnu": "0.1.0",
-    "@gruffed/node-win32-x64-msvc": "0.1.0"
+  "dependencies": {
+    "@gruffed/node": "workspace:*"
   }
 }
