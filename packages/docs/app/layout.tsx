@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
@@ -12,7 +13,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={styles.document}>
-      <body className={styles.body}>{children}</body>
+      <body className={styles.body}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
