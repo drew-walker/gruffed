@@ -28,8 +28,8 @@ export default function HomePage() {
               findings at a glance. JSON output uses the same report model for automation.
             </p>
             <div className={styles.links}>
-              <Link className={styles.primary} href="/showcase">
-                View samples
+              <Link className={styles.primary} href="/demo">
+                View demo
               </Link>
               <a className={styles.secondary} href={docsUrl}>
                 CLI reference
