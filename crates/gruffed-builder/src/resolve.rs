@@ -20,12 +20,15 @@ impl ImportResolver {
             ],
             // TypeScript convention: import specifiers use `.js` (and `.jsx`)
             // extensions even when the source file is `.ts`/`.tsx`. Resolve
-            // those aliases so the graph captures real edges.
+            // those aliases while preserving same-extension JS/MJS/CJS targets.
             extension_alias: vec![
-                (".js".into(), vec![".ts".into(), ".tsx".into()]),
-                (".jsx".into(), vec![".tsx".into()]),
-                (".mjs".into(), vec![".mts".into()]),
-                (".cjs".into(), vec![".cts".into()]),
+                (
+                    ".js".into(),
+                    vec![".js".into(), ".ts".into(), ".tsx".into()],
+                ),
+                (".jsx".into(), vec![".jsx".into(), ".tsx".into()]),
+                (".mjs".into(), vec![".mjs".into(), ".mts".into()]),
+                (".cjs".into(), vec![".cjs".into(), ".cts".into()]),
             ],
             ..ResolveOptions::default()
         });

@@ -1,8 +1,8 @@
 use gruffed_builder::BuildWarning;
-use gruffed_core::graph::Graph;
+use gruffed_core::graph::{Edge, EdgeKind, Graph, Value};
 use gruffed_core::report::{Finding, Location, Severity};
 
-use crate::scc::find_sccs;
+use crate::scc::find_sccs_with_edge_filter;
 use crate::Rule;
 
 pub struct NoCyclesRule {
@@ -21,7 +21,7 @@ impl Rule for NoCyclesRule {
     }
 
     fn analyze(&self, graph: &Graph, _warnings: &[BuildWarning]) -> Vec<Finding> {
-        let sccs = find_sccs(graph);
+        let sccs = find_sccs_with_edge_filter(graph, includes_runtime_cycle_edge);
 
         sccs.into_iter()
             .filter(|scc| scc.is_cycle())
@@ -63,10 +63,21 @@ impl Rule for NoCyclesRule {
     }
 }
 
+fn includes_runtime_cycle_edge(edge: &Edge) -> bool {
+    if edge.kind != EdgeKind::Imports {
+        return false;
+    }
+
+    !matches!(
+        edge.properties.get("import_kind"),
+        Some(Value::String(kind)) if kind == "type"
+    )
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
-    use gruffed_core::graph::{EdgeKind, NodeKind};
+    use gruffed_core::graph::NodeKind;
     use std::collections::HashMap;
 
     #[test]
@@ -110,5 +121,24 @@ mod tests {
         let findings = rule.analyze(&graph, &[]);
         assert_eq!(findings.len(), 1);
         assert!(findings[0].message.contains("3 nodes"));
+    }
+
+    #[test]
+    fn ignores_type_only_cycles_by_default() {
+        let mut graph = Graph::new();
+        let a = graph.add_node(NodeKind::Module, "a.ts", HashMap::new());
+        let b = graph.add_node(NodeKind::Module, "b.ts", HashMap::new());
+        let mut type_props = HashMap::new();
+        type_props.insert(
+            "import_kind".to_string(),
+            gruffed_core::graph::Value::String("type".to_string()),
+        );
+
+        graph.add_edge(a, b, EdgeKind::Imports, type_props.clone());
+        graph.add_edge(b, a, EdgeKind::Imports, type_props);
+
+        let rule = NoCyclesRule::new(Severity::Error);
+        let findings = rule.analyze(&graph, &[]);
+        assert!(findings.is_empty());
     }
 }

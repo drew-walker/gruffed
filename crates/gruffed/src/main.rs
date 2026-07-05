@@ -11,7 +11,11 @@ use gruffed_config::GruffedConfig;
 use gruffed_console_reporter::{render_json, ConsoleReporter};
 
 #[derive(Parser)]
-#[command(name = "gruffed", version, about = "Module graph analysis for large codebases")]
+#[command(
+    name = "gruffed",
+    version,
+    about = "Module graph analysis for large codebases"
+)]
 struct Cli {
     /// Path to config file (default: auto-discover gruffed.jsonc)
     #[arg(long)]

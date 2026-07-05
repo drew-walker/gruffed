@@ -5,6 +5,28 @@ use oxc::ast::ast;
 use oxc::parser::Parser;
 use oxc::span::SourceType as OxcSourceType;
 
+/// The dependency category represented by an import-like syntax node.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum ImportKind {
+    Runtime,
+    Type,
+    SideEffect,
+    Dynamic,
+    Require,
+}
+
+impl ImportKind {
+    pub fn as_str(self) -> &'static str {
+        match self {
+            Self::Runtime => "runtime",
+            Self::Type => "type",
+            Self::SideEffect => "side-effect",
+            Self::Dynamic => "dynamic",
+            Self::Require => "require",
+        }
+    }
+}
+
 /// An import specifier extracted from a source file.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ImportSpecifier {
@@ -12,6 +34,8 @@ pub struct ImportSpecifier {
     pub specifier: String,
     /// Line number (1-based) where the import appears.
     pub line: u32,
+    /// The syntactic dependency category.
+    pub kind: ImportKind,
 }
 
 /// Extract all import specifiers from a file's source code.
@@ -51,6 +75,7 @@ pub fn extract_imports(source_text: &str, file_path: &Path) -> Vec<ImportSpecifi
                 imports.push(ImportSpecifier {
                     specifier: spec.to_string(),
                     line,
+                    kind: import_declaration_kind(decl),
                 });
             }
             // export { x } from "./baz"
@@ -61,6 +86,11 @@ pub fn extract_imports(source_text: &str, file_path: &Path) -> Vec<ImportSpecifi
                     imports.push(ImportSpecifier {
                         specifier: spec.to_string(),
                         line,
+                        kind: if decl.export_kind.is_type() {
+                            ImportKind::Type
+                        } else {
+                            ImportKind::Runtime
+                        },
                     });
                 }
             }
@@ -71,6 +101,11 @@ pub fn extract_imports(source_text: &str, file_path: &Path) -> Vec<ImportSpecifi
                 imports.push(ImportSpecifier {
                     specifier: spec.to_string(),
                     line,
+                    kind: if decl.export_kind.is_type() {
+                        ImportKind::Type
+                    } else {
+                        ImportKind::Runtime
+                    },
                 });
             }
             // Dynamic import("./bar") and require("./bar")
@@ -92,6 +127,34 @@ pub fn extract_imports(source_text: &str, file_path: &Path) -> Vec<ImportSpecifi
     imports
 }
 
+fn import_declaration_kind(decl: &ast::ImportDeclaration<'_>) -> ImportKind {
+    if decl.import_kind.is_type() {
+        return ImportKind::Type;
+    }
+
+    let Some(specifiers) = &decl.specifiers else {
+        return ImportKind::SideEffect;
+    };
+
+    if specifiers.is_empty() {
+        return ImportKind::Runtime;
+    }
+
+    let all_specifiers_are_type = specifiers.iter().all(|specifier| match specifier {
+        ast::ImportDeclarationSpecifier::ImportSpecifier(specifier) => {
+            specifier.import_kind.is_type()
+        }
+        ast::ImportDeclarationSpecifier::ImportDefaultSpecifier(_)
+        | ast::ImportDeclarationSpecifier::ImportNamespaceSpecifier(_) => false,
+    });
+
+    if all_specifiers_are_type {
+        ImportKind::Type
+    } else {
+        ImportKind::Runtime
+    }
+}
+
 fn line_number(source: &str, byte_offset: u32) -> u32 {
     let end = byte_offset.min(source.len() as u32) as usize;
     source[..end].lines().count() as u32
@@ -109,6 +172,7 @@ fn extract_dynamic_imports(
                 imports.push(ImportSpecifier {
                     specifier: lit.value.as_str().to_string(),
                     line: line_number(source_text, lit.span.start),
+                    kind: ImportKind::Dynamic,
                 });
             }
         }
@@ -152,6 +216,7 @@ fn handle_call_expression(
                 imports.push(ImportSpecifier {
                     specifier: lit.value.as_str().to_string(),
                     line: line_number(source_text, lit.span.start),
+                    kind: ImportKind::Require,
                 });
             }
         }
@@ -175,6 +240,7 @@ fn extract_dynamic_imports_from_argument(
                 imports.push(ImportSpecifier {
                     specifier: lit.value.as_str().to_string(),
                     line: line_number(source_text, lit.span.start),
+                    kind: ImportKind::Dynamic,
                 });
             }
         }
@@ -217,6 +283,7 @@ mod tests {
         let imports = parse_imports(r#"import { foo } from "./bar";"#);
         assert_eq!(imports.len(), 1);
         assert_eq!(imports[0].specifier, "./bar");
+        assert_eq!(imports[0].kind, ImportKind::Runtime);
     }
 
     #[test]
@@ -224,6 +291,22 @@ mod tests {
         let imports = parse_imports(r#"import foo from "./bar";"#);
         assert_eq!(imports.len(), 1);
         assert_eq!(imports[0].specifier, "./bar");
+    }
+
+    #[test]
+    fn extracts_side_effect_import() {
+        let imports = parse_imports(r#"import "./setup";"#);
+        assert_eq!(imports.len(), 1);
+        assert_eq!(imports[0].specifier, "./setup");
+        assert_eq!(imports[0].kind, ImportKind::SideEffect);
+    }
+
+    #[test]
+    fn extracts_type_only_import() {
+        let imports = parse_imports(r#"import type { Foo } from "./types";"#);
+        assert_eq!(imports.len(), 1);
+        assert_eq!(imports[0].specifier, "./types");
+        assert_eq!(imports[0].kind, ImportKind::Type);
     }
 
     #[test]
@@ -245,6 +328,7 @@ mod tests {
         let imports = parse_imports(r#"const mod = await import("./bar");"#);
         assert_eq!(imports.len(), 1);
         assert_eq!(imports[0].specifier, "./bar");
+        assert_eq!(imports[0].kind, ImportKind::Dynamic);
     }
 
     #[test]
@@ -259,6 +343,7 @@ mod tests {
         let imports = parse_imports(r#"const mod = require("./bar");"#);
         assert_eq!(imports.len(), 1);
         assert_eq!(imports[0].specifier, "./bar");
+        assert_eq!(imports[0].kind, ImportKind::Require);
     }
 
     #[test]

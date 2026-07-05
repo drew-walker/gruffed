@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use std::panic::{catch_unwind, AssertUnwindSafe};
 use std::path::{Path, PathBuf};
 use std::time::Instant;
 
@@ -56,8 +57,20 @@ pub enum BuildWarning {
         specifier: String,
         line: u32,
     },
+    ResolvedImportNotInGraph {
+        source: PathBuf,
+        specifier: String,
+        resolved: PathBuf,
+        line: u32,
+    },
     ParseFailure {
         file: PathBuf,
+        error: String,
+    },
+    ResolveFailure {
+        source: PathBuf,
+        specifier: String,
+        line: u32,
         error: String,
     },
 }
@@ -71,7 +84,7 @@ pub enum BuildError {
 struct ParseOutput {
     #[allow(dead_code)]
     source_node: NodeId,
-    edges: Vec<(NodeId, NodeId)>,
+    edges: Vec<(NodeId, NodeId, HashMap<String, Value>)>,
     warnings: Vec<BuildWarning>,
 }
 
@@ -136,7 +149,10 @@ impl ModuleGraphBuilder {
         // First pass: create nodes for all discovered files
         let mut file_to_node: HashMap<PathBuf, NodeId> = HashMap::new();
         for file in &files {
-            let canonical = file.path.canonicalize().unwrap_or_else(|_| file.path.clone());
+            let canonical = file
+                .path
+                .canonicalize()
+                .unwrap_or_else(|_| file.path.clone());
             let label = canonical.to_string_lossy().to_string();
             let node_id = graph.add_node(
                 NodeKind::Module,
@@ -155,7 +171,10 @@ impl ModuleGraphBuilder {
         let source_nodes: Vec<NodeId> = files
             .iter()
             .map(|file| {
-                let canonical = file.path.canonicalize().unwrap_or_else(|_| file.path.clone());
+                let canonical = file
+                    .path
+                    .canonicalize()
+                    .unwrap_or_else(|_| file.path.clone());
                 *file_to_node.get(&canonical).unwrap()
             })
             .collect();
@@ -179,21 +198,58 @@ impl ModuleGraphBuilder {
                     }
                 };
 
-                let imports = extract_imports(&source_text, &file.path);
+                let imports = match catch_unwind(AssertUnwindSafe(|| {
+                    extract_imports(&source_text, &file.path)
+                })) {
+                    Ok(imports) => imports,
+                    Err(_) => {
+                        return ParseOutput {
+                            source_node,
+                            edges: Vec::new(),
+                            warnings: vec![BuildWarning::ParseFailure {
+                                file: file.path.clone(),
+                                error: "parser panicked".to_string(),
+                            }],
+                        };
+                    }
+                };
 
                 let mut edges = Vec::with_capacity(imports.len());
                 let mut warnings = Vec::new();
 
                 for import in imports {
-                    match resolver.resolve(&file.path, &import.specifier) {
-                        Some(resolved) => {
+                    let resolved = catch_unwind(AssertUnwindSafe(|| {
+                        resolver.resolve(&file.path, &import.specifier)
+                    }));
+
+                    match resolved {
+                        Err(_) => {
+                            warnings.push(BuildWarning::ResolveFailure {
+                                source: file.path.clone(),
+                                specifier: import.specifier.clone(),
+                                line: import.line,
+                                error: "resolver panicked".to_string(),
+                            });
+                        }
+                        Ok(Some(resolved)) => {
                             let resolved_canonical =
                                 resolved.canonicalize().unwrap_or(resolved.clone());
                             if let Some(&target_node) = file_to_node.get(&resolved_canonical) {
-                                edges.push((source_node, target_node));
+                                edges.push((
+                                    source_node,
+                                    target_node,
+                                    edge_properties_for_import(import.kind),
+                                ));
+                            } else if should_report_untracked_resolved_import(&import.specifier) {
+                                warnings.push(BuildWarning::ResolvedImportNotInGraph {
+                                    source: file.path.clone(),
+                                    specifier: import.specifier.clone(),
+                                    resolved: resolved_canonical,
+                                    line: import.line,
+                                });
                             }
                         }
-                        None => {
+                        Ok(None) => {
                             if should_report_unresolved_import(&import.specifier) {
                                 warnings.push(BuildWarning::UnresolvedImport {
                                     source: file.path.clone(),
@@ -217,8 +273,8 @@ impl ModuleGraphBuilder {
 
         // Apply edges and warnings sequentially
         for output in &outputs {
-            for &(source, target) in &output.edges {
-                graph.add_edge(source, target, EdgeKind::Imports, HashMap::new());
+            for (source, target, properties) in &output.edges {
+                graph.add_edge(*source, *target, EdgeKind::Imports, properties.clone());
             }
             warnings.extend(output.warnings.iter().cloned());
         }
@@ -258,6 +314,23 @@ fn should_report_unresolved_import(specifier: &str) -> bool {
     matches!(ext, "ts" | "tsx" | "js" | "jsx" | "mjs" | "cjs")
 }
 
+fn should_report_untracked_resolved_import(specifier: &str) -> bool {
+    specifier.starts_with("./") || specifier.starts_with("../")
+}
+
+fn edge_properties_for_import(kind: parse::ImportKind) -> HashMap<String, Value> {
+    if kind == parse::ImportKind::Runtime {
+        return HashMap::new();
+    }
+
+    let mut properties = HashMap::new();
+    properties.insert(
+        "import_kind".to_string(),
+        Value::String(kind.as_str().to_string()),
+    );
+    properties
+}
+
 fn build_node_properties(
     source_type: SourceType,
     entrypoints: &[String],
@@ -273,7 +346,10 @@ fn build_node_properties(
         SourceType::ESModule => "mjs",
         SourceType::CommonJS => "cjs",
     };
-    props.insert("source_type".to_string(), Value::String(type_str.to_string()));
+    props.insert(
+        "source_type".to_string(),
+        Value::String(type_str.to_string()),
+    );
 
     // Match entrypoint patterns against the file path relative to root,
     // falling back to suffix matching for robustness.
@@ -288,10 +364,7 @@ fn build_node_properties(
         {
             return true;
         }
-        file_path
-            .to_str()
-            .map(|s| s.ends_with(e))
-            .unwrap_or(false)
+        file_path.to_str().map(|s| s.ends_with(e)).unwrap_or(false)
     });
     props.insert("is_entrypoint".to_string(), Value::Bool(is_entrypoint));
     props

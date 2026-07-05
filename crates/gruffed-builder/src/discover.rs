@@ -31,7 +31,11 @@ impl SourceType {
     }
 }
 
-pub fn discover_files(root: &Path, extensions: &[String], exclude: &[String]) -> Vec<DiscoveredFile> {
+pub fn discover_files(
+    root: &Path,
+    extensions: &[String],
+    exclude: &[String],
+) -> Vec<DiscoveredFile> {
     let mut builder = WalkBuilder::new(root);
     builder.hidden(true);
     builder.git_ignore(true);
@@ -113,9 +117,18 @@ mod tests {
 
     #[test]
     fn source_type_detection() {
-        assert_eq!(SourceType::from_extension(".ts"), Some(SourceType::TypeScript));
-        assert_eq!(SourceType::from_extension(".tsx"), Some(SourceType::TypeScriptTsx));
-        assert_eq!(SourceType::from_extension(".mjs"), Some(SourceType::ESModule));
+        assert_eq!(
+            SourceType::from_extension(".ts"),
+            Some(SourceType::TypeScript)
+        );
+        assert_eq!(
+            SourceType::from_extension(".tsx"),
+            Some(SourceType::TypeScriptTsx)
+        );
+        assert_eq!(
+            SourceType::from_extension(".mjs"),
+            Some(SourceType::ESModule)
+        );
         assert_eq!(SourceType::from_extension(".unknown"), None);
     }
 }

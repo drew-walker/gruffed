@@ -104,7 +104,10 @@ impl Graph {
             properties: Arc::new(properties),
         };
         self.edges.insert(id, edge);
-        self.out_edges.get_mut(&from).expect("from node exists").push(id);
+        self.out_edges
+            .get_mut(&from)
+            .expect("from node exists")
+            .push(id);
         self.in_edges.get_mut(&to).expect("to node exists").push(id);
         id
     }

@@ -85,11 +85,7 @@ fn config_from_file_works() {
 fn discover_finds_jsonc_in_directory() {
     use tempfile::TempDir;
     let dir = TempDir::new().unwrap();
-    std::fs::write(
-        dir.path().join("gruffed.jsonc"),
-        r#"{ "root": "./found" }"#,
-    )
-    .unwrap();
+    std::fs::write(dir.path().join("gruffed.jsonc"), r#"{ "root": "./found" }"#).unwrap();
     let config = GruffedConfig::discover_or_default(dir.path()).unwrap();
     assert_eq!(config.root, Some("./found".into()));
 }
