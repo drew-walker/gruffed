@@ -4,6 +4,9 @@
   "description": "Fast module-graph analysis for JavaScript and TypeScript codebases.",
   "type": "module",
   "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drew-walker/gruffed.git",

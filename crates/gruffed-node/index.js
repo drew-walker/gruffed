@@ -29,21 +29,40 @@ function candidateTriples() {
 }
 
 function loadNativeBinding() {
-  const candidates = [
-    ...candidateTriples().map((triple) => `gruffed-node.${triple}.node`),
+  const triples = candidateTriples();
+  const localCandidates = [
+    ...triples.map((triple) => `gruffed-node.${triple}.node`),
     'gruffed-node.node',
   ];
 
-  for (const fileName of candidates) {
+  for (const fileName of localCandidates) {
     const filePath = path.join(__dirname, fileName);
     if (fs.existsSync(filePath)) {
       return require(filePath);
     }
   }
 
+  const packageCandidates = triples.map((triple) => `@gruffed/node-${triple}`);
+  for (const packageName of packageCandidates) {
+    try {
+      return require(packageName);
+    } catch (error) {
+      if (!isMissingOptionalPackage(error, packageName)) {
+        throw error;
+      }
+    }
+  }
+
   throw new Error(
     `Could not find a native gruffed binding for ${process.platform}/${process.arch}. ` +
-      `Looked for: ${candidates.join(', ')}`,
+      `Looked for local files: ${localCandidates.join(', ')}; ` +
+      `optional packages: ${packageCandidates.join(', ')}`,
+  );
+}
+
+function isMissingOptionalPackage(error, packageName) {
+  return (
+    error?.code === 'MODULE_NOT_FOUND' && error.message.includes(packageName)
   );
 }
 

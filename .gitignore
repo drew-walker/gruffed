@@ -4,6 +4,9 @@ node_modules/
 .next/
 out/
 docs/repo-trials/
+crates/gruffed-node/npm/
+native-artifacts/
+npm-packs/
 *.tsbuildinfo
 *.log
 crates/gruffed-node/*.node

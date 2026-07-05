@@ -40,26 +40,32 @@ For the first publish, dependent crates cannot be fully packaged against crates.
 
 ## npm Publish Order
 
-Build the native binding first:
+Build and test the local native binding first:
 
 ```sh
 pnpm node:build
+pnpm node:test
 ```
 
-Then publish:
+For broad npm distribution, use the `npm Release` GitHub Actions workflow. It builds the native bindings on Linux x64, macOS x64, macOS arm64, and Windows x64, assembles the `@gruffed/node-*` optional native packages, then publishes those packages before publishing `@gruffed/node` and `gruffed`.
+
+Manual publishing still follows the same order:
 
 ```sh
-pnpm --filter @gruffed/node publish --access public
-pnpm --filter gruffed publish --access public
+pnpm --filter @gruffed/node npm-dirs
+pnpm --filter @gruffed/node exec napi artifacts --output-dir ../../native-artifacts
+pnpm --filter @gruffed/node pre-publish
+pnpm --filter @gruffed/node publish --access public --no-git-checks
+pnpm --filter gruffed publish --access public --no-git-checks
 ```
 
 `pnpm pack` rewrites `workspace:*` dependencies to the synchronized package version, so the packed `gruffed` package depends on `@gruffed/node` at the same version.
 
 ## Native npm Strategy
 
-The current alpha packaging strategy is a single `@gruffed/node` package containing the native `.node` file for the platform that built it. This is enough for local install verification and a narrow alpha on the build platform.
+`@gruffed/node` is the public native binding entrypoint. It loads a local `gruffed-node.<platform>.node` file for contributor builds, then falls back to platform optional packages such as `@gruffed/node-darwin-arm64` or `@gruffed/node-linux-x64-gnu` for published installs.
 
-Before broad npm distribution, move to platform-specific native packages or a full napi-rs release workflow so macOS, Linux, and Windows users install the matching binary. The public `gruffed` wrapper should stay ESM-only.
+The public `gruffed` wrapper stays ESM-only.
 
 ## Versioning
 
