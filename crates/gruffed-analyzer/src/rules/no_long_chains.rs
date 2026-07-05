@@ -13,7 +13,10 @@ pub struct NoLongChainsRule {
 
 impl NoLongChainsRule {
     pub fn new(severity: Severity, max_depth: usize) -> Self {
-        Self { severity, max_depth }
+        Self {
+            severity,
+            max_depth,
+        }
     }
 }
 
@@ -139,11 +142,7 @@ fn bfs_depths(graph: &Graph, entrypoints: &[NodeId]) -> HashMap<NodeId, usize> {
 }
 
 /// Reconstruct the path from an entrypoint to the given node.
-fn reconstruct_path(
-    graph: &Graph,
-    target: NodeId,
-    depths: &HashMap<NodeId, usize>,
-) -> Vec<NodeId> {
+fn reconstruct_path(graph: &Graph, target: NodeId, depths: &HashMap<NodeId, usize>) -> Vec<NodeId> {
     let target_depth = *depths.get(&target).unwrap_or(&0);
     let mut path = vec![target];
     let mut current = target;

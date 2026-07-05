@@ -13,6 +13,7 @@ export interface JsBuildWarning {
   kind: string;
   source: string;
   specifier?: string;
+  resolved?: string;
   line?: number;
   error?: string;
 }

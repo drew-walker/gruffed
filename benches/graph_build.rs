@@ -72,11 +72,19 @@ fn generate_synthetic_project(file_count: usize) -> PathBuf {
                 k = k
             ));
         }
-        content.push_str(&format!("export function func0(x: number): number {{ return helper0(x, x{i}); }}\n", i = i));
+        content.push_str(&format!(
+            "export function func0(x: number): number {{ return helper0(x, x{i}); }}\n",
+            i = i
+        ));
         std::fs::write(dir.join(format!("mod{i}.ts", i = i)), content).unwrap();
     }
     dir
 }
 
-criterion_group!(benches, bench_build_simple, bench_build_long_chain, bench_build_synthetic);
+criterion_group!(
+    benches,
+    bench_build_simple,
+    bench_build_long_chain,
+    bench_build_synthetic
+);
 criterion_main!(benches);

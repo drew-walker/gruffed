@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use gruffed_core::graph::{Graph, NodeId};
+use gruffed_core::graph::{Edge, Graph, NodeId};
 
 /// A strongly connected component found by Tarjan's algorithm.
 #[derive(Debug, Clone)]
@@ -21,12 +21,17 @@ impl Scc {
 /// Find all strongly connected components in the graph using Tarjan's algorithm.
 /// Runs in O(V + E).
 pub fn find_sccs(graph: &Graph) -> Vec<Scc> {
+    find_sccs_with_edge_filter(graph, |_| true)
+}
+
+/// Find all strongly connected components using only edges accepted by `include_edge`.
+pub fn find_sccs_with_edge_filter(graph: &Graph, include_edge: impl Fn(&Edge) -> bool) -> Vec<Scc> {
     let node_count = graph.node_count();
     let mut state = TarjanState::new(node_count);
 
     for node_id in graph.nodes().map(|n| n.id) {
         if !state.index.contains_key(&node_id) {
-            strongconnect(graph, node_id, &mut state);
+            strongconnect(graph, node_id, &include_edge, &mut state);
         }
     }
 
@@ -55,7 +60,12 @@ impl TarjanState {
     }
 }
 
-fn strongconnect(graph: &Graph, v: NodeId, state: &mut TarjanState) {
+fn strongconnect(
+    graph: &Graph,
+    v: NodeId,
+    include_edge: &impl Fn(&Edge) -> bool,
+    state: &mut TarjanState,
+) {
     let v_index = state.next_index;
     state.index.insert(v, v_index);
     state.lowlink.insert(v, v_index);
@@ -65,9 +75,12 @@ fn strongconnect(graph: &Graph, v: NodeId, state: &mut TarjanState) {
 
     for edge_id in graph.out_edges(v) {
         if let Some(edge) = graph.edge(*edge_id) {
+            if !include_edge(edge) {
+                continue;
+            }
             let w = edge.to;
             if !state.index.contains_key(&w) {
-                strongconnect(graph, w, state);
+                strongconnect(graph, w, include_edge, state);
                 let w_low = *state.lowlink.get(&w).unwrap();
                 let v_low = *state.lowlink.get(&v).unwrap();
                 state.lowlink.insert(v, v_low.min(w_low));
@@ -96,8 +109,8 @@ fn strongconnect(graph: &Graph, v: NodeId, state: &mut TarjanState) {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use std::collections::HashMap;
     use gruffed_core::graph::{EdgeKind, Graph, NodeKind};
+    use std::collections::HashMap;
 
     #[test]
     fn acyclic_graph_has_no_cycles() {
