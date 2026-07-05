@@ -17,6 +17,9 @@ export function Nav() {
           <Link className={styles.link} href="/showcase">
             Showcase
           </Link>
+          <Link className={styles.link} href="/public-repos">
+            Public repos
+          </Link>
           <Link className={styles.link} href="/benchmarks">
             Benchmarks
           </Link>

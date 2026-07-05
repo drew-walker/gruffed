@@ -31,6 +31,9 @@ export default function HomePage() {
               <Link className={styles.primary} href="/showcase">
                 View samples
               </Link>
+              <Link className={styles.secondary} href="/public-repos">
+                Public repo runs
+              </Link>
               <a className={styles.secondary} href={docsUrl}>
                 CLI reference
               </a>
