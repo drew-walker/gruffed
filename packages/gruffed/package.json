@@ -1,18 +1,39 @@
 {
   "name": "gruffed",
   "version": "0.1.0",
+  "description": "Fast module-graph analysis for JavaScript and TypeScript codebases.",
+  "type": "module",
   "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drew-walker/gruffed.git",
     "directory": "packages/gruffed"
   },
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
   "bin": {
-    "gruffed": "../crates/gruffed-node/gruffed"
+    "gruffed": "./bin/gruffed.js"
+  },
+  "scripts": {
+    "test:smoke": "node test/smoke.mjs"
   },
   "dependencies": {
     "@gruffed/node": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

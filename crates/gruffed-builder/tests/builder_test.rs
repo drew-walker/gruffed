@@ -36,6 +36,30 @@ fn detects_unresolved_imports() {
 }
 
 #[test]
+fn ignores_unresolved_bare_imports() {
+    let dir = tempfile::TempDir::new().unwrap();
+    let source = dir.path().join("index.ts");
+    std::fs::write(
+        &source,
+        r#"
+        import fs from "node:fs";
+        import react from "react";
+        import helper from "@/helper";
+        import component from "./Component.svelte";
+        import type { Thing } from "./types.d.ts";
+        import missing from "./missing";
+        "#,
+    )
+    .unwrap();
+
+    let result = ModuleGraphBuilder::new(dir.path()).build().unwrap();
+
+    assert_eq!(result.warnings.len(), 1);
+    let warning = &result.warnings[0];
+    assert!(format!("{warning:?}").contains("./missing"));
+}
+
+#[test]
 fn builds_cycle_graph() {
     let result = ModuleGraphBuilder::new(fixture_path("cycle"))
         .build()

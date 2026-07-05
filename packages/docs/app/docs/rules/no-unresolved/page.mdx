@@ -1,6 +1,6 @@
 # no-unresolved
 
-`no-unresolved` reports imports that the builder could not resolve to a source file.
+`no-unresolved` reports relative imports that the builder could not resolve to a source file.
 
 ## What it catches
 
@@ -31,4 +31,4 @@ The finding includes the source file and line number reported by the parser.
 
 ## Notes
 
-This rule checks module resolution, not package installation health or TypeScript declarations. It does not replace `tsc`, but it catches graph-level import holes quickly.
+This rule checks source-file resolution, not package installation health, TypeScript declarations, or framework assets. Bare package imports, Node builtins, unresolved path aliases, and explicit imports of unsupported file types are ignored until package, TypeScript project graph, and framework-file support lands.

@@ -194,11 +194,13 @@ impl ModuleGraphBuilder {
                             }
                         }
                         None => {
-                            warnings.push(BuildWarning::UnresolvedImport {
-                                source: file.path.clone(),
-                                specifier: import.specifier.clone(),
-                                line: import.line,
-                            });
+                            if should_report_unresolved_import(&import.specifier) {
+                                warnings.push(BuildWarning::UnresolvedImport {
+                                    source: file.path.clone(),
+                                    specifier: import.specifier.clone(),
+                                    line: import.line,
+                                });
+                            }
                         }
                     }
                 }
@@ -234,6 +236,26 @@ impl ModuleGraphBuilder {
             },
         })
     }
+}
+
+fn should_report_unresolved_import(specifier: &str) -> bool {
+    if !(specifier.starts_with("./") || specifier.starts_with("../")) {
+        return false;
+    }
+
+    let Some(file_name) = specifier.rsplit('/').next() else {
+        return true;
+    };
+
+    if file_name.ends_with(".d.ts") {
+        return false;
+    }
+
+    let Some((_, ext)) = file_name.rsplit_once('.') else {
+        return true;
+    };
+
+    matches!(ext, "ts" | "tsx" | "js" | "jsx" | "mjs" | "cjs")
 }
 
 fn build_node_properties(
@@ -273,4 +295,26 @@ fn build_node_properties(
     });
     props.insert("is_entrypoint".to_string(), Value::Bool(is_entrypoint));
     props
+}
+
+#[cfg(test)]
+mod tests {
+    use super::should_report_unresolved_import;
+
+    #[test]
+    fn unresolved_reporting_is_limited_to_relative_source_imports() {
+        assert!(should_report_unresolved_import("./missing"));
+        assert!(should_report_unresolved_import("../missing"));
+        assert!(should_report_unresolved_import("./missing.ts"));
+        assert!(should_report_unresolved_import("./missing.cjs"));
+
+        assert!(!should_report_unresolved_import("react"));
+        assert!(!should_report_unresolved_import("@scope/package"));
+        assert!(!should_report_unresolved_import("@/path-alias"));
+        assert!(!should_report_unresolved_import("node:fs"));
+        assert!(!should_report_unresolved_import("/absolute/path"));
+        assert!(!should_report_unresolved_import("./component.svelte"));
+        assert!(!should_report_unresolved_import("./styles.css"));
+        assert!(!should_report_unresolved_import("./types.d.ts"));
+    }
 }

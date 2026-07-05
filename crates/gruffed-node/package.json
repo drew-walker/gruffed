@@ -1,18 +1,54 @@
 {
   "name": "@gruffed/node",
   "version": "0.1.0",
+  "description": "Native Node.js bindings for gruffed.",
+  "type": "module",
   "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drew-walker/gruffed.git",
     "directory": "crates/gruffed-node"
   },
-  "main": "index.js",
-  "types": "index.d.ts",
-  "napi": {
-    "name": "gruffed-node",
-    "triples": {
-      "defaults": true
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
     }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "types",
+    "*.node"
+  ],
+  "scripts": {
+    "build": "napi build --platform --release --no-js && node scripts/sync-types.mjs",
+    "build:debug": "napi build --platform --no-js && node scripts/sync-types.mjs",
+    "npm-dirs": "napi create-npm-dirs",
+    "artifacts": "napi artifacts",
+    "pre-publish": "napi pre-publish --tag-style npm --no-gh-release",
+    "pre-publish:dry-run": "napi pre-publish --tag-style npm --no-gh-release --dry-run",
+    "test:smoke": "node test/smoke.mjs"
+  },
+  "napi": {
+    "binaryName": "gruffed-node",
+    "npmClient": "pnpm",
+    "targets": [
+      "x86_64-apple-darwin",
+      "aarch64-apple-darwin",
+      "x86_64-pc-windows-msvc",
+      "x86_64-unknown-linux-gnu"
+    ]
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^3.4.7"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

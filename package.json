@@ -21,7 +21,12 @@
     "site:build": "pnpm --filter @gruffed/site build",
     "site:typecheck": "pnpm --filter @gruffed/site typecheck",
     "typecheck": "pnpm -r --filter './packages/docs' --filter './packages/site' typecheck",
-    "build:sites": "pnpm -r --filter './packages/docs' --filter './packages/site' build"
+    "build:sites": "pnpm -r --filter './packages/docs' --filter './packages/site' build",
+    "node:build": "pnpm --filter @gruffed/node build",
+    "node:test": "pnpm --filter @gruffed/node test:smoke && pnpm --filter gruffed test:smoke",
+    "release:preflight": "node scripts/release-preflight.mjs",
+    "trials:clone": "node scripts/clone-trial-repos.mjs",
+    "trials:run": "node scripts/run-public-repo-trials.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.3"
