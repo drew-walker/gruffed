@@ -11,8 +11,8 @@ export function Footer() {
           <Link className={styles.link} href="/benchmarks">
             Benchmarks
           </Link>
-          <Link className={styles.link} href="/showcase">
-            Showcase
+          <Link className={styles.link} href="/demo">
+            Demo
           </Link>
           <a className={styles.link} href={githubUrl}>
             GitHub

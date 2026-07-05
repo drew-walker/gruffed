@@ -14,11 +14,8 @@ export function Nav() {
           gruffed
         </Link>
         <nav className={styles.links} aria-label="Primary">
-          <Link className={styles.link} href="/showcase">
-            Showcase
-          </Link>
-          <Link className={styles.link} href="/public-repos">
-            Public repos
+          <Link className={styles.link} href="/demo">
+            Demo
           </Link>
           <Link className={styles.link} href="/benchmarks">
             Benchmarks
