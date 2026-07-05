@@ -1,18 +1,43 @@
 {
   "name": "@gruffed/node",
   "version": "0.1.0",
+  "description": "Native Node.js bindings for gruffed.",
+  "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drew-walker/gruffed.git",
     "directory": "crates/gruffed-node"
   },
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "types",
+    "*.node"
+  ],
+  "scripts": {
+    "build": "napi build --platform --release && node scripts/sync-types.mjs",
+    "build:debug": "napi build --platform && node scripts/sync-types.mjs",
+    "test:smoke": "node test/smoke.mjs"
+  },
   "napi": {
     "name": "gruffed-node",
     "triples": {
       "defaults": true
     }
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^3.4.7"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -24,7 +24,7 @@ export function Hero() {
             Find cycles, unresolved imports, and dependency chains before they harden.
           </p>
           <div className={styles.actions}>
-            <InstallCommand command="cargo install gruffed-cli" />
+            <InstallCommand command="cargo install gruffed" />
             <a className={styles.cta} href={docsUrl}>
               Read the docs
             </a>

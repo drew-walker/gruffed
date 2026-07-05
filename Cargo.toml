@@ -6,12 +6,22 @@ members = [
     "crates/gruffed-builder",
     "crates/gruffed-analyzer",
     "crates/gruffed-console-reporter",
-    "crates/gruffed-cli",
+    "crates/gruffed",
+    "crates/gruffed-node",
+]
+default-members = [
+    ".",
+    "crates/gruffed-core",
+    "crates/gruffed-config",
+    "crates/gruffed-builder",
+    "crates/gruffed-analyzer",
+    "crates/gruffed-console-reporter",
+    "crates/gruffed",
     "crates/gruffed-node",
 ]
 
 [package]
-name = "gruffed"
+name = "gruffed-workspace"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
@@ -21,16 +31,23 @@ publish = false
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.80"
 license = "MIT"
 authors = ["Drew Walker"]
+description = "Fast module-graph analysis for JavaScript and TypeScript codebases."
+repository = "https://github.com/drew-walker/gruffed"
+homepage = "https://github.com/drew-walker/gruffed"
+documentation = "https://github.com/drew-walker/gruffed"
+keywords = ["typescript", "javascript", "dependencies", "graph", "lint"]
+categories = ["command-line-utilities", "development-tools"]
 
 [workspace.dependencies]
-gruffed-core = { path = "crates/gruffed-core" }
-gruffed-config = { path = "crates/gruffed-config" }
-gruffed-builder = { path = "crates/gruffed-builder" }
-gruffed-analyzer = { path = "crates/gruffed-analyzer" }
-gruffed-console-reporter = { path = "crates/gruffed-console-reporter" }
-gruffed-node = { path = "crates/gruffed-node" }
+gruffed-core = { version = "0.1.0", path = "crates/gruffed-core" }
+gruffed-config = { version = "0.1.0", path = "crates/gruffed-config" }
+gruffed-builder = { version = "0.1.0", path = "crates/gruffed-builder" }
+gruffed-analyzer = { version = "0.1.0", path = "crates/gruffed-analyzer" }
+gruffed-console-reporter = { version = "0.1.0", path = "crates/gruffed-console-reporter" }
+gruffed-node = { version = "0.1.0", path = "crates/gruffed-node" }
 criterion = { version = "0.5", features = ["html_reports"] }
 
 [dev-dependencies]

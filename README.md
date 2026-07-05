@@ -17,7 +17,7 @@ gruffed builds a dependency graph from your source files and detects structural 
 
 ```bash
 # Install
-cargo install gruffed-cli
+cargo install gruffed
 
 # Run in your project (create a gruffed.jsonc to enable rules)
 gruffed --root ./src
@@ -33,16 +33,17 @@ npm install gruffed
 ```
 
 ```ts
-import { buildModuleGraph, analyzeGraph, renderReport } from 'gruffed';
+import { analyzeGraph, buildModuleGraph, freeGraph, renderReport } from 'gruffed';
 
 const result = buildModuleGraph('./src', undefined);
-const report = analyzeGraph(result.graph, result.warnings, JSON.stringify({
+const report = analyzeGraph(result.graphHandle, result.warnings, JSON.stringify({
   rules: {
     'no-cycles': 'error',
     'no-unresolved': 'error',
   }
 }));
-console.log(renderReport(report, result.graph, true));
+console.log(renderReport(report, result.graphHandle, true));
+freeGraph(result.graphHandle);
 ```
 
 ## Configuration
@@ -99,7 +100,7 @@ gruffed is a Cargo workspace with focused crates:
 - `gruffed-builder` — module graph builder (oxc parser + resolver)
 - `gruffed-analyzer` — rules engine with Tarjan's SCC for cycle detection
 - `gruffed-console-reporter` — terminal output formatting
-- `gruffed-cli` — the `gruffed` binary
+- `gruffed` — the command-line binary
 - `gruffed-node` — napi-rs bindings for Node.js
 
 ## Development

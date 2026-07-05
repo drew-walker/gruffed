@@ -3,6 +3,8 @@ node_modules/
 .pnpm-store/
 .next/
 out/
+docs/repo-trials/
 *.tsbuildinfo
 *.log
+crates/gruffed-node/*.node
 .DS_Store

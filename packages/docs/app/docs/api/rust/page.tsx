@@ -6,7 +6,7 @@ const crates = [
   ["gruffed-analyzer", "Rules engine plus built-in graph rules for cycles, unresolved imports, and chain depth."],
   ["gruffed-config", "JSONC config parsing and rule setting normalization."],
   ["gruffed-console-reporter", "Terminal and JSON rendering for reports."],
-  ["gruffed-cli", "The command-line binary that wires config, builder, analyzer, and reporter together."],
+  ["gruffed", "The command-line binary that wires config, builder, analyzer, and reporter together."],
 ] as const;
 
 export default function RustApiPage() {

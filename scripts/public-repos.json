@@ -1,0 +1,50 @@
+[
+  {
+    "name": "vite",
+    "url": "https://github.com/vitejs/vite.git"
+  },
+  {
+    "name": "vitest",
+    "url": "https://github.com/vitest-dev/vitest.git"
+  },
+  {
+    "name": "pnpm",
+    "url": "https://github.com/pnpm/pnpm.git"
+  },
+  {
+    "name": "eslint",
+    "url": "https://github.com/eslint/eslint.git"
+  },
+  {
+    "name": "prettier",
+    "url": "https://github.com/prettier/prettier.git"
+  },
+  {
+    "name": "astro",
+    "url": "https://github.com/withastro/astro.git"
+  },
+  {
+    "name": "remix",
+    "url": "https://github.com/remix-run/remix.git"
+  },
+  {
+    "name": "typescript",
+    "url": "https://github.com/microsoft/TypeScript.git"
+  },
+  {
+    "name": "babel",
+    "url": "https://github.com/babel/babel.git"
+  },
+  {
+    "name": "vue-core",
+    "url": "https://github.com/vuejs/core.git"
+  },
+  {
+    "name": "svelte",
+    "url": "https://github.com/sveltejs/svelte.git"
+  },
+  {
+    "name": "tailwindcss",
+    "url": "https://github.com/tailwindlabs/tailwindcss.git"
+  }
+]

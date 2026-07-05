@@ -412,11 +412,13 @@ dependencies = [
 name = "gruffed"
 version = "0.1.0"
 dependencies = [
- "criterion",
+ "clap",
  "gruffed-analyzer",
  "gruffed-builder",
+ "gruffed-config",
+ "gruffed-console-reporter",
  "gruffed-core",
- "tempfile",
+ "serde_json",
 ]
 
 [[package]]
@@ -442,19 +444,6 @@ dependencies = [
  "rayon",
  "serde",
  "tempfile",
-]
-
-[[package]]
-name = "gruffed-cli"
-version = "0.1.0"
-dependencies = [
- "clap",
- "gruffed-analyzer",
- "gruffed-builder",
- "gruffed-config",
- "gruffed-console-reporter",
- "gruffed-core",
- "serde_json",
 ]
 
 [[package]]
@@ -498,6 +487,17 @@ dependencies = [
  "napi-build",
  "napi-derive",
  "serde_json",
+]
+
+[[package]]
+name = "gruffed-workspace"
+version = "0.1.0"
+dependencies = [
+ "criterion",
+ "gruffed-analyzer",
+ "gruffed-builder",
+ "gruffed-core",
+ "tempfile",
 ]
 
 [[package]]
