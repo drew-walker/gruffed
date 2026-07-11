@@ -68,6 +68,7 @@ Root scripts:
 ```sh
 pnpm format:check
 pnpm format
+pnpm lint
 pnpm typecheck
 pnpm build:sites
 pnpm docs:typecheck
