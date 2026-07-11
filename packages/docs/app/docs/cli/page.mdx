@@ -1,6 +1,6 @@
 # CLI
 
-gruffed analyzes a JavaScript or TypeScript source tree, builds a module graph, runs enabled rules, and writes a terminal or JSON report.
+gruffed analyzes a JavaScript or TypeScript source tree, builds a module graph, runs enabled rules, and writes a terminal, JSON, or shareable trace report.
 
 ## Command
 
@@ -29,8 +29,12 @@ By default, gruffed looks for `gruffed.jsonc` or `gruffed.json` in the root it i
       <td>Analyze this root directory. This overrides <code>root</code> from config.</td>
     </tr>
     <tr>
-      <td><code>--format &lt;terminal|json&gt;</code></td>
-      <td>Select terminal output or JSON output. Defaults to <code>terminal</code>.</td>
+      <td><code>--format &lt;terminal|json|trace&gt;</code></td>
+      <td>Select terminal, report JSON, or bounded graph-trace output. Defaults to <code>terminal</code>.</td>
+    </tr>
+    <tr>
+      <td><code>--trace-max-nodes &lt;count&gt;</code></td>
+      <td>Limit the number of clusters in trace output. Defaults to <code>80</code>.</td>
     </tr>
     <tr>
       <td><code>--color</code></td>
@@ -63,6 +67,14 @@ gruffed --root ./src --format json
 ```
 
 JSON output serializes the report shape from `gruffed-core`: findings plus graph stats. It is the preferred format for CI, dashboards, and automation.
+
+## Trace output
+
+```bash
+gruffed --root ./src --format trace --trace-max-nodes 80 > graph-trace.json
+```
+
+Trace output is a bounded, deterministic projection for sharing and visualization. It adaptively groups the complete Rust-owned graph into directory and file clusters, aggregates imports between clusters, and includes finding paths. The complete module graph remains in Rust memory; the trace contains only the requested projection.
 
 ## Exit codes
 

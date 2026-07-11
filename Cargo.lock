@@ -462,6 +462,7 @@ name = "gruffed-console-reporter"
 version = "0.1.0"
 dependencies = [
  "gruffed-core",
+ "serde",
  "serde_json",
 ]
 

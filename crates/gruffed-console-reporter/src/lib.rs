@@ -1,6 +1,10 @@
 use gruffed_core::graph::Graph;
 use gruffed_core::report::{Report, Severity};
 
+mod trace;
+
+pub use trace::{render_trace_json, TraceArtifact};
+
 pub struct ConsoleReporter {
     pub use_color: bool,
     pub max_context_nodes: usize,

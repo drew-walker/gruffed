@@ -1,0 +1,1532 @@
+{
+  "schemaVersion": 1,
+  "projection": "directory-clusters",
+  "root": "TypeScript",
+  "stats": {
+    "totalNodes": 635,
+    "totalEdges": 2050,
+    "projectedNodes": 80,
+    "projectedEdges": 151,
+    "omittedClusters": 0,
+    "buildTimeMs": 187,
+    "analyzeTimeMs": 3
+  },
+  "nodes": [
+    {
+      "id": "cluster:0",
+      "label": "Herebyfile.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:1",
+      "label": "eslint.config.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:2",
+      "label": "scripts/addPackageJsonGitHead.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:3",
+      "label": "scripts/browserIntegrationTest.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:4",
+      "label": "scripts/build",
+      "moduleCount": 6,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:5",
+      "label": "scripts/checkModuleFormat.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:6",
+      "label": "scripts/checkPackageSize.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:7",
+      "label": "scripts/configurePrerelease.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:8",
+      "label": "scripts/dtsBundler.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:9",
+      "label": "scripts/errorCheck.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:10",
+      "label": "scripts/eslint/rules",
+      "moduleCount": 10,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:11",
+      "label": "scripts/failed-tests.cjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:12",
+      "label": "scripts/find-unused-diganostic-messages.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:13",
+      "label": "scripts/generateLocalizedDiagnosticMessages.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:14",
+      "label": "scripts/link-hooks.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:15",
+      "label": "scripts/post-vsts-artifact-comment.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:16",
+      "label": "scripts/processDiagnosticMessages.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:17",
+      "label": "scripts/produceLKG.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:18",
+      "label": "scripts/regenerate-unicode-identifier-parts.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:19",
+      "label": "scripts/run-sequence.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:20",
+      "label": "src/compiler",
+      "moduleCount": 77,
+      "findingCount": 2
+    },
+    {
+      "id": "cluster:21",
+      "label": "src/deprecatedCompat",
+      "moduleCount": 3,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:22",
+      "label": "src/harness",
+      "moduleCount": 38,
+      "findingCount": 3
+    },
+    {
+      "id": "cluster:23",
+      "label": "src/jsTyping/_namespaces",
+      "moduleCount": 3,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:24",
+      "label": "src/jsTyping/jsTyping.ts",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:25",
+      "label": "src/jsTyping/shared.ts",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:26",
+      "label": "src/jsTyping/types.ts",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:27",
+      "label": "src/server",
+      "moduleCount": 15,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:28",
+      "label": "src/services",
+      "moduleCount": 168,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:29",
+      "label": "src/testRunner/_namespaces",
+      "moduleCount": 14,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:30",
+      "label": "src/testRunner/compilerRunner.ts",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:31",
+      "label": "src/testRunner/fourslashRunner.ts",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:32",
+      "label": "src/testRunner/parallel",
+      "moduleCount": 3,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:33",
+      "label": "src/testRunner/projectsRunner.ts",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:34",
+      "label": "src/testRunner/runner.ts",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:35",
+      "label": "src/testRunner/tests.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:36",
+      "label": "src/testRunner/transpileRunner.ts",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:37",
+      "label": "src/testRunner/unittests/asserts.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:38",
+      "label": "src/testRunner/unittests/base64.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:39",
+      "label": "src/testRunner/unittests/builder.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:40",
+      "label": "src/testRunner/unittests/canWatch.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:41",
+      "label": "src/testRunner/unittests/comments.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:42",
+      "label": "src/testRunner/unittests/compilerCore.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:43",
+      "label": "src/testRunner/unittests/config",
+      "moduleCount": 10,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:44",
+      "label": "src/testRunner/unittests/convertToBase64.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:45",
+      "label": "src/testRunner/unittests/customTransforms.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:46",
+      "label": "src/testRunner/unittests/debugDeprecation.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:47",
+      "label": "src/testRunner/unittests/diagnosticCollection.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:48",
+      "label": "src/testRunner/unittests/evaluation",
+      "moduleCount": 20,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:49",
+      "label": "src/testRunner/unittests/factory.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:50",
+      "label": "src/testRunner/unittests/helpers",
+      "moduleCount": 21,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:51",
+      "label": "src/testRunner/unittests/helpers.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:52",
+      "label": "src/testRunner/unittests/incrementalParser.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:53",
+      "label": "src/testRunner/unittests/jsDocParsing.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:54",
+      "label": "src/testRunner/unittests/jsonParserRecovery.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:55",
+      "label": "src/testRunner/unittests/moduleResolution.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:56",
+      "label": "src/testRunner/unittests/parsePseudoBigInt.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:57",
+      "label": "src/testRunner/unittests/paths.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:58",
+      "label": "src/testRunner/unittests/printer.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:59",
+      "label": "src/testRunner/unittests/programApi.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:60",
+      "label": "src/testRunner/unittests/publicApi.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:61",
+      "label": "src/testRunner/unittests/regExpScannerRecovery.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:62",
+      "label": "src/testRunner/unittests/reuseProgramStructure.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:63",
+      "label": "src/testRunner/unittests/semver.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:64",
+      "label": "src/testRunner/unittests/services",
+      "moduleCount": 17,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:65",
+      "label": "src/testRunner/unittests/skipJSDocParsing.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:66",
+      "label": "src/testRunner/unittests/sys/symlinkWatching.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:67",
+      "label": "src/testRunner/unittests/transform.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:68",
+      "label": "src/testRunner/unittests/tsbuild",
+      "moduleCount": 31,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:69",
+      "label": "src/testRunner/unittests/tsbuildWatch",
+      "moduleCount": 13,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:70",
+      "label": "src/testRunner/unittests/tsc",
+      "moduleCount": 17,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:71",
+      "label": "src/testRunner/unittests/tscWatch",
+      "moduleCount": 20,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:72",
+      "label": "src/testRunner/unittests/tsserver",
+      "moduleCount": 80,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:73",
+      "label": "src/testRunner/unittests/typeParameterIsPossiblyReferenced.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:74",
+      "label": "src/tsc",
+      "moduleCount": 2,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:75",
+      "label": "src/tsserver",
+      "moduleCount": 3,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:76",
+      "label": "src/typescript",
+      "moduleCount": 3,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:77",
+      "label": "src/typingsInstaller/nodeTypingsInstaller.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:78",
+      "label": "src/typingsInstallerCore",
+      "moduleCount": 4,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:79",
+      "label": "src/watchGuard/watchGuard.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:0",
+      "source": "cluster:0",
+      "target": "cluster:4",
+      "importCount": 5
+    },
+    {
+      "id": "edge:1",
+      "source": "cluster:14",
+      "target": "cluster:4",
+      "importCount": 1
+    },
+    {
+      "id": "edge:2",
+      "source": "cluster:17",
+      "target": "cluster:4",
+      "importCount": 1
+    },
+    {
+      "id": "edge:3",
+      "source": "cluster:21",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:4",
+      "source": "cluster:22",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:5",
+      "source": "cluster:22",
+      "target": "cluster:21",
+      "importCount": 1
+    },
+    {
+      "id": "edge:6",
+      "source": "cluster:22",
+      "target": "cluster:23",
+      "importCount": 2
+    },
+    {
+      "id": "edge:7",
+      "source": "cluster:22",
+      "target": "cluster:27",
+      "importCount": 2
+    },
+    {
+      "id": "edge:8",
+      "source": "cluster:22",
+      "target": "cluster:28",
+      "importCount": 1
+    },
+    {
+      "id": "edge:9",
+      "source": "cluster:22",
+      "target": "cluster:78",
+      "importCount": 2
+    },
+    {
+      "id": "edge:10",
+      "source": "cluster:23",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:11",
+      "source": "cluster:23",
+      "target": "cluster:24",
+      "importCount": 1
+    },
+    {
+      "id": "edge:12",
+      "source": "cluster:23",
+      "target": "cluster:25",
+      "importCount": 1
+    },
+    {
+      "id": "edge:13",
+      "source": "cluster:23",
+      "target": "cluster:26",
+      "importCount": 1
+    },
+    {
+      "id": "edge:14",
+      "source": "cluster:24",
+      "target": "cluster:23",
+      "importCount": 2
+    },
+    {
+      "id": "edge:15",
+      "source": "cluster:25",
+      "target": "cluster:23",
+      "importCount": 1
+    },
+    {
+      "id": "edge:16",
+      "source": "cluster:26",
+      "target": "cluster:23",
+      "importCount": 2
+    },
+    {
+      "id": "edge:17",
+      "source": "cluster:27",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:18",
+      "source": "cluster:27",
+      "target": "cluster:21",
+      "importCount": 1
+    },
+    {
+      "id": "edge:19",
+      "source": "cluster:27",
+      "target": "cluster:23",
+      "importCount": 2
+    },
+    {
+      "id": "edge:20",
+      "source": "cluster:27",
+      "target": "cluster:28",
+      "importCount": 1
+    },
+    {
+      "id": "edge:21",
+      "source": "cluster:27",
+      "target": "cluster:78",
+      "importCount": 1
+    },
+    {
+      "id": "edge:22",
+      "source": "cluster:28",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:23",
+      "source": "cluster:28",
+      "target": "cluster:23",
+      "importCount": 1
+    },
+    {
+      "id": "edge:24",
+      "source": "cluster:29",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:25",
+      "source": "cluster:29",
+      "target": "cluster:21",
+      "importCount": 1
+    },
+    {
+      "id": "edge:26",
+      "source": "cluster:29",
+      "target": "cluster:22",
+      "importCount": 10
+    },
+    {
+      "id": "edge:27",
+      "source": "cluster:29",
+      "target": "cluster:23",
+      "importCount": 2
+    },
+    {
+      "id": "edge:28",
+      "source": "cluster:29",
+      "target": "cluster:27",
+      "importCount": 2
+    },
+    {
+      "id": "edge:29",
+      "source": "cluster:29",
+      "target": "cluster:28",
+      "importCount": 1
+    },
+    {
+      "id": "edge:30",
+      "source": "cluster:29",
+      "target": "cluster:30",
+      "importCount": 1
+    },
+    {
+      "id": "edge:31",
+      "source": "cluster:29",
+      "target": "cluster:31",
+      "importCount": 1
+    },
+    {
+      "id": "edge:32",
+      "source": "cluster:29",
+      "target": "cluster:32",
+      "importCount": 3
+    },
+    {
+      "id": "edge:33",
+      "source": "cluster:29",
+      "target": "cluster:33",
+      "importCount": 1
+    },
+    {
+      "id": "edge:34",
+      "source": "cluster:29",
+      "target": "cluster:34",
+      "importCount": 1
+    },
+    {
+      "id": "edge:35",
+      "source": "cluster:29",
+      "target": "cluster:36",
+      "importCount": 1
+    },
+    {
+      "id": "edge:36",
+      "source": "cluster:29",
+      "target": "cluster:78",
+      "importCount": 2
+    },
+    {
+      "id": "edge:37",
+      "source": "cluster:30",
+      "target": "cluster:29",
+      "importCount": 5
+    },
+    {
+      "id": "edge:38",
+      "source": "cluster:31",
+      "target": "cluster:29",
+      "importCount": 3
+    },
+    {
+      "id": "edge:39",
+      "source": "cluster:32",
+      "target": "cluster:29",
+      "importCount": 8
+    },
+    {
+      "id": "edge:40",
+      "source": "cluster:33",
+      "target": "cluster:29",
+      "importCount": 7
+    },
+    {
+      "id": "edge:41",
+      "source": "cluster:34",
+      "target": "cluster:29",
+      "importCount": 5
+    },
+    {
+      "id": "edge:42",
+      "source": "cluster:35",
+      "target": "cluster:37",
+      "importCount": 1
+    },
+    {
+      "id": "edge:43",
+      "source": "cluster:35",
+      "target": "cluster:38",
+      "importCount": 1
+    },
+    {
+      "id": "edge:44",
+      "source": "cluster:35",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:45",
+      "source": "cluster:35",
+      "target": "cluster:40",
+      "importCount": 1
+    },
+    {
+      "id": "edge:46",
+      "source": "cluster:35",
+      "target": "cluster:41",
+      "importCount": 1
+    },
+    {
+      "id": "edge:47",
+      "source": "cluster:35",
+      "target": "cluster:42",
+      "importCount": 1
+    },
+    {
+      "id": "edge:48",
+      "source": "cluster:35",
+      "target": "cluster:43",
+      "importCount": 9
+    },
+    {
+      "id": "edge:49",
+      "source": "cluster:35",
+      "target": "cluster:44",
+      "importCount": 1
+    },
+    {
+      "id": "edge:50",
+      "source": "cluster:35",
+      "target": "cluster:45",
+      "importCount": 1
+    },
+    {
+      "id": "edge:51",
+      "source": "cluster:35",
+      "target": "cluster:46",
+      "importCount": 1
+    },
+    {
+      "id": "edge:52",
+      "source": "cluster:35",
+      "target": "cluster:47",
+      "importCount": 1
+    },
+    {
+      "id": "edge:53",
+      "source": "cluster:35",
+      "target": "cluster:48",
+      "importCount": 20
+    },
+    {
+      "id": "edge:54",
+      "source": "cluster:35",
+      "target": "cluster:49",
+      "importCount": 1
+    },
+    {
+      "id": "edge:55",
+      "source": "cluster:35",
+      "target": "cluster:52",
+      "importCount": 1
+    },
+    {
+      "id": "edge:56",
+      "source": "cluster:35",
+      "target": "cluster:53",
+      "importCount": 1
+    },
+    {
+      "id": "edge:57",
+      "source": "cluster:35",
+      "target": "cluster:54",
+      "importCount": 1
+    },
+    {
+      "id": "edge:58",
+      "source": "cluster:35",
+      "target": "cluster:55",
+      "importCount": 1
+    },
+    {
+      "id": "edge:59",
+      "source": "cluster:35",
+      "target": "cluster:56",
+      "importCount": 1
+    },
+    {
+      "id": "edge:60",
+      "source": "cluster:35",
+      "target": "cluster:57",
+      "importCount": 1
+    },
+    {
+      "id": "edge:61",
+      "source": "cluster:35",
+      "target": "cluster:58",
+      "importCount": 1
+    },
+    {
+      "id": "edge:62",
+      "source": "cluster:35",
+      "target": "cluster:59",
+      "importCount": 1
+    },
+    {
+      "id": "edge:63",
+      "source": "cluster:35",
+      "target": "cluster:60",
+      "importCount": 1
+    },
+    {
+      "id": "edge:64",
+      "source": "cluster:35",
+      "target": "cluster:61",
+      "importCount": 1
+    },
+    {
+      "id": "edge:65",
+      "source": "cluster:35",
+      "target": "cluster:62",
+      "importCount": 1
+    },
+    {
+      "id": "edge:66",
+      "source": "cluster:35",
+      "target": "cluster:63",
+      "importCount": 1
+    },
+    {
+      "id": "edge:67",
+      "source": "cluster:35",
+      "target": "cluster:64",
+      "importCount": 16
+    },
+    {
+      "id": "edge:68",
+      "source": "cluster:35",
+      "target": "cluster:65",
+      "importCount": 1
+    },
+    {
+      "id": "edge:69",
+      "source": "cluster:35",
+      "target": "cluster:66",
+      "importCount": 1
+    },
+    {
+      "id": "edge:70",
+      "source": "cluster:35",
+      "target": "cluster:67",
+      "importCount": 1
+    },
+    {
+      "id": "edge:71",
+      "source": "cluster:35",
+      "target": "cluster:68",
+      "importCount": 31
+    },
+    {
+      "id": "edge:72",
+      "source": "cluster:35",
+      "target": "cluster:69",
+      "importCount": 13
+    },
+    {
+      "id": "edge:73",
+      "source": "cluster:35",
+      "target": "cluster:70",
+      "importCount": 17
+    },
+    {
+      "id": "edge:74",
+      "source": "cluster:35",
+      "target": "cluster:71",
+      "importCount": 20
+    },
+    {
+      "id": "edge:75",
+      "source": "cluster:35",
+      "target": "cluster:72",
+      "importCount": 80
+    },
+    {
+      "id": "edge:76",
+      "source": "cluster:35",
+      "target": "cluster:73",
+      "importCount": 1
+    },
+    {
+      "id": "edge:77",
+      "source": "cluster:36",
+      "target": "cluster:29",
+      "importCount": 3
+    },
+    {
+      "id": "edge:78",
+      "source": "cluster:37",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:79",
+      "source": "cluster:38",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:80",
+      "source": "cluster:39",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:81",
+      "source": "cluster:39",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:82",
+      "source": "cluster:40",
+      "target": "cluster:29",
+      "importCount": 2
+    },
+    {
+      "id": "edge:83",
+      "source": "cluster:41",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:84",
+      "source": "cluster:42",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:85",
+      "source": "cluster:43",
+      "target": "cluster:29",
+      "importCount": 28
+    },
+    {
+      "id": "edge:86",
+      "source": "cluster:43",
+      "target": "cluster:51",
+      "importCount": 7
+    },
+    {
+      "id": "edge:87",
+      "source": "cluster:44",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:88",
+      "source": "cluster:45",
+      "target": "cluster:29",
+      "importCount": 2
+    },
+    {
+      "id": "edge:89",
+      "source": "cluster:46",
+      "target": "cluster:21",
+      "importCount": 1
+    },
+    {
+      "id": "edge:90",
+      "source": "cluster:46",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:91",
+      "source": "cluster:47",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:92",
+      "source": "cluster:48",
+      "target": "cluster:29",
+      "importCount": 34
+    },
+    {
+      "id": "edge:93",
+      "source": "cluster:49",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:94",
+      "source": "cluster:50",
+      "target": "cluster:22",
+      "importCount": 10
+    },
+    {
+      "id": "edge:95",
+      "source": "cluster:50",
+      "target": "cluster:27",
+      "importCount": 2
+    },
+    {
+      "id": "edge:96",
+      "source": "cluster:50",
+      "target": "cluster:29",
+      "importCount": 32
+    },
+    {
+      "id": "edge:97",
+      "source": "cluster:50",
+      "target": "cluster:51",
+      "importCount": 18
+    },
+    {
+      "id": "edge:98",
+      "source": "cluster:51",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:99",
+      "source": "cluster:52",
+      "target": "cluster:29",
+      "importCount": 2
+    },
+    {
+      "id": "edge:100",
+      "source": "cluster:53",
+      "target": "cluster:29",
+      "importCount": 3
+    },
+    {
+      "id": "edge:101",
+      "source": "cluster:54",
+      "target": "cluster:29",
+      "importCount": 2
+    },
+    {
+      "id": "edge:102",
+      "source": "cluster:55",
+      "target": "cluster:29",
+      "importCount": 2
+    },
+    {
+      "id": "edge:103",
+      "source": "cluster:55",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:104",
+      "source": "cluster:56",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:105",
+      "source": "cluster:57",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:106",
+      "source": "cluster:58",
+      "target": "cluster:29",
+      "importCount": 4
+    },
+    {
+      "id": "edge:107",
+      "source": "cluster:59",
+      "target": "cluster:29",
+      "importCount": 5
+    },
+    {
+      "id": "edge:108",
+      "source": "cluster:59",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:109",
+      "source": "cluster:60",
+      "target": "cluster:29",
+      "importCount": 5
+    },
+    {
+      "id": "edge:110",
+      "source": "cluster:60",
+      "target": "cluster:50",
+      "importCount": 1
+    },
+    {
+      "id": "edge:111",
+      "source": "cluster:60",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:112",
+      "source": "cluster:61",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:113",
+      "source": "cluster:62",
+      "target": "cluster:29",
+      "importCount": 3
+    },
+    {
+      "id": "edge:114",
+      "source": "cluster:62",
+      "target": "cluster:50",
+      "importCount": 1
+    },
+    {
+      "id": "edge:115",
+      "source": "cluster:62",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:116",
+      "source": "cluster:63",
+      "target": "cluster:29",
+      "importCount": 2
+    },
+    {
+      "id": "edge:117",
+      "source": "cluster:64",
+      "target": "cluster:22",
+      "importCount": 2
+    },
+    {
+      "id": "edge:118",
+      "source": "cluster:64",
+      "target": "cluster:29",
+      "importCount": 26
+    },
+    {
+      "id": "edge:119",
+      "source": "cluster:64",
+      "target": "cluster:50",
+      "importCount": 5
+    },
+    {
+      "id": "edge:120",
+      "source": "cluster:64",
+      "target": "cluster:51",
+      "importCount": 2
+    },
+    {
+      "id": "edge:121",
+      "source": "cluster:65",
+      "target": "cluster:29",
+      "importCount": 3
+    },
+    {
+      "id": "edge:122",
+      "source": "cluster:66",
+      "target": "cluster:29",
+      "importCount": 3
+    },
+    {
+      "id": "edge:123",
+      "source": "cluster:66",
+      "target": "cluster:50",
+      "importCount": 1
+    },
+    {
+      "id": "edge:124",
+      "source": "cluster:67",
+      "target": "cluster:29",
+      "importCount": 7
+    },
+    {
+      "id": "edge:125",
+      "source": "cluster:68",
+      "target": "cluster:29",
+      "importCount": 28
+    },
+    {
+      "id": "edge:126",
+      "source": "cluster:68",
+      "target": "cluster:50",
+      "importCount": 71
+    },
+    {
+      "id": "edge:127",
+      "source": "cluster:68",
+      "target": "cluster:51",
+      "importCount": 24
+    },
+    {
+      "id": "edge:128",
+      "source": "cluster:69",
+      "target": "cluster:29",
+      "importCount": 8
+    },
+    {
+      "id": "edge:129",
+      "source": "cluster:69",
+      "target": "cluster:50",
+      "importCount": 30
+    },
+    {
+      "id": "edge:130",
+      "source": "cluster:69",
+      "target": "cluster:51",
+      "importCount": 8
+    },
+    {
+      "id": "edge:131",
+      "source": "cluster:70",
+      "target": "cluster:29",
+      "importCount": 18
+    },
+    {
+      "id": "edge:132",
+      "source": "cluster:70",
+      "target": "cluster:50",
+      "importCount": 43
+    },
+    {
+      "id": "edge:133",
+      "source": "cluster:70",
+      "target": "cluster:51",
+      "importCount": 12
+    },
+    {
+      "id": "edge:134",
+      "source": "cluster:71",
+      "target": "cluster:29",
+      "importCount": 19
+    },
+    {
+      "id": "edge:135",
+      "source": "cluster:71",
+      "target": "cluster:50",
+      "importCount": 55
+    },
+    {
+      "id": "edge:136",
+      "source": "cluster:71",
+      "target": "cluster:51",
+      "importCount": 14
+    },
+    {
+      "id": "edge:137",
+      "source": "cluster:72",
+      "target": "cluster:22",
+      "importCount": 9
+    },
+    {
+      "id": "edge:138",
+      "source": "cluster:72",
+      "target": "cluster:29",
+      "importCount": 94
+    },
+    {
+      "id": "edge:139",
+      "source": "cluster:72",
+      "target": "cluster:50",
+      "importCount": 172
+    },
+    {
+      "id": "edge:140",
+      "source": "cluster:72",
+      "target": "cluster:51",
+      "importCount": 46
+    },
+    {
+      "id": "edge:141",
+      "source": "cluster:73",
+      "target": "cluster:29",
+      "importCount": 5
+    },
+    {
+      "id": "edge:142",
+      "source": "cluster:74",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:143",
+      "source": "cluster:75",
+      "target": "cluster:76",
+      "importCount": 4
+    },
+    {
+      "id": "edge:144",
+      "source": "cluster:76",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:145",
+      "source": "cluster:76",
+      "target": "cluster:23",
+      "importCount": 2
+    },
+    {
+      "id": "edge:146",
+      "source": "cluster:76",
+      "target": "cluster:27",
+      "importCount": 2
+    },
+    {
+      "id": "edge:147",
+      "source": "cluster:76",
+      "target": "cluster:28",
+      "importCount": 1
+    },
+    {
+      "id": "edge:148",
+      "source": "cluster:77",
+      "target": "cluster:76",
+      "importCount": 2
+    },
+    {
+      "id": "edge:149",
+      "source": "cluster:78",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:150",
+      "source": "cluster:78",
+      "target": "cluster:23",
+      "importCount": 2
+    }
+  ],
+  "findings": [
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../diagnosticInformationMap.generated.js\" in src/compiler/_namespaces/ts.ts:12",
+      "file": "src/compiler/_namespaces/ts.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (76 nodes in cycle): src/compiler/expressionToTypeNode.ts → src/compiler/executeCommandLine.ts → src/compiler/tsbuildPublic.ts → src/compiler/tsbuild.ts → src/compiler/watchPublic.ts → src/compiler/watch.ts → src/compiler/resolutionCache.ts → src/compiler/builderPublic.ts → src/compiler/builder.ts → src/compiler/builderState.ts → src/compiler/builderStatePublic.ts → src/compiler/programDiagnostics.ts → src/compiler/program.ts → src/compiler/watchUtilities.ts → src/compiler/emitter.ts → src/compiler/transformer.ts → src/compiler/transformers/declarations.ts → src/compiler/transformers/declarations/diagnostics.ts → src/compiler/transformers/module/impliedNodeFormatDependent.ts → src/compiler/transformers/module/esnextAnd2015.ts → src/compiler/transformers/module/system.ts → src/compiler/transformers/module/module.ts → src/compiler/transformers/generators.ts → src/compiler/transformers/es2015.ts → src/compiler/transformers/es2016.ts → src/compiler/transformers/jsx.ts → src/compiler/transformers/esnext.ts → src/compiler/transformers/es2021.ts → src/compiler/transformers/es2020.ts → src/compiler/transformers/es2019.ts → src/compiler/transformers/es2018.ts → src/compiler/transformers/es2017.ts → src/compiler/transformers/esDecorators.ts → src/compiler/transformers/legacyDecorators.ts → src/compiler/transformers/typeSerializer.ts → src/compiler/transformers/classFields.ts → src/compiler/transformers/ts.ts → src/compiler/transformers/taggedTemplate.ts → src/compiler/transformers/namedEvaluation.ts → src/compiler/transformers/classThis.ts → src/compiler/transformers/destructuring.ts → src/compiler/transformers/utilities.ts → src/compiler/sourcemap.ts → src/compiler/visitorPublic.ts → src/compiler/moduleSpecifiers.ts → src/compiler/_namespaces/ts.moduleSpecifiers.ts → src/compiler/checker.ts → src/compiler/symbolWalker.ts → src/compiler/binder.ts → src/compiler/moduleNameResolver.ts → src/compiler/commandLineParser.ts → src/compiler/parser.ts → src/compiler/factory/utilitiesPublic.ts → src/compiler/factory/utilities.ts → src/compiler/factory/nodeChildren.ts → src/compiler/factory/nodeTests.ts → src/compiler/factory/emitHelpers.ts → src/compiler/factory/emitNode.ts → src/compiler/factory/nodeFactory.ts → src/compiler/factory/nodeConverters.ts → src/compiler/factory/parenthesizerRules.ts → src/compiler/factory/baseNodeFactory.ts → src/compiler/utilities.ts → src/compiler/utilitiesPublic.ts → src/compiler/scanner.ts → src/compiler/path.ts → src/compiler/sys.ts → src/compiler/types.ts → src/compiler/performance.ts → src/compiler/_namespaces/ts.performance.ts → src/compiler/tracing.ts → src/compiler/performanceCore.ts → src/compiler/semver.ts → src/compiler/debug.ts → src/compiler/core.ts → src/compiler/_namespaces/ts.ts",
+      "file": "src/compiler/expressionToTypeNode.ts",
+      "path": [
+        "src/compiler/_namespaces/ts.ts",
+        "src/compiler/core.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (6 nodes in cycle): src/jsTyping/types.ts → src/jsTyping/shared.ts → src/jsTyping/_namespaces/ts.server.ts → src/jsTyping/jsTyping.ts → src/jsTyping/_namespaces/ts.JsTyping.ts → src/jsTyping/_namespaces/ts.ts",
+      "file": "src/jsTyping/types.ts",
+      "path": [
+        "src/jsTyping/_namespaces/ts.ts",
+        "src/jsTyping/_namespaces/ts.JsTyping.ts",
+        "src/jsTyping/jsTyping.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (168 nodes in cycle): src/services/pasteEdits.ts → src/services/_namespaces/ts.PasteEdits.ts → src/services/preparePasteEdits.ts → src/services/_namespaces/ts.preparePasteEdits.ts → src/services/formatting/smartIndenter.ts → src/services/formatting/formatting.ts → src/services/formatting/rulesMap.ts → src/services/formatting/rules.ts → src/services/formatting/rule.ts → src/services/formatting/formattingScanner.ts → src/services/formatting/formattingContext.ts → src/services/_namespaces/ts.formatting.ts → src/services/textChanges.ts → src/services/_namespaces/ts.textChanges.ts → src/services/symbolDisplay.ts → src/services/_namespaces/ts.SymbolDisplay.ts → src/services/smartSelection.ts → src/services/_namespaces/ts.SmartSelectionRange.ts → src/services/signatureHelp.ts → src/services/_namespaces/ts.SignatureHelp.ts → src/services/rename.ts → src/services/_namespaces/ts.Rename.ts → src/services/outliningElementsCollector.ts → src/services/_namespaces/ts.OutliningElementsCollector.ts → src/services/organizeImports.ts → src/services/_namespaces/ts.OrganizeImports.ts → src/services/_namespaces/ts.MapCode.ts → src/services/jsDoc.ts → src/services/_namespaces/ts.JsDoc.ts → src/services/inlayHints.ts → src/services/_namespaces/ts.InlayHints.ts → src/services/goToDefinition.ts → src/services/_namespaces/ts.GoToDefinition.ts → src/services/findAllReferences.ts → src/services/importTracker.ts → src/services/_namespaces/ts.FindAllReferences.ts → src/services/stringCompletions.ts → src/services/_namespaces/ts.Completions.StringCompletions.ts → src/services/completions.ts → src/services/_namespaces/ts.Completions.ts → src/services/codefixes/fixAddVoidToPromise.ts → src/services/codefixes/fixExpectedComma.ts → src/services/codefixes/convertConstToLet.ts → src/services/codefixes/splitTypeOnlyImport.ts → src/services/codefixes/removeUnnecessaryAwait.ts → src/services/codefixes/removeAccidentalCallParentheses.ts → src/services/codefixes/convertToMappedObjectType.ts → src/services/codefixes/wrapDecoratorInParentheses.ts → src/services/codefixes/wrapJsxInFragment.ts → src/services/codefixes/fixAddModuleReferTypeMissingTypeof.ts → src/services/codefixes/useBigintLiteral.ts → src/services/codefixes/useDefaultImport.ts → src/services/codefixes/requireInTs.ts → src/services/codefixes/fixStrictClassInitialization.ts → src/services/codefixes/fixInvalidImportSyntax.ts → src/services/codefixes/generateAccessors.ts → src/services/codefixes/helpers.ts → src/services/codefixes/disableJsDiagnostics.ts → src/services/codefixes/fixReturnTypeInAsyncFunction.ts → src/services/codefixes/inferFromUsage.ts → src/services/codefixes/fixPropertyOverrideAccessor.ts → src/services/codefixes/fixAwaitInSyncFunction.ts → src/services/codefixes/fixMissingTypeAnnotationOnExports.ts → src/services/codefixes/fixMissingCallParentheses.ts → src/services/codefixes/fixJSDocTypes.ts → src/services/codefixes/fixUnusedLabel.ts → src/services/codefixes/fixUnreachableCode.ts → src/services/codefixes/fixUnusedIdentifier.ts → src/services/codefixes/fixUnreferenceableDecoratorMetadata.ts → src/services/codefixes/fixUnmatchedParameter.ts → src/services/codefixes/fixInvalidJsxCharacters.ts → src/services/codefixes/fixForgottenThisPropertyAccess.ts → src/services/codefixes/fixExtendsInterfaceBecomesImplements.ts → src/services/codefixes/fixPropertyAssignment.ts → src/services/codefixes/fixModuleAndTargetOptions.ts → src/services/codefixes/fixNaNEquality.ts → src/services/codefixes/fixEnableJsxFlag.ts → src/services/codefixes/fixConstructorForDerivedNeedSuperCall.ts → src/services/codefixes/fixClassSuperMustPrecedeThisAccess.ts → src/services/codefixes/fixClassDoesntImplementInheritedAbstractMember.ts → src/services/codefixes/fixCannotFindModule.ts → src/services/codefixes/fixAddMissingParam.ts → src/services/codefixes/fixAddMissingNewOperator.ts → src/services/codefixes/fixAddMissingMember.ts → src/services/codefixes/returnValueCorrect.ts → src/services/codefixes/fixSpelling.ts → src/services/codefixes/fixIncorrectNamedTupleSyntax.ts → src/services/codefixes/fixImportNonExportedMember.ts → src/services/codefixes/fixImplicitThis.ts → src/services/codefixes/fixNoPropertyAccessFromIndexSignature.ts → src/services/codefixes/fixOverrideModifier.ts → src/services/codefixes/fixAddMissingConstraint.ts → src/services/codefixes/importFixes.ts → src/services/codefixes/fixClassIncorrectlyImplementsInterface.ts → src/services/codefixes/convertLiteralTypeToMappedType.ts → src/services/codefixes/convertTypedefToType.ts → src/services/codefixes/convertToTypeOnlyImport.ts → src/services/codefixes/convertToTypeOnlyExport.ts → src/services/codefixes/correctQualifiedNameToIndexedAccessType.ts → src/services/codefixes/convertToEsModule.ts → src/services/codefixes/convertToAsyncFunction.ts → src/services/codefixes/convertFunctionToEs6Class.ts → src/services/codefixes/annotateWithTypeFromJSDoc.ts → src/services/codefixes/addOptionalPropertyUndefined.ts → src/services/codefixes/addNameToNamelessParameter.ts → src/services/codefixes/addMissingResolutionModeImportAttribute.ts → src/services/codefixes/addMissingInvocationForDecorator.ts → src/services/codefixes/addMissingDeclareProperty.ts → src/services/codefixes/addMissingConst.ts → src/services/codefixes/addMissingAwait.ts → src/services/codefixes/addMissingAsync.ts → src/services/codefixes/addEmptyExportDeclaration.ts → src/services/codefixes/addConvertToUnknownForNonOverlappingTypes.ts → src/services/codeFixProvider.ts → src/services/_namespaces/ts.codefix.ts → src/services/_namespaces/ts.classifier.v2020.ts → src/services/_namespaces/ts.classifier.ts → src/services/callHierarchy.ts → src/services/_namespaces/ts.CallHierarchy.ts → src/services/breakpoints.ts → src/services/_namespaces/ts.BreakpointResolver.ts → src/services/transform.ts → src/services/classifier2020.ts → src/services/refactors/inferFunctionReturnType.ts → src/services/_namespaces/ts.refactor.inferFunctionReturnType.ts → src/services/refactors/generateGetAccessorAndSetAccessor.ts → src/services/_namespaces/ts.refactor.generateGetAccessorAndSetAccessor.ts → src/services/refactors/extractSymbol.ts → src/services/_namespaces/ts.refactor.extractSymbol.ts → src/services/refactors/convertToOptionalChainExpression.ts → src/services/_namespaces/ts.refactor.convertToOptionalChainExpression.ts → src/services/refactors/convertStringOrTemplateLiteral.ts → src/services/_namespaces/ts.refactor.convertStringOrTemplateLiteral.ts → src/services/refactors/convertParamsToDestructuredObject.ts → src/services/_namespaces/ts.refactor.convertParamsToDestructuredObject.ts → src/services/refactors/convertArrowFunctionOrFunctionExpression.ts → src/services/_namespaces/ts.refactor.convertArrowFunctionOrFunctionExpression.ts → src/services/refactors/addOrRemoveBracesToArrowFunction.ts → src/services/refactors/convertOverloadListToSingleSignature.ts → src/services/_namespaces/ts.refactor.addOrRemoveBracesToArrowFunction.ts → src/services/refactors/moveToNewFile.ts → src/services/refactors/inlineVariable.ts → src/services/refactors/moveToFile.ts → src/services/refactors/helpers.ts → src/services/refactors/extractType.ts → src/services/refactors/convertImport.ts → src/services/refactors/convertExport.ts → src/services/refactorProvider.ts → src/services/_namespaces/ts.refactor.ts → src/services/navigationBar.ts → src/services/_namespaces/ts.NavigationBar.ts → src/services/navigateTo.ts → src/services/_namespaces/ts.NavigateTo.ts → src/services/services.ts → src/services/transpile.ts → src/services/suggestionDiagnostics.ts → src/services/sourcemaps.ts → src/services/preProcess.ts → src/services/patternMatcher.ts → src/services/getEditsForFileRename.ts → src/services/documentRegistry.ts → src/services/documentHighlights.ts → src/services/classifier.ts → src/services/exportInfoMap.ts → src/services/utilities.ts → src/services/types.ts → src/services/_namespaces/ts.ts → src/services/mapCode.ts",
+      "file": "src/services/pasteEdits.ts",
+      "path": [
+        "src/services/_namespaces/ts.ts",
+        "src/services/types.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (3 nodes in cycle): src/deprecatedCompat/deprecate.ts → src/deprecatedCompat/deprecations.ts → src/deprecatedCompat/_namespaces/ts.ts",
+      "file": "src/deprecatedCompat/deprecate.ts",
+      "path": [
+        "src/deprecatedCompat/_namespaces/ts.ts",
+        "src/deprecatedCompat/deprecations.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (4 nodes in cycle): src/typingsInstallerCore/_namespaces/ts.ts → src/typingsInstallerCore/typingsInstaller.ts → src/typingsInstallerCore/_namespaces/ts.server.typingsInstaller.ts → src/typingsInstallerCore/_namespaces/ts.server.ts",
+      "file": "src/typingsInstallerCore/_namespaces/ts.ts",
+      "path": [
+        "src/typingsInstallerCore/_namespaces/ts.ts",
+        "src/typingsInstallerCore/_namespaces/ts.server.ts",
+        "src/typingsInstallerCore/_namespaces/ts.server.typingsInstaller.ts",
+        "src/typingsInstallerCore/typingsInstaller.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (15 nodes in cycle): src/server/typingInstallerAdapter.ts → src/server/scriptVersionCache.ts → src/server/session.ts → src/server/packageJsonCache.ts → src/server/moduleSpecifierCache.ts → src/server/editorServices.ts → src/server/project.ts → src/server/scriptInfo.ts → src/server/protocol.ts → src/server/_namespaces/ts.server.protocol.ts → src/server/utilities.ts → src/server/utilitiesPublic.ts → src/server/types.ts → src/server/_namespaces/ts.server.ts → src/server/_namespaces/ts.ts",
+      "file": "src/server/typingInstallerAdapter.ts",
+      "path": [
+        "src/server/_namespaces/ts.ts",
+        "src/server/_namespaces/ts.server.ts",
+        "src/server/types.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (4 nodes in cycle): src/harness/client.ts → src/harness/_namespaces/ts.server.ts → src/harness/harnessGlobals.ts → src/harness/_namespaces/ts.ts",
+      "file": "src/harness/client.ts",
+      "path": [
+        "src/harness/_namespaces/ts.ts",
+        "src/harness/harnessGlobals.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (21 nodes in cycle): src/harness/sourceMapRecorder.ts → src/harness/_namespaces/Harness.SourceMapRecorder.ts → src/harness/tsserverLogger.ts → src/harness/projectServiceStateLogger.ts → src/harness/harnessLanguageService.ts → src/harness/_namespaces/Harness.LanguageService.ts → src/harness/vpathUtil.ts → src/harness/_namespaces/vpath.ts → src/harness/vfsUtil.ts → src/harness/_namespaces/vfs.ts → src/harness/harnessUtils.ts → src/harness/_namespaces/Utils.ts → src/harness/fakesHosts.ts → src/harness/_namespaces/fakes.ts → src/harness/documentsUtil.ts → src/harness/_namespaces/documents.ts → src/harness/compilerImpl.ts → src/harness/_namespaces/compiler.ts → src/harness/harnessIO.ts → src/harness/runnerbase.ts → src/harness/_namespaces/Harness.ts",
+      "file": "src/harness/sourceMapRecorder.ts",
+      "path": [
+        "src/harness/_namespaces/Harness.ts",
+        "src/harness/runnerbase.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (4 nodes in cycle): src/harness/fourslashInterfaceImpl.ts → src/harness/_namespaces/FourSlashInterface.ts → src/harness/fourslashImpl.ts → src/harness/_namespaces/FourSlash.ts",
+      "file": "src/harness/fourslashInterfaceImpl.ts",
+      "path": [
+        "src/harness/fourslashInterfaceImpl.ts",
+        "src/harness/_namespaces/FourSlash.ts",
+        "src/harness/fourslashImpl.ts",
+        "src/harness/_namespaces/FourSlashInterface.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (13 nodes in cycle): src/testRunner/projectsRunner.ts → src/testRunner/_namespaces/project.ts → src/testRunner/runner.ts → src/testRunner/transpileRunner.ts → src/testRunner/compilerRunner.ts → src/testRunner/fourslashRunner.ts → src/testRunner/parallel/worker.ts → src/testRunner/_namespaces/Harness.Parallel.Worker.ts → src/testRunner/parallel/host.ts → src/testRunner/_namespaces/Harness.Parallel.Host.ts → src/testRunner/parallel/shared.ts → src/testRunner/_namespaces/Harness.Parallel.ts → src/testRunner/_namespaces/Harness.ts",
+      "file": "src/testRunner/projectsRunner.ts",
+      "path": [
+        "src/testRunner/_namespaces/Harness.ts",
+        "src/testRunner/_namespaces/Harness.Parallel.ts",
+        "src/testRunner/parallel/shared.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (7 nodes in cycle): src/testRunner/unittests/helpers/tscWatch.ts → src/testRunner/unittests/helpers/solutionBuilder.ts → src/testRunner/unittests/helpers/tsserver.ts → src/testRunner/unittests/helpers/typingsInstaller.ts → src/testRunner/unittests/helpers/virtualFileSystemWithWatch.ts → src/testRunner/unittests/helpers/baseline.ts → src/testRunner/unittests/helpers/tsc.ts",
+      "file": "src/testRunner/unittests/helpers/tscWatch.ts",
+      "path": [
+        "src/testRunner/unittests/helpers/baseline.ts",
+        "src/testRunner/unittests/helpers/virtualFileSystemWithWatch.ts",
+        "src/testRunner/unittests/helpers/typingsInstaller.ts",
+        "src/testRunner/unittests/helpers/tsserver.ts"
+      ]
+    }
+  ]
+}

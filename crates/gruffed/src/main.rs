@@ -8,7 +8,7 @@ use clap::Parser;
 use gruffed_analyzer::Analyzer;
 use gruffed_builder::ModuleGraphBuilder;
 use gruffed_config::GruffedConfig;
-use gruffed_console_reporter::{render_json, ConsoleReporter};
+use gruffed_console_reporter::{render_json, render_trace_json, ConsoleReporter};
 
 #[derive(Parser)]
 #[command(
@@ -21,9 +21,13 @@ struct Cli {
     #[arg(long)]
     config: Option<PathBuf>,
 
-    /// Output format: "terminal" (default) or "json"
+    /// Output format: "terminal" (default), "json", or "trace"
     #[arg(long, default_value = "terminal")]
     format: String,
+
+    /// Maximum number of clusters included in trace output
+    #[arg(long, default_value_t = 80)]
+    trace_max_nodes: usize,
 
     /// Force color output
     #[arg(long)]
@@ -109,6 +113,15 @@ fn run(cli: Cli) -> ExitCode {
     report.stats.analyze_time_ms = analyze_elapsed.as_millis() as u64;
 
     match cli.format.as_str() {
+        "trace" => {
+            match render_trace_json(&report, &build_result.graph, &root, cli.trace_max_nodes) {
+                Ok(json) => println!("{}", json),
+                Err(e) => {
+                    eprintln!("Error formatting trace: {}", e);
+                    return ExitCode::FAILURE;
+                }
+            }
+        }
         "json" => match render_json(&report) {
             Ok(json) => println!("{}", json),
             Err(e) => {

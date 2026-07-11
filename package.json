@@ -26,7 +26,8 @@
     "node:test": "pnpm --filter @gruffed/node test:smoke && pnpm --filter gruffed test:smoke",
     "release:preflight": "node scripts/release-preflight.mjs",
     "trials:clone": "node scripts/clone-trial-repos.mjs",
-    "trials:run": "node scripts/run-public-repo-trials.mjs"
+    "trials:run": "node scripts/run-public-repo-trials.mjs",
+    "trials:trace": "node scripts/run-public-repo-traces.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.3"

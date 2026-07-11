@@ -69,3 +69,22 @@ fn json_output_is_valid_json() {
     assert!(parsed.is_object());
     assert!(parsed["findings"].is_array());
 }
+
+#[test]
+fn trace_output_is_valid_json() {
+    let output = Command::new(env!("CARGO_BIN_EXE_gruffed"))
+        .args([
+            "--root",
+            fixture_path("cycle").to_str().unwrap(),
+            "--format",
+            "trace",
+        ])
+        .output()
+        .unwrap();
+
+    let parsed: serde_json::Value = serde_json::from_slice(&output.stdout).unwrap();
+    assert_eq!(parsed["schemaVersion"], 1);
+    assert_eq!(parsed["projection"], "directory-clusters");
+    assert!(parsed["nodes"].as_array().is_some());
+    assert!(parsed["edges"].as_array().is_some());
+}

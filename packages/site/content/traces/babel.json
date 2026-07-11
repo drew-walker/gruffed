@@ -1,0 +1,1250 @@
+{
+  "schemaVersion": 1,
+  "projection": "directory-clusters",
+  "root": "babel",
+  "stats": {
+    "totalNodes": 862,
+    "totalEdges": 1304,
+    "projectedNodes": 80,
+    "projectedEdges": 49,
+    "omittedClusters": 0,
+    "buildTimeMs": 139,
+    "analyzeTimeMs": 2
+  },
+  "nodes": [
+    {
+      "id": "cluster:0",
+      "label": "Gulpfile.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:1",
+      "label": "Makefile.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:2",
+      "label": "Makefile.source.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:3",
+      "label": "babel-worker.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:4",
+      "label": "babel.config.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:5",
+      "label": "benchmark/babel-cli/print-usage/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:6",
+      "label": "benchmark/babel-core",
+      "moduleCount": 3,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:7",
+      "label": "benchmark/babel-generator",
+      "moduleCount": 4,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:8",
+      "label": "benchmark/babel-helper-compilation-targets/getTargets.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:9",
+      "label": "benchmark/babel-helper-validator-identifier",
+      "moduleCount": 6,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:10",
+      "label": "benchmark/babel-parser/large-regexp/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:11",
+      "label": "benchmark/babel-parser/many-arrow-function-flow-types/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:12",
+      "label": "benchmark/babel-parser/many-async-arrows/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:13",
+      "label": "benchmark/babel-parser/many-class-private-properties/1-length.bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:14",
+      "label": "benchmark/babel-parser/many-empty-statements/attachComment-false.bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:15",
+      "label": "benchmark/babel-parser/many-identifiers",
+      "moduleCount": 4,
+      "findingCount": 2
+    },
+    {
+      "id": "cluster:16",
+      "label": "benchmark/babel-parser/many-inner-comments-nested/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:17",
+      "label": "benchmark/babel-parser/many-inner-comments/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:18",
+      "label": "benchmark/babel-parser/many-leading-comments-nested/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:19",
+      "label": "benchmark/babel-parser/many-leading-comments/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:20",
+      "label": "benchmark/babel-parser/many-leading-trailing-comments",
+      "moduleCount": 2,
+      "findingCount": 2
+    },
+    {
+      "id": "cluster:21",
+      "label": "benchmark/babel-parser/many-let-declarations-within-block/10-length-binding.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:22",
+      "label": "benchmark/babel-parser/many-let-declarations/1-length-binding.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:23",
+      "label": "benchmark/babel-parser/many-named-export/1-length.bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:24",
+      "label": "benchmark/babel-parser/many-nested-block-elements/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:25",
+      "label": "benchmark/babel-parser/many-nested-conditional-expressions",
+      "moduleCount": 2,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:26",
+      "label": "benchmark/babel-parser/many-nested-jsx-elements-with-attributes/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:27",
+      "label": "benchmark/babel-parser/many-nested-template-elements/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:28",
+      "label": "benchmark/babel-parser/many-small-all-flags-regexp/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:29",
+      "label": "benchmark/babel-parser/many-template-elements/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:30",
+      "label": "benchmark/babel-parser/many-trailing-comments-nested/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:31",
+      "label": "benchmark/babel-parser/many-trailing-comments/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:32",
+      "label": "benchmark/babel-parser/real-case-no-loc.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:33",
+      "label": "benchmark/babel-parser/real-case-ts/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 2
+    },
+    {
+      "id": "cluster:34",
+      "label": "benchmark/babel-parser/real-case/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:35",
+      "label": "benchmark/babel-traverse/enter-visitor-context-change/bench.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:36",
+      "label": "benchmark/babel-types/builders",
+      "moduleCount": 4,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:37",
+      "label": "benchmark/babel-types/validators/isExpression.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:38",
+      "label": "benchmark/update-baselines.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:39",
+      "label": "benchmark/util.mjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:40",
+      "label": "codemods",
+      "moduleCount": 2,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:41",
+      "label": "eslint.config.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:42",
+      "label": "eslint/babel-eslint-parser/src",
+      "moduleCount": 16,
+      "findingCount": 8
+    },
+    {
+      "id": "cluster:43",
+      "label": "eslint/babel-eslint-plugin-development-internal/src",
+      "moduleCount": 3,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:44",
+      "label": "eslint/babel-eslint-plugin-development/src/index.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:45",
+      "label": "eslint/babel-eslint-plugin-development/src/rules",
+      "moduleCount": 3,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:46",
+      "label": "eslint/babel-eslint-plugin-development/src/utils",
+      "moduleCount": 4,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:47",
+      "label": "eslint/babel-eslint-plugin/src/index.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:48",
+      "label": "eslint/babel-eslint-plugin/src/rule-composer.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:49",
+      "label": "eslint/babel-eslint-plugin/src/rules",
+      "moduleCount": 3,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:50",
+      "label": "eslint/babel-eslint-plugin/src/types.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:51",
+      "label": "eslint/babel-eslint-shared-fixtures",
+      "moduleCount": 3,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:52",
+      "label": "jest.config.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:53",
+      "label": "knip.config.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:54",
+      "label": "packages",
+      "moduleCount": 729,
+      "findingCount": 45
+    },
+    {
+      "id": "cluster:55",
+      "label": "scripts/actions/repl.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:56",
+      "label": "scripts/assert-dir-git-clean.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:57",
+      "label": "scripts/babel-plugin-bit-decorator/plugin.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:58",
+      "label": "scripts/babel-plugin-toggle-boolean-flag/plugin.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:59",
+      "label": "scripts/babel-plugin-transform-node-protocol-import/plugin.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:60",
+      "label": "scripts/cleanup-fixtures.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:61",
+      "label": "scripts/clone-license.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:62",
+      "label": "scripts/ensure-packages-exist.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:63",
+      "label": "scripts/ensure-yarn-version-integrity.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:64",
+      "label": "scripts/generate-babel-7-tests.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:65",
+      "label": "scripts/generators",
+      "moduleCount": 4,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:66",
+      "label": "scripts/integration-tests/utils/bump-babel-dependencies.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:67",
+      "label": "scripts/pack-script.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:68",
+      "label": "scripts/parallel-tsc/tsc.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:69",
+      "label": "scripts/parser-tests",
+      "moduleCount": 5,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:70",
+      "label": "scripts/postinstall.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:71",
+      "label": "scripts/publint.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:72",
+      "label": "scripts/remove-babel-7-tests.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:73",
+      "label": "scripts/rename-proposal-to-transform.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:74",
+      "label": "scripts/repo-utils",
+      "moduleCount": 2,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:75",
+      "label": "scripts/rollup-plugin-babel-source.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:76",
+      "label": "scripts/rollup-plugin-dependency-condition.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:77",
+      "label": "scripts/rollup-plugin-standalone-internals.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:78",
+      "label": "scripts/utils",
+      "moduleCount": 2,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:79",
+      "label": "yarn.config.cjs",
+      "moduleCount": 1,
+      "findingCount": 0
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:0",
+      "source": "cluster:0",
+      "target": "cluster:54",
+      "importCount": 1
+    },
+    {
+      "id": "edge:1",
+      "source": "cluster:0",
+      "target": "cluster:58",
+      "importCount": 1
+    },
+    {
+      "id": "edge:2",
+      "source": "cluster:0",
+      "target": "cluster:75",
+      "importCount": 1
+    },
+    {
+      "id": "edge:3",
+      "source": "cluster:0",
+      "target": "cluster:76",
+      "importCount": 1
+    },
+    {
+      "id": "edge:4",
+      "source": "cluster:0",
+      "target": "cluster:77",
+      "importCount": 1
+    },
+    {
+      "id": "edge:5",
+      "source": "cluster:0",
+      "target": "cluster:78",
+      "importCount": 2
+    },
+    {
+      "id": "edge:6",
+      "source": "cluster:3",
+      "target": "cluster:78",
+      "importCount": 1
+    },
+    {
+      "id": "edge:7",
+      "source": "cluster:4",
+      "target": "cluster:57",
+      "importCount": 1
+    },
+    {
+      "id": "edge:8",
+      "source": "cluster:4",
+      "target": "cluster:58",
+      "importCount": 1
+    },
+    {
+      "id": "edge:9",
+      "source": "cluster:4",
+      "target": "cluster:59",
+      "importCount": 1
+    },
+    {
+      "id": "edge:10",
+      "source": "cluster:5",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:11",
+      "source": "cluster:6",
+      "target": "cluster:39",
+      "importCount": 3
+    },
+    {
+      "id": "edge:12",
+      "source": "cluster:7",
+      "target": "cluster:39",
+      "importCount": 5
+    },
+    {
+      "id": "edge:13",
+      "source": "cluster:8",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:14",
+      "source": "cluster:9",
+      "target": "cluster:39",
+      "importCount": 5
+    },
+    {
+      "id": "edge:15",
+      "source": "cluster:10",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:16",
+      "source": "cluster:11",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:17",
+      "source": "cluster:12",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:18",
+      "source": "cluster:13",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:19",
+      "source": "cluster:14",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:20",
+      "source": "cluster:15",
+      "target": "cluster:39",
+      "importCount": 4
+    },
+    {
+      "id": "edge:21",
+      "source": "cluster:16",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:22",
+      "source": "cluster:17",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:23",
+      "source": "cluster:18",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:24",
+      "source": "cluster:19",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:25",
+      "source": "cluster:20",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:26",
+      "source": "cluster:21",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:27",
+      "source": "cluster:22",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:28",
+      "source": "cluster:23",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:29",
+      "source": "cluster:24",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:30",
+      "source": "cluster:25",
+      "target": "cluster:39",
+      "importCount": 2
+    },
+    {
+      "id": "edge:31",
+      "source": "cluster:26",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:32",
+      "source": "cluster:27",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:33",
+      "source": "cluster:28",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:34",
+      "source": "cluster:29",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:35",
+      "source": "cluster:30",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:36",
+      "source": "cluster:31",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:37",
+      "source": "cluster:32",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:38",
+      "source": "cluster:33",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:39",
+      "source": "cluster:34",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:40",
+      "source": "cluster:35",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:41",
+      "source": "cluster:36",
+      "target": "cluster:39",
+      "importCount": 4
+    },
+    {
+      "id": "edge:42",
+      "source": "cluster:37",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:43",
+      "source": "cluster:44",
+      "target": "cluster:45",
+      "importCount": 3
+    },
+    {
+      "id": "edge:44",
+      "source": "cluster:45",
+      "target": "cluster:46",
+      "importCount": 5
+    },
+    {
+      "id": "edge:45",
+      "source": "cluster:47",
+      "target": "cluster:49",
+      "importCount": 3
+    },
+    {
+      "id": "edge:46",
+      "source": "cluster:48",
+      "target": "cluster:50",
+      "importCount": 1
+    },
+    {
+      "id": "edge:47",
+      "source": "cluster:49",
+      "target": "cluster:48",
+      "importCount": 2
+    },
+    {
+      "id": "edge:48",
+      "source": "cluster:49",
+      "target": "cluster:50",
+      "importCount": 2
+    }
+  ],
+  "findings": [
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./parser-baseline.cjs\" in benchmark/babel-parser/real-case-ts/bench.mjs:40",
+      "file": "benchmark/babel-parser/real-case-ts/bench.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./parser-current.cjs\" in benchmark/babel-parser/real-case-ts/bench.mjs:41",
+      "file": "benchmark/babel-parser/real-case-ts/bench.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index-main.js\" in benchmark/babel-parser/many-identifiers/await.mjs:2",
+      "file": "benchmark/babel-parser/many-identifiers/await.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index-main.js\" in benchmark/babel-parser/many-identifiers/11-length.bench.mjs:2",
+      "file": "benchmark/babel-parser/many-identifiers/11-length.bench.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index-v2.js\" in benchmark/babel-parser/many-small-all-flags-regexp/bench.mjs:2",
+      "file": "benchmark/babel-parser/many-small-all-flags-regexp/bench.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index.js\" in benchmark/babel-parser/many-leading-trailing-comments/attachComment-false.bench.mjs:3",
+      "file": "benchmark/babel-parser/many-leading-trailing-comments/attachComment-false.bench.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../util.mjs\" in benchmark/babel-parser/many-leading-trailing-comments/attachComment-false.bench.mjs:4",
+      "file": "benchmark/babel-parser/many-leading-trailing-comments/attachComment-false.bench.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../../packages/babel-parser/lib/index.js\" in scripts/parser-tests/utils/parser-test-runner.js:6",
+      "file": "scripts/parser-tests/utils/parser-test-runner.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../lib/babel/index.js\" in packages/babel-cli/bin/babel.js:4",
+      "file": "packages/babel-cli/bin/babel.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./lib/index.js\" in packages/babel-helper-plugin-test-runner/esm.mjs:1",
+      "file": "packages/babel-helper-plugin-test-runner/esm.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../build/compat-table/build-utils/parse-envs-versions.js\" in packages/babel-compat-data/scripts/utils-build-data.mjs:5",
+      "file": "packages/babel-compat-data/scripts/utils-build-data.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../build/compat-table/build-utils/interpolate-all-results.js\" in packages/babel-compat-data/scripts/utils-build-data.mjs:6",
+      "file": "packages/babel-compat-data/scripts/utils-build-data.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../build/compat-table/build-utils/compare-versions.js\" in packages/babel-compat-data/scripts/utils-build-data.mjs:7",
+      "file": "packages/babel-compat-data/scripts/utils-build-data.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../build/compat-table/data-es5.js\" in packages/babel-compat-data/scripts/utils-build-data.mjs:10",
+      "file": "packages/babel-compat-data/scripts/utils-build-data.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../build/compat-table/data-es6.js\" in packages/babel-compat-data/scripts/utils-build-data.mjs:11",
+      "file": "packages/babel-compat-data/scripts/utils-build-data.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../build/compat-table/data-es2016plus.js\" in packages/babel-compat-data/scripts/utils-build-data.mjs:12",
+      "file": "packages/babel-compat-data/scripts/utils-build-data.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../build/compat-table/data-esnext.js\" in packages/babel-compat-data/scripts/utils-build-data.mjs:13",
+      "file": "packages/babel-compat-data/scripts/utils-build-data.mjs",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../lib/babel-node\" in packages/babel-node/bin/babel-node.js:3",
+      "file": "packages/babel-node/bin/babel-node.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../lib/babel-build-external-helpers.js\" in packages/babel-build-external-helpers/bin/babel-build-external-helpers.js:3",
+      "file": "packages/babel-build-external-helpers/bin/babel-build-external-helpers.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./nonIterableRest.ts\" in packages/babel-helpers/src/helpers/slicedToArray.ts:7",
+      "file": "packages/babel-helpers/src/helpers/slicedToArray.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./nonIterableRest.ts\" in packages/babel-helpers/src/helpers/toArray.ts:7",
+      "file": "packages/babel-helpers/src/helpers/toArray.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./nonIterableSpread.ts\" in packages/babel-helpers/src/helpers/toConsumableArray.ts:7",
+      "file": "packages/babel-helpers/src/helpers/toConsumableArray.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../lib/index.js\" in packages/babel-plugin-transform-runtime/scripts/build-dist.ts:8",
+      "file": "packages/babel-plugin-transform-runtime/scripts/build-dist.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index.js\" in packages/babel-types/scripts/utils/fieldHelpers.ts:2",
+      "file": "packages/babel-types/scripts/utils/fieldHelpers.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index.js\" in packages/babel-types/scripts/generators/asserts.ts:8",
+      "file": "packages/babel-types/scripts/generators/asserts.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index.js\" in packages/babel-types/scripts/generators/ast-types.ts:2",
+      "file": "packages/babel-types/scripts/generators/ast-types.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index.js\" in packages/babel-types/scripts/generators/flow.ts:2",
+      "file": "packages/babel-types/scripts/generators/flow.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index.js\" in packages/babel-types/scripts/generators/docs.ts:5",
+      "file": "packages/babel-types/scripts/generators/docs.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index.js\" in packages/babel-types/scripts/generators/constants.ts:2",
+      "file": "packages/babel-types/scripts/generators/constants.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index.js\" in packages/babel-types/scripts/generators/validators.ts:10",
+      "file": "packages/babel-types/scripts/generators/validators.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index.js\" in packages/babel-types/scripts/generators/typescript-legacy.ts:2",
+      "file": "packages/babel-types/scripts/generators/typescript-legacy.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../../lib/index.js\" in packages/babel-types/scripts/generators/builders.ts:2",
+      "file": "packages/babel-types/scripts/generators/builders.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./typeof.js\" in packages/babel-runtime/helpers/esm/possibleConstructorReturn.js:1",
+      "file": "packages/babel-runtime/helpers/esm/possibleConstructorReturn.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./assertThisInitialized.js\" in packages/babel-runtime/helpers/esm/possibleConstructorReturn.js:2",
+      "file": "packages/babel-runtime/helpers/esm/possibleConstructorReturn.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./arrayWithHoles.js\" in packages/babel-runtime/helpers/esm/toArray.js:1",
+      "file": "packages/babel-runtime/helpers/esm/toArray.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./unsupportedIterableToArray.js\" in packages/babel-runtime/helpers/esm/toArray.js:3",
+      "file": "packages/babel-runtime/helpers/esm/toArray.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./nonIterableRest.js\" in packages/babel-runtime/helpers/esm/toArray.js:4",
+      "file": "packages/babel-runtime/helpers/esm/toArray.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./temporalUndefined.js\" in packages/babel-runtime/helpers/esm/temporalRef.js:1",
+      "file": "packages/babel-runtime/helpers/esm/temporalRef.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./tdz.js\" in packages/babel-runtime/helpers/esm/temporalRef.js:2",
+      "file": "packages/babel-runtime/helpers/esm/temporalRef.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./assertThisInitialized.js\" in packages/babel-runtime/helpers/possibleConstructorReturn.js:2",
+      "file": "packages/babel-runtime/helpers/possibleConstructorReturn.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./arrayWithHoles.js\" in packages/babel-runtime/helpers/toArray.js:1",
+      "file": "packages/babel-runtime/helpers/toArray.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./unsupportedIterableToArray.js\" in packages/babel-runtime/helpers/toArray.js:3",
+      "file": "packages/babel-runtime/helpers/toArray.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./nonIterableRest.js\" in packages/babel-runtime/helpers/toArray.js:4",
+      "file": "packages/babel-runtime/helpers/toArray.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./temporalUndefined.js\" in packages/babel-runtime/helpers/temporalRef.js:1",
+      "file": "packages/babel-runtime/helpers/temporalRef.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./tdz.js\" in packages/babel-runtime/helpers/temporalRef.js:2",
+      "file": "packages/babel-runtime/helpers/temporalRef.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./types\" in eslint/babel-eslint-parser/src/parse.ts:2",
+      "file": "eslint/babel-eslint-parser/src/parse.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./types\" in eslint/babel-eslint-parser/src/client.ts:9",
+      "file": "eslint/babel-eslint-parser/src/client.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../types\" in eslint/babel-eslint-parser/src/worker/maybeParse.ts:7",
+      "file": "eslint/babel-eslint-parser/src/worker/maybeParse.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../types\" in eslint/babel-eslint-parser/src/worker/configuration.ts:3",
+      "file": "eslint/babel-eslint-parser/src/worker/configuration.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./types\" in eslint/babel-eslint-parser/src/configuration.ts:1",
+      "file": "eslint/babel-eslint-parser/src/configuration.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../types\" in eslint/babel-eslint-parser/src/convert/convertAST.ts:2",
+      "file": "eslint/babel-eslint-parser/src/convert/convertAST.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../types\" in eslint/babel-eslint-parser/src/convert/convertTokens.ts:1",
+      "file": "eslint/babel-eslint-parser/src/convert/convertTokens.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../types\" in eslint/babel-eslint-parser/src/convert/index.ts:4",
+      "file": "eslint/babel-eslint-parser/src/convert/index.ts",
+      "path": []
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (13 nodes in cycle): packages/babel-types/src/validators/validate.ts → packages/babel-types/src/validators/isPlaceholderType.ts → packages/babel-types/src/definitions/typescript.ts → packages/babel-types/src/definitions/experimental.ts → packages/babel-types/src/definitions/placeholders.ts → packages/babel-types/src/definitions/misc.ts → packages/babel-types/src/definitions/jsx.ts → packages/babel-types/src/definitions/flow.ts → packages/babel-types/src/definitions/core.ts → packages/babel-types/src/definitions/index.ts → packages/babel-types/src/validators/isType.ts → packages/babel-types/src/validators/is.ts → packages/babel-types/src/definitions/utils.ts",
+      "file": "packages/babel-types/src/validators/validate.ts",
+      "path": [
+        "packages/babel-types/src/definitions/index.ts",
+        "packages/babel-types/src/definitions/core.ts",
+        "packages/babel-types/src/validators/is.ts",
+        "packages/babel-types/src/validators/isType.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (12 nodes in cycle): packages/babel-traverse/src/path/family.ts → packages/babel-traverse/src/path/removal.ts → packages/babel-traverse/src/path/modification.ts → packages/babel-traverse/src/path/replacement.ts → packages/babel-traverse/src/scope/traverseForScope.ts → packages/babel-traverse/src/scope/lib/renamer.ts → packages/babel-traverse/src/scope/index.ts → packages/babel-traverse/src/traverse-node.ts → packages/babel-traverse/src/index.ts → packages/babel-traverse/src/path/index.ts → packages/babel-traverse/src/path/context.ts → packages/babel-traverse/src/path/conversion.ts",
+      "file": "packages/babel-traverse/src/path/family.ts",
+      "path": [
+        "packages/babel-traverse/src/path/index.ts",
+        "packages/babel-traverse/src/index.ts",
+        "packages/babel-traverse/src/path/context.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (12 nodes in cycle): packages/babel-generator/src/generators/types.ts → packages/babel-generator/src/generators/modules.ts → packages/babel-generator/src/generators/flow.ts → packages/babel-generator/src/generators/classes.ts → packages/babel-generator/src/generators/statements.ts → packages/babel-generator/src/generators/expressions.ts → packages/babel-generator/src/generators/index.ts → packages/babel-generator/src/nodes.ts → packages/babel-generator/src/node/parentheses.ts → packages/babel-generator/src/node/index.ts → packages/babel-generator/src/generators/methods.ts → packages/babel-generator/src/generators/typescript.ts",
+      "file": "packages/babel-generator/src/generators/types.ts",
+      "path": [
+        "packages/babel-generator/src/node/index.ts",
+        "packages/babel-generator/src/node/parentheses.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (2 nodes in cycle): packages/babel-parser/src/parser/expression.ts → packages/babel-parser/src/parser/statement.ts",
+      "file": "packages/babel-parser/src/parser/expression.ts",
+      "path": [
+        "packages/babel-parser/src/parser/expression.ts",
+        "packages/babel-parser/src/parser/statement.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (2 nodes in cycle): packages/babel-core/src/config/validation/option-assertions.ts → packages/babel-core/src/config/validation/options.ts",
+      "file": "packages/babel-core/src/config/validation/option-assertions.ts",
+      "path": [
+        "packages/babel-core/src/config/validation/option-assertions.ts",
+        "packages/babel-core/src/config/validation/options.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (2 nodes in cycle): packages/babel-core/src/config/item.ts → packages/babel-core/src/config/config-descriptors.ts",
+      "file": "packages/babel-core/src/config/item.ts",
+      "path": [
+        "packages/babel-core/src/config/item.ts",
+        "packages/babel-core/src/config/config-descriptors.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (7 nodes in cycle): packages/babel-core/src/parse.ts → packages/babel-core/src/transform-ast.ts → packages/babel-core/src/transform.ts → packages/babel-core/src/config/full.ts → packages/babel-core/src/config/index.ts → packages/babel-core/src/index.ts → packages/babel-core/src/config/helpers/config-api.ts",
+      "file": "packages/babel-core/src/parse.ts",
+      "path": [
+        "packages/babel-core/src/config/index.ts",
+        "packages/babel-core/src/config/full.ts",
+        "packages/babel-core/src/index.ts"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (4 nodes in cycle): packages/babel-types/src/modifications/prependToMemberExpression.ts → packages/babel-types/src/index.ts → packages/babel-types/src/utils/react/cleanJSXElementLiteralChild.ts → packages/babel-types/src/builders/react/buildChildren.ts",
+      "file": "packages/babel-types/src/modifications/prependToMemberExpression.ts",
+      "path": [
+        "packages/babel-types/src/index.ts",
+        "packages/babel-types/src/builders/react/buildChildren.ts",
+        "packages/babel-types/src/utils/react/cleanJSXElementLiteralChild.ts"
+      ]
+    }
+  ]
+}

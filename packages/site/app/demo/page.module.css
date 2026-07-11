@@ -34,137 +34,19 @@
   line-height: 1.65;
 }
 
-.samples,
-.scale {
-  margin-top: 44px;
-}
-
-.sectionHeader {
-  max-width: 800px;
-  margin-bottom: 20px;
-}
-
-.sectionHeader h2 {
-  margin: 0;
-  color: #101722;
-  font-size: 30px;
-  line-height: 1.15;
-}
-
-.sectionHeader p {
-  margin: 14px 0 0;
-  color: #536273;
-  font-size: 16px;
-  line-height: 1.65;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin: 26px 0;
-}
-
-.stat {
-  border: 1px solid #d9e2ec;
-  border-radius: 8px;
-  background: #ffffff;
-  padding: 18px;
-}
-
-.statValue {
-  display: block;
-  color: #101722;
-  font-size: 28px;
-  font-weight: 850;
-}
-
-.statLabel {
-  display: block;
-  margin-top: 4px;
-  color: #657386;
-  font-size: 13px;
-  font-weight: 750;
-}
-
-.tableWrap {
-  overflow-x: auto;
-  border: 1px solid #d9e2ec;
-  border-radius: 8px;
-  background: #ffffff;
-}
-
-.table {
-  width: 100%;
-  min-width: 680px;
-  border-collapse: collapse;
-}
-
-.table th,
-.table td {
-  border-bottom: 1px solid #e7edf3;
-  padding: 14px 16px;
-  text-align: left;
-  vertical-align: top;
-}
-
-.table thead th {
-  color: #405064;
-  font-size: 12px;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.table tbody tr:last-child th,
-.table tbody tr:last-child td {
-  border-bottom: 0;
-}
-
-.table td {
-  color: #536273;
-  font-size: 14px;
-  line-height: 1.55;
-}
-
-.repoName,
-.repoSlug {
-  display: block;
-}
-
-.repoName {
-  color: #101722;
-  font-size: 15px;
-  font-weight: 850;
-}
-
-.repoSlug {
-  margin-top: 3px;
-  color: #657386;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.note {
-  max-width: 800px;
-  margin: 22px 0 0;
-  color: #657386;
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-@media (max-width: 920px) {
-  .stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+.scanSummary { margin-top: 76px; }
+.summaryHeader { display: grid; grid-template-columns: .85fr 1.15fr; gap: 42px; align-items: end; margin-bottom: 24px; }
+.summaryHeader h2 { margin: 0; color: #101722; font-size: 32px; line-height: 1.12; }.summaryHeader > p { margin: 0; color: #59697b; font-size: 15px; line-height: 1.65; }
+.summaryStats { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid #d9e2ec; border-bottom: 0; border-radius: 9px 9px 0 0; overflow: hidden; background: #eef2f5; }
+.summaryStats span { background: #fff; padding: 14px 16px; color: #6b7989; font-size: 11px; font-weight: 750; }.summaryStats span + span { border-left: 1px solid #d9e2ec; }.summaryStats strong { display: block; margin-bottom: 2px; color: #172130; font-size: 18px; }
+.tableWrap { overflow-x: auto; border: 1px solid #d9e2ec; border-radius: 0 0 9px 9px; background: #fff; }
+.table { width: 100%; min-width: 650px; border-collapse: collapse; }.table th,.table td { border-bottom: 1px solid #e5ebf0; padding: 12px 16px; text-align: left; }.table thead th { background: #f7f9fa; color: #69798b; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }.table tbody tr:last-child th,.table tbody tr:last-child td { border-bottom: 0; }.table tbody th strong,.table tbody th span { display: block; }.table tbody th strong { color: #172130; font-size: 13px; }.table tbody th span { margin-top: 2px; color: #8290a0; font: 9px ui-monospace,monospace; }.table td { color: #4d5d70; font: 11px ui-monospace,monospace; }
+.summaryNote { margin: 13px 0 0; color: #7a8999; font-size: 11px; line-height: 1.55; }
+.repoCell { display: flex; align-items: center; gap: 10px; }.repoCell img { flex: 0 0 auto; border: 1px solid #dce4eb; border-radius: 6px; background: #fff; object-fit: cover; }.repoCell span,.repoCell strong,.repoCell small { display: block; }.repoCell strong { color: #172130; font-size: 13px; }.repoCell small { margin-top: 2px; color: #8290a0; font: 9px ui-monospace,monospace; }
 
 @media (max-width: 760px) {
   .title {
     font-size: 38px;
   }
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
+  .summaryHeader { grid-template-columns: 1fr; gap: 13px; }.summaryStats { grid-template-columns: repeat(2,1fr); }.summaryStats span:nth-child(3) { border-left: 0; border-top: 1px solid #d9e2ec; }.summaryStats span:nth-child(4) { border-top: 1px solid #d9e2ec; }
 }

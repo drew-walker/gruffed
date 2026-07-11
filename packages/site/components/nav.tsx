@@ -17,9 +17,6 @@ export function Nav() {
           <Link className={styles.link} href="/demo">
             Demo
           </Link>
-          <Link className={styles.link} href="/benchmarks">
-            Benchmarks
-          </Link>
           <a className={styles.link} href={docsUrl}>
             Docs
           </a>

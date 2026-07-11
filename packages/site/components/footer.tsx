@@ -8,9 +8,6 @@ export function Footer() {
       <div className={styles.inner}>
         <span>gruffed v0.1.0 - module graph analysis for JS and TS codebases.</span>
         <div className={styles.links}>
-          <Link className={styles.link} href="/benchmarks">
-            Benchmarks
-          </Link>
           <Link className={styles.link} href="/demo">
             Demo
           </Link>

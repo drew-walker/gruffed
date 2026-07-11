@@ -1,0 +1,31 @@
+{
+  // Keep public demo traces focused on authored source, not generated/test fixtures.
+  "exclude": [
+    "node_modules/**",
+    ".git/**",
+    ".next/**",
+    "dist/**",
+    "build/**",
+    "coverage/**",
+    "out/**",
+    "vendor/**",
+    "fixtures/**",
+    "**/fixtures/**",
+    "__fixtures__/**",
+    "**/__fixtures__/**",
+    "test/**",
+    "**/test/**",
+    "tests/**",
+    "**/tests/**",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.d.ts"
+  ],
+  "extensions": [".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs"],
+  "rules": {
+    "no-cycles": "error",
+    "no-unresolved": "error"
+  }
+}

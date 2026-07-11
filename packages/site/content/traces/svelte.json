@@ -1,0 +1,2519 @@
+{
+  "schemaVersion": 1,
+  "projection": "directory-clusters",
+  "root": "svelte",
+  "stats": {
+    "totalNodes": 409,
+    "totalEdges": 1484,
+    "projectedNodes": 80,
+    "projectedEdges": 319,
+    "omittedClusters": 0,
+    "buildTimeMs": 54,
+    "analyzeTimeMs": 2
+  },
+  "nodes": [
+    {
+      "id": "cluster:0",
+      "label": "benchmarking/benchmarks",
+      "moduleCount": 5,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:1",
+      "label": "benchmarking/compare",
+      "moduleCount": 4,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:2",
+      "label": "benchmarking/run.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:3",
+      "label": "benchmarking/utils.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:4",
+      "label": "eslint.config.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:5",
+      "label": "packages/svelte/rollup.config.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:6",
+      "label": "packages/svelte/scripts",
+      "moduleCount": 14,
+      "findingCount": 5
+    },
+    {
+      "id": "cluster:7",
+      "label": "packages/svelte/src/animate/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:8",
+      "label": "packages/svelte/src/attachments/index.js",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:9",
+      "label": "packages/svelte/src/compiler/errors.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:10",
+      "label": "packages/svelte/src/compiler/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:11",
+      "label": "packages/svelte/src/compiler/legacy.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:12",
+      "label": "packages/svelte/src/compiler/migrate/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:13",
+      "label": "packages/svelte/src/compiler/phases/1-parse",
+      "moduleCount": 17,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:14",
+      "label": "packages/svelte/src/compiler/phases/2-analyze/css",
+      "moduleCount": 4,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:15",
+      "label": "packages/svelte/src/compiler/phases/2-analyze/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:16",
+      "label": "packages/svelte/src/compiler/phases/2-analyze/utils/check_graph_for_cycles.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:17",
+      "label": "packages/svelte/src/compiler/phases/2-analyze/visitors",
+      "moduleCount": 71,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:18",
+      "label": "packages/svelte/src/compiler/phases/3-transform/client/transform-client.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:19",
+      "label": "packages/svelte/src/compiler/phases/3-transform/client/transform-template",
+      "moduleCount": 3,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:20",
+      "label": "packages/svelte/src/compiler/phases/3-transform/client/utils.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:21",
+      "label": "packages/svelte/src/compiler/phases/3-transform/client/visitors",
+      "moduleCount": 61,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:22",
+      "label": "packages/svelte/src/compiler/phases/3-transform/css/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:23",
+      "label": "packages/svelte/src/compiler/phases/3-transform/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:24",
+      "label": "packages/svelte/src/compiler/phases/3-transform/server/transform-server.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:25",
+      "label": "packages/svelte/src/compiler/phases/3-transform/server/visitors",
+      "moduleCount": 37,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:26",
+      "label": "packages/svelte/src/compiler/phases/3-transform/shared",
+      "moduleCount": 2,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:27",
+      "label": "packages/svelte/src/compiler/phases/3-transform/utils.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:28",
+      "label": "packages/svelte/src/compiler/phases/bindings.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:29",
+      "label": "packages/svelte/src/compiler/phases/css.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:30",
+      "label": "packages/svelte/src/compiler/phases/nodes.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:31",
+      "label": "packages/svelte/src/compiler/phases/patterns.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:32",
+      "label": "packages/svelte/src/compiler/phases/scope.js",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:33",
+      "label": "packages/svelte/src/compiler/preprocess",
+      "moduleCount": 3,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:34",
+      "label": "packages/svelte/src/compiler/print/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:35",
+      "label": "packages/svelte/src/compiler/state.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:36",
+      "label": "packages/svelte/src/compiler/utils",
+      "moduleCount": 10,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:37",
+      "label": "packages/svelte/src/compiler/validate-options.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:38",
+      "label": "packages/svelte/src/compiler/warnings.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:39",
+      "label": "packages/svelte/src/constants.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:40",
+      "label": "packages/svelte/src/easing/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:41",
+      "label": "packages/svelte/src/escaping.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:42",
+      "label": "packages/svelte/src/events/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:43",
+      "label": "packages/svelte/src/html-tree-validation.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:44",
+      "label": "packages/svelte/src/index-client.js",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:45",
+      "label": "packages/svelte/src/index-server.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:46",
+      "label": "packages/svelte/src/internal/client/constants.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:47",
+      "label": "packages/svelte/src/internal/client/context.js",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:48",
+      "label": "packages/svelte/src/internal/client/dev",
+      "moduleCount": 12,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:49",
+      "label": "packages/svelte/src/internal/client/dom",
+      "moduleCount": 44,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:50",
+      "label": "packages/svelte/src/internal/client/error-handling.js",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:51",
+      "label": "packages/svelte/src/internal/client/errors.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:52",
+      "label": "packages/svelte/src/internal/client/hydratable.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:53",
+      "label": "packages/svelte/src/internal/client/index.js",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:54",
+      "label": "packages/svelte/src/internal/client/legacy.js",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:55",
+      "label": "packages/svelte/src/internal/client/loop.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:56",
+      "label": "packages/svelte/src/internal/client/proxy.js",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:57",
+      "label": "packages/svelte/src/internal/client/reactivity",
+      "moduleCount": 10,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:58",
+      "label": "packages/svelte/src/internal/client/render.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:59",
+      "label": "packages/svelte/src/internal/client/runtime.js",
+      "moduleCount": 1,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:60",
+      "label": "packages/svelte/src/internal/client/timing.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:61",
+      "label": "packages/svelte/src/internal/client/validate.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:62",
+      "label": "packages/svelte/src/internal/client/warnings.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:63",
+      "label": "packages/svelte/src/internal/disclose-version.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:64",
+      "label": "packages/svelte/src/internal/flags",
+      "moduleCount": 4,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:65",
+      "label": "packages/svelte/src/internal/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:66",
+      "label": "packages/svelte/src/internal/server",
+      "moduleCount": 13,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:67",
+      "label": "packages/svelte/src/internal/shared",
+      "moduleCount": 7,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:68",
+      "label": "packages/svelte/src/legacy",
+      "moduleCount": 2,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:69",
+      "label": "packages/svelte/src/motion",
+      "moduleCount": 4,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:70",
+      "label": "packages/svelte/src/reactivity",
+      "moduleCount": 11,
+      "findingCount": 2
+    },
+    {
+      "id": "cluster:71",
+      "label": "packages/svelte/src/server/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:72",
+      "label": "packages/svelte/src/store",
+      "moduleCount": 4,
+      "findingCount": 1
+    },
+    {
+      "id": "cluster:73",
+      "label": "packages/svelte/src/transition/index.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:74",
+      "label": "packages/svelte/src/utils.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:75",
+      "label": "packages/svelte/src/version.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:76",
+      "label": "playgrounds/sandbox",
+      "moduleCount": 10,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:77",
+      "label": "svelte.config.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:78",
+      "label": "vitest-xhtml-environment.ts",
+      "moduleCount": 1,
+      "findingCount": 0
+    },
+    {
+      "id": "cluster:79",
+      "label": "vitest.config.js",
+      "moduleCount": 1,
+      "findingCount": 0
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:0",
+      "source": "cluster:0",
+      "target": "cluster:3",
+      "importCount": 3
+    },
+    {
+      "id": "edge:1",
+      "source": "cluster:0",
+      "target": "cluster:53",
+      "importCount": 1
+    },
+    {
+      "id": "edge:2",
+      "source": "cluster:1",
+      "target": "cluster:0",
+      "importCount": 1
+    },
+    {
+      "id": "edge:3",
+      "source": "cluster:1",
+      "target": "cluster:3",
+      "importCount": 2
+    },
+    {
+      "id": "edge:4",
+      "source": "cluster:2",
+      "target": "cluster:0",
+      "importCount": 2
+    },
+    {
+      "id": "edge:5",
+      "source": "cluster:2",
+      "target": "cluster:3",
+      "importCount": 1
+    },
+    {
+      "id": "edge:6",
+      "source": "cluster:2",
+      "target": "cluster:53",
+      "importCount": 1
+    },
+    {
+      "id": "edge:7",
+      "source": "cluster:5",
+      "target": "cluster:6",
+      "importCount": 1
+    },
+    {
+      "id": "edge:8",
+      "source": "cluster:6",
+      "target": "cluster:10",
+      "importCount": 2
+    },
+    {
+      "id": "edge:9",
+      "source": "cluster:6",
+      "target": "cluster:28",
+      "importCount": 1
+    },
+    {
+      "id": "edge:10",
+      "source": "cluster:6",
+      "target": "cluster:74",
+      "importCount": 1
+    },
+    {
+      "id": "edge:11",
+      "source": "cluster:7",
+      "target": "cluster:40",
+      "importCount": 1
+    },
+    {
+      "id": "edge:12",
+      "source": "cluster:8",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:13",
+      "source": "cluster:8",
+      "target": "cluster:44",
+      "importCount": 1
+    },
+    {
+      "id": "edge:14",
+      "source": "cluster:8",
+      "target": "cluster:53",
+      "importCount": 1
+    },
+    {
+      "id": "edge:15",
+      "source": "cluster:8",
+      "target": "cluster:57",
+      "importCount": 1
+    },
+    {
+      "id": "edge:16",
+      "source": "cluster:9",
+      "target": "cluster:36",
+      "importCount": 1
+    },
+    {
+      "id": "edge:17",
+      "source": "cluster:10",
+      "target": "cluster:11",
+      "importCount": 1
+    },
+    {
+      "id": "edge:18",
+      "source": "cluster:10",
+      "target": "cluster:12",
+      "importCount": 1
+    },
+    {
+      "id": "edge:19",
+      "source": "cluster:10",
+      "target": "cluster:13",
+      "importCount": 3
+    },
+    {
+      "id": "edge:20",
+      "source": "cluster:10",
+      "target": "cluster:15",
+      "importCount": 1
+    },
+    {
+      "id": "edge:21",
+      "source": "cluster:10",
+      "target": "cluster:23",
+      "importCount": 1
+    },
+    {
+      "id": "edge:22",
+      "source": "cluster:10",
+      "target": "cluster:33",
+      "importCount": 1
+    },
+    {
+      "id": "edge:23",
+      "source": "cluster:10",
+      "target": "cluster:34",
+      "importCount": 1
+    },
+    {
+      "id": "edge:24",
+      "source": "cluster:10",
+      "target": "cluster:35",
+      "importCount": 1
+    },
+    {
+      "id": "edge:25",
+      "source": "cluster:10",
+      "target": "cluster:37",
+      "importCount": 1
+    },
+    {
+      "id": "edge:26",
+      "source": "cluster:10",
+      "target": "cluster:75",
+      "importCount": 1
+    },
+    {
+      "id": "edge:27",
+      "source": "cluster:11",
+      "target": "cluster:31",
+      "importCount": 1
+    },
+    {
+      "id": "edge:28",
+      "source": "cluster:11",
+      "target": "cluster:36",
+      "importCount": 1
+    },
+    {
+      "id": "edge:29",
+      "source": "cluster:12",
+      "target": "cluster:13",
+      "importCount": 2
+    },
+    {
+      "id": "edge:30",
+      "source": "cluster:12",
+      "target": "cluster:15",
+      "importCount": 1
+    },
+    {
+      "id": "edge:31",
+      "source": "cluster:12",
+      "target": "cluster:31",
+      "importCount": 1
+    },
+    {
+      "id": "edge:32",
+      "source": "cluster:12",
+      "target": "cluster:32",
+      "importCount": 1
+    },
+    {
+      "id": "edge:33",
+      "source": "cluster:12",
+      "target": "cluster:35",
+      "importCount": 1
+    },
+    {
+      "id": "edge:34",
+      "source": "cluster:12",
+      "target": "cluster:36",
+      "importCount": 2
+    },
+    {
+      "id": "edge:35",
+      "source": "cluster:12",
+      "target": "cluster:37",
+      "importCount": 1
+    },
+    {
+      "id": "edge:36",
+      "source": "cluster:12",
+      "target": "cluster:74",
+      "importCount": 1
+    },
+    {
+      "id": "edge:37",
+      "source": "cluster:13",
+      "target": "cluster:9",
+      "importCount": 11
+    },
+    {
+      "id": "edge:38",
+      "source": "cluster:13",
+      "target": "cluster:17",
+      "importCount": 1
+    },
+    {
+      "id": "edge:39",
+      "source": "cluster:13",
+      "target": "cluster:30",
+      "importCount": 2
+    },
+    {
+      "id": "edge:40",
+      "source": "cluster:13",
+      "target": "cluster:31",
+      "importCount": 3
+    },
+    {
+      "id": "edge:41",
+      "source": "cluster:13",
+      "target": "cluster:35",
+      "importCount": 3
+    },
+    {
+      "id": "edge:42",
+      "source": "cluster:13",
+      "target": "cluster:36",
+      "importCount": 5
+    },
+    {
+      "id": "edge:43",
+      "source": "cluster:13",
+      "target": "cluster:38",
+      "importCount": 2
+    },
+    {
+      "id": "edge:44",
+      "source": "cluster:13",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:45",
+      "source": "cluster:13",
+      "target": "cluster:43",
+      "importCount": 1
+    },
+    {
+      "id": "edge:46",
+      "source": "cluster:13",
+      "target": "cluster:74",
+      "importCount": 2
+    },
+    {
+      "id": "edge:47",
+      "source": "cluster:14",
+      "target": "cluster:9",
+      "importCount": 1
+    },
+    {
+      "id": "edge:48",
+      "source": "cluster:14",
+      "target": "cluster:29",
+      "importCount": 2
+    },
+    {
+      "id": "edge:49",
+      "source": "cluster:14",
+      "target": "cluster:31",
+      "importCount": 1
+    },
+    {
+      "id": "edge:50",
+      "source": "cluster:14",
+      "target": "cluster:36",
+      "importCount": 1
+    },
+    {
+      "id": "edge:51",
+      "source": "cluster:14",
+      "target": "cluster:38",
+      "importCount": 1
+    },
+    {
+      "id": "edge:52",
+      "source": "cluster:15",
+      "target": "cluster:9",
+      "importCount": 1
+    },
+    {
+      "id": "edge:53",
+      "source": "cluster:15",
+      "target": "cluster:13",
+      "importCount": 1
+    },
+    {
+      "id": "edge:54",
+      "source": "cluster:15",
+      "target": "cluster:14",
+      "importCount": 3
+    },
+    {
+      "id": "edge:55",
+      "source": "cluster:15",
+      "target": "cluster:16",
+      "importCount": 1
+    },
+    {
+      "id": "edge:56",
+      "source": "cluster:15",
+      "target": "cluster:17",
+      "importCount": 62
+    },
+    {
+      "id": "edge:57",
+      "source": "cluster:15",
+      "target": "cluster:30",
+      "importCount": 1
+    },
+    {
+      "id": "edge:58",
+      "source": "cluster:15",
+      "target": "cluster:32",
+      "importCount": 1
+    },
+    {
+      "id": "edge:59",
+      "source": "cluster:15",
+      "target": "cluster:35",
+      "importCount": 2
+    },
+    {
+      "id": "edge:60",
+      "source": "cluster:15",
+      "target": "cluster:36",
+      "importCount": 3
+    },
+    {
+      "id": "edge:61",
+      "source": "cluster:15",
+      "target": "cluster:38",
+      "importCount": 1
+    },
+    {
+      "id": "edge:62",
+      "source": "cluster:15",
+      "target": "cluster:74",
+      "importCount": 1
+    },
+    {
+      "id": "edge:63",
+      "source": "cluster:17",
+      "target": "cluster:9",
+      "importCount": 41
+    },
+    {
+      "id": "edge:64",
+      "source": "cluster:17",
+      "target": "cluster:13",
+      "importCount": 2
+    },
+    {
+      "id": "edge:65",
+      "source": "cluster:17",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:66",
+      "source": "cluster:17",
+      "target": "cluster:28",
+      "importCount": 1
+    },
+    {
+      "id": "edge:67",
+      "source": "cluster:17",
+      "target": "cluster:30",
+      "importCount": 8
+    },
+    {
+      "id": "edge:68",
+      "source": "cluster:17",
+      "target": "cluster:31",
+      "importCount": 8
+    },
+    {
+      "id": "edge:69",
+      "source": "cluster:17",
+      "target": "cluster:32",
+      "importCount": 5
+    },
+    {
+      "id": "edge:70",
+      "source": "cluster:17",
+      "target": "cluster:35",
+      "importCount": 3
+    },
+    {
+      "id": "edge:71",
+      "source": "cluster:17",
+      "target": "cluster:36",
+      "importCount": 32
+    },
+    {
+      "id": "edge:72",
+      "source": "cluster:17",
+      "target": "cluster:38",
+      "importCount": 19
+    },
+    {
+      "id": "edge:73",
+      "source": "cluster:17",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:74",
+      "source": "cluster:17",
+      "target": "cluster:43",
+      "importCount": 3
+    },
+    {
+      "id": "edge:75",
+      "source": "cluster:17",
+      "target": "cluster:74",
+      "importCount": 6
+    },
+    {
+      "id": "edge:76",
+      "source": "cluster:18",
+      "target": "cluster:20",
+      "importCount": 1
+    },
+    {
+      "id": "edge:77",
+      "source": "cluster:18",
+      "target": "cluster:21",
+      "importCount": 53
+    },
+    {
+      "id": "edge:78",
+      "source": "cluster:18",
+      "target": "cluster:22",
+      "importCount": 1
+    },
+    {
+      "id": "edge:79",
+      "source": "cluster:18",
+      "target": "cluster:35",
+      "importCount": 1
+    },
+    {
+      "id": "edge:80",
+      "source": "cluster:18",
+      "target": "cluster:36",
+      "importCount": 1
+    },
+    {
+      "id": "edge:81",
+      "source": "cluster:19",
+      "target": "cluster:31",
+      "importCount": 1
+    },
+    {
+      "id": "edge:82",
+      "source": "cluster:19",
+      "target": "cluster:35",
+      "importCount": 1
+    },
+    {
+      "id": "edge:83",
+      "source": "cluster:19",
+      "target": "cluster:36",
+      "importCount": 2
+    },
+    {
+      "id": "edge:84",
+      "source": "cluster:19",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:85",
+      "source": "cluster:19",
+      "target": "cluster:41",
+      "importCount": 1
+    },
+    {
+      "id": "edge:86",
+      "source": "cluster:19",
+      "target": "cluster:74",
+      "importCount": 1
+    },
+    {
+      "id": "edge:87",
+      "source": "cluster:20",
+      "target": "cluster:36",
+      "importCount": 2
+    },
+    {
+      "id": "edge:88",
+      "source": "cluster:20",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:89",
+      "source": "cluster:21",
+      "target": "cluster:19",
+      "importCount": 4
+    },
+    {
+      "id": "edge:90",
+      "source": "cluster:21",
+      "target": "cluster:20",
+      "importCount": 12
+    },
+    {
+      "id": "edge:91",
+      "source": "cluster:21",
+      "target": "cluster:26",
+      "importCount": 2
+    },
+    {
+      "id": "edge:92",
+      "source": "cluster:21",
+      "target": "cluster:27",
+      "importCount": 4
+    },
+    {
+      "id": "edge:93",
+      "source": "cluster:21",
+      "target": "cluster:28",
+      "importCount": 1
+    },
+    {
+      "id": "edge:94",
+      "source": "cluster:21",
+      "target": "cluster:30",
+      "importCount": 7
+    },
+    {
+      "id": "edge:95",
+      "source": "cluster:21",
+      "target": "cluster:31",
+      "importCount": 1
+    },
+    {
+      "id": "edge:96",
+      "source": "cluster:21",
+      "target": "cluster:32",
+      "importCount": 4
+    },
+    {
+      "id": "edge:97",
+      "source": "cluster:21",
+      "target": "cluster:35",
+      "importCount": 21
+    },
+    {
+      "id": "edge:98",
+      "source": "cluster:21",
+      "target": "cluster:36",
+      "importCount": 70
+    },
+    {
+      "id": "edge:99",
+      "source": "cluster:21",
+      "target": "cluster:39",
+      "importCount": 4
+    },
+    {
+      "id": "edge:100",
+      "source": "cluster:21",
+      "target": "cluster:41",
+      "importCount": 1
+    },
+    {
+      "id": "edge:101",
+      "source": "cluster:21",
+      "target": "cluster:74",
+      "importCount": 5
+    },
+    {
+      "id": "edge:102",
+      "source": "cluster:22",
+      "target": "cluster:29",
+      "importCount": 1
+    },
+    {
+      "id": "edge:103",
+      "source": "cluster:22",
+      "target": "cluster:35",
+      "importCount": 1
+    },
+    {
+      "id": "edge:104",
+      "source": "cluster:22",
+      "target": "cluster:36",
+      "importCount": 1
+    },
+    {
+      "id": "edge:105",
+      "source": "cluster:23",
+      "target": "cluster:18",
+      "importCount": 1
+    },
+    {
+      "id": "edge:106",
+      "source": "cluster:23",
+      "target": "cluster:22",
+      "importCount": 1
+    },
+    {
+      "id": "edge:107",
+      "source": "cluster:23",
+      "target": "cluster:24",
+      "importCount": 1
+    },
+    {
+      "id": "edge:108",
+      "source": "cluster:23",
+      "target": "cluster:35",
+      "importCount": 1
+    },
+    {
+      "id": "edge:109",
+      "source": "cluster:23",
+      "target": "cluster:36",
+      "importCount": 1
+    },
+    {
+      "id": "edge:110",
+      "source": "cluster:23",
+      "target": "cluster:75",
+      "importCount": 1
+    },
+    {
+      "id": "edge:111",
+      "source": "cluster:24",
+      "target": "cluster:22",
+      "importCount": 1
+    },
+    {
+      "id": "edge:112",
+      "source": "cluster:24",
+      "target": "cluster:25",
+      "importCount": 34
+    },
+    {
+      "id": "edge:113",
+      "source": "cluster:24",
+      "target": "cluster:32",
+      "importCount": 1
+    },
+    {
+      "id": "edge:114",
+      "source": "cluster:24",
+      "target": "cluster:35",
+      "importCount": 1
+    },
+    {
+      "id": "edge:115",
+      "source": "cluster:24",
+      "target": "cluster:36",
+      "importCount": 2
+    },
+    {
+      "id": "edge:116",
+      "source": "cluster:25",
+      "target": "cluster:26",
+      "importCount": 2
+    },
+    {
+      "id": "edge:117",
+      "source": "cluster:25",
+      "target": "cluster:27",
+      "importCount": 4
+    },
+    {
+      "id": "edge:118",
+      "source": "cluster:25",
+      "target": "cluster:28",
+      "importCount": 1
+    },
+    {
+      "id": "edge:119",
+      "source": "cluster:25",
+      "target": "cluster:30",
+      "importCount": 6
+    },
+    {
+      "id": "edge:120",
+      "source": "cluster:25",
+      "target": "cluster:31",
+      "importCount": 2
+    },
+    {
+      "id": "edge:121",
+      "source": "cluster:25",
+      "target": "cluster:32",
+      "importCount": 5
+    },
+    {
+      "id": "edge:122",
+      "source": "cluster:25",
+      "target": "cluster:35",
+      "importCount": 6
+    },
+    {
+      "id": "edge:123",
+      "source": "cluster:25",
+      "target": "cluster:36",
+      "importCount": 41
+    },
+    {
+      "id": "edge:124",
+      "source": "cluster:25",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:125",
+      "source": "cluster:25",
+      "target": "cluster:41",
+      "importCount": 2
+    },
+    {
+      "id": "edge:126",
+      "source": "cluster:25",
+      "target": "cluster:66",
+      "importCount": 1
+    },
+    {
+      "id": "edge:127",
+      "source": "cluster:25",
+      "target": "cluster:74",
+      "importCount": 3
+    },
+    {
+      "id": "edge:128",
+      "source": "cluster:26",
+      "target": "cluster:36",
+      "importCount": 3
+    },
+    {
+      "id": "edge:129",
+      "source": "cluster:27",
+      "target": "cluster:9",
+      "importCount": 1
+    },
+    {
+      "id": "edge:130",
+      "source": "cluster:27",
+      "target": "cluster:16",
+      "importCount": 1
+    },
+    {
+      "id": "edge:131",
+      "source": "cluster:27",
+      "target": "cluster:31",
+      "importCount": 1
+    },
+    {
+      "id": "edge:132",
+      "source": "cluster:27",
+      "target": "cluster:32",
+      "importCount": 1
+    },
+    {
+      "id": "edge:133",
+      "source": "cluster:27",
+      "target": "cluster:36",
+      "importCount": 1
+    },
+    {
+      "id": "edge:134",
+      "source": "cluster:30",
+      "target": "cluster:36",
+      "importCount": 1
+    },
+    {
+      "id": "edge:135",
+      "source": "cluster:32",
+      "target": "cluster:9",
+      "importCount": 1
+    },
+    {
+      "id": "edge:136",
+      "source": "cluster:32",
+      "target": "cluster:17",
+      "importCount": 1
+    },
+    {
+      "id": "edge:137",
+      "source": "cluster:32",
+      "target": "cluster:30",
+      "importCount": 1
+    },
+    {
+      "id": "edge:138",
+      "source": "cluster:32",
+      "target": "cluster:36",
+      "importCount": 3
+    },
+    {
+      "id": "edge:139",
+      "source": "cluster:32",
+      "target": "cluster:74",
+      "importCount": 1
+    },
+    {
+      "id": "edge:140",
+      "source": "cluster:33",
+      "target": "cluster:36",
+      "importCount": 2
+    },
+    {
+      "id": "edge:141",
+      "source": "cluster:34",
+      "target": "cluster:74",
+      "importCount": 1
+    },
+    {
+      "id": "edge:142",
+      "source": "cluster:35",
+      "target": "cluster:74",
+      "importCount": 1
+    },
+    {
+      "id": "edge:143",
+      "source": "cluster:36",
+      "target": "cluster:13",
+      "importCount": 1
+    },
+    {
+      "id": "edge:144",
+      "source": "cluster:36",
+      "target": "cluster:30",
+      "importCount": 1
+    },
+    {
+      "id": "edge:145",
+      "source": "cluster:36",
+      "target": "cluster:31",
+      "importCount": 1
+    },
+    {
+      "id": "edge:146",
+      "source": "cluster:36",
+      "target": "cluster:35",
+      "importCount": 1
+    },
+    {
+      "id": "edge:147",
+      "source": "cluster:36",
+      "target": "cluster:38",
+      "importCount": 1
+    },
+    {
+      "id": "edge:148",
+      "source": "cluster:36",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:149",
+      "source": "cluster:37",
+      "target": "cluster:9",
+      "importCount": 1
+    },
+    {
+      "id": "edge:150",
+      "source": "cluster:37",
+      "target": "cluster:38",
+      "importCount": 1
+    },
+    {
+      "id": "edge:151",
+      "source": "cluster:38",
+      "target": "cluster:35",
+      "importCount": 1
+    },
+    {
+      "id": "edge:152",
+      "source": "cluster:38",
+      "target": "cluster:36",
+      "importCount": 1
+    },
+    {
+      "id": "edge:153",
+      "source": "cluster:42",
+      "target": "cluster:49",
+      "importCount": 1
+    },
+    {
+      "id": "edge:154",
+      "source": "cluster:44",
+      "target": "cluster:47",
+      "importCount": 2
+    },
+    {
+      "id": "edge:155",
+      "source": "cluster:44",
+      "target": "cluster:49",
+      "importCount": 1
+    },
+    {
+      "id": "edge:156",
+      "source": "cluster:44",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:157",
+      "source": "cluster:44",
+      "target": "cluster:52",
+      "importCount": 1
+    },
+    {
+      "id": "edge:158",
+      "source": "cluster:44",
+      "target": "cluster:53",
+      "importCount": 1
+    },
+    {
+      "id": "edge:159",
+      "source": "cluster:44",
+      "target": "cluster:57",
+      "importCount": 1
+    },
+    {
+      "id": "edge:160",
+      "source": "cluster:44",
+      "target": "cluster:58",
+      "importCount": 1
+    },
+    {
+      "id": "edge:161",
+      "source": "cluster:44",
+      "target": "cluster:59",
+      "importCount": 2
+    },
+    {
+      "id": "edge:162",
+      "source": "cluster:44",
+      "target": "cluster:64",
+      "importCount": 1
+    },
+    {
+      "id": "edge:163",
+      "source": "cluster:44",
+      "target": "cluster:67",
+      "importCount": 1
+    },
+    {
+      "id": "edge:164",
+      "source": "cluster:45",
+      "target": "cluster:66",
+      "importCount": 6
+    },
+    {
+      "id": "edge:165",
+      "source": "cluster:45",
+      "target": "cluster:67",
+      "importCount": 2
+    },
+    {
+      "id": "edge:166",
+      "source": "cluster:47",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:167",
+      "source": "cluster:47",
+      "target": "cluster:46",
+      "importCount": 1
+    },
+    {
+      "id": "edge:168",
+      "source": "cluster:47",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:169",
+      "source": "cluster:47",
+      "target": "cluster:57",
+      "importCount": 1
+    },
+    {
+      "id": "edge:170",
+      "source": "cluster:47",
+      "target": "cluster:59",
+      "importCount": 1
+    },
+    {
+      "id": "edge:171",
+      "source": "cluster:47",
+      "target": "cluster:64",
+      "importCount": 1
+    },
+    {
+      "id": "edge:172",
+      "source": "cluster:48",
+      "target": "cluster:39",
+      "importCount": 6
+    },
+    {
+      "id": "edge:173",
+      "source": "cluster:48",
+      "target": "cluster:46",
+      "importCount": 7
+    },
+    {
+      "id": "edge:174",
+      "source": "cluster:48",
+      "target": "cluster:47",
+      "importCount": 3
+    },
+    {
+      "id": "edge:175",
+      "source": "cluster:48",
+      "target": "cluster:49",
+      "importCount": 2
+    },
+    {
+      "id": "edge:176",
+      "source": "cluster:48",
+      "target": "cluster:51",
+      "importCount": 2
+    },
+    {
+      "id": "edge:177",
+      "source": "cluster:48",
+      "target": "cluster:56",
+      "importCount": 1
+    },
+    {
+      "id": "edge:178",
+      "source": "cluster:48",
+      "target": "cluster:57",
+      "importCount": 4
+    },
+    {
+      "id": "edge:179",
+      "source": "cluster:48",
+      "target": "cluster:58",
+      "importCount": 1
+    },
+    {
+      "id": "edge:180",
+      "source": "cluster:48",
+      "target": "cluster:59",
+      "importCount": 6
+    },
+    {
+      "id": "edge:181",
+      "source": "cluster:48",
+      "target": "cluster:62",
+      "importCount": 4
+    },
+    {
+      "id": "edge:182",
+      "source": "cluster:48",
+      "target": "cluster:67",
+      "importCount": 6
+    },
+    {
+      "id": "edge:183",
+      "source": "cluster:48",
+      "target": "cluster:74",
+      "importCount": 2
+    },
+    {
+      "id": "edge:184",
+      "source": "cluster:49",
+      "target": "cluster:39",
+      "importCount": 12
+    },
+    {
+      "id": "edge:185",
+      "source": "cluster:49",
+      "target": "cluster:46",
+      "importCount": 19
+    },
+    {
+      "id": "edge:186",
+      "source": "cluster:49",
+      "target": "cluster:47",
+      "importCount": 8
+    },
+    {
+      "id": "edge:187",
+      "source": "cluster:49",
+      "target": "cluster:48",
+      "importCount": 4
+    },
+    {
+      "id": "edge:188",
+      "source": "cluster:49",
+      "target": "cluster:50",
+      "importCount": 1
+    },
+    {
+      "id": "edge:189",
+      "source": "cluster:49",
+      "target": "cluster:51",
+      "importCount": 4
+    },
+    {
+      "id": "edge:190",
+      "source": "cluster:49",
+      "target": "cluster:55",
+      "importCount": 1
+    },
+    {
+      "id": "edge:191",
+      "source": "cluster:49",
+      "target": "cluster:56",
+      "importCount": 2
+    },
+    {
+      "id": "edge:192",
+      "source": "cluster:49",
+      "target": "cluster:57",
+      "importCount": 49
+    },
+    {
+      "id": "edge:193",
+      "source": "cluster:49",
+      "target": "cluster:58",
+      "importCount": 2
+    },
+    {
+      "id": "edge:194",
+      "source": "cluster:49",
+      "target": "cluster:59",
+      "importCount": 17
+    },
+    {
+      "id": "edge:195",
+      "source": "cluster:49",
+      "target": "cluster:62",
+      "importCount": 7
+    },
+    {
+      "id": "edge:196",
+      "source": "cluster:49",
+      "target": "cluster:64",
+      "importCount": 3
+    },
+    {
+      "id": "edge:197",
+      "source": "cluster:49",
+      "target": "cluster:67",
+      "importCount": 17
+    },
+    {
+      "id": "edge:198",
+      "source": "cluster:49",
+      "target": "cluster:68",
+      "importCount": 1
+    },
+    {
+      "id": "edge:199",
+      "source": "cluster:49",
+      "target": "cluster:70",
+      "importCount": 1
+    },
+    {
+      "id": "edge:200",
+      "source": "cluster:49",
+      "target": "cluster:74",
+      "importCount": 3
+    },
+    {
+      "id": "edge:201",
+      "source": "cluster:50",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:202",
+      "source": "cluster:50",
+      "target": "cluster:46",
+      "importCount": 1
+    },
+    {
+      "id": "edge:203",
+      "source": "cluster:50",
+      "target": "cluster:49",
+      "importCount": 1
+    },
+    {
+      "id": "edge:204",
+      "source": "cluster:50",
+      "target": "cluster:59",
+      "importCount": 1
+    },
+    {
+      "id": "edge:205",
+      "source": "cluster:50",
+      "target": "cluster:67",
+      "importCount": 1
+    },
+    {
+      "id": "edge:206",
+      "source": "cluster:51",
+      "target": "cluster:67",
+      "importCount": 1
+    },
+    {
+      "id": "edge:207",
+      "source": "cluster:52",
+      "target": "cluster:49",
+      "importCount": 1
+    },
+    {
+      "id": "edge:208",
+      "source": "cluster:52",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:209",
+      "source": "cluster:52",
+      "target": "cluster:62",
+      "importCount": 1
+    },
+    {
+      "id": "edge:210",
+      "source": "cluster:52",
+      "target": "cluster:64",
+      "importCount": 1
+    },
+    {
+      "id": "edge:211",
+      "source": "cluster:53",
+      "target": "cluster:8",
+      "importCount": 1
+    },
+    {
+      "id": "edge:212",
+      "source": "cluster:53",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:213",
+      "source": "cluster:53",
+      "target": "cluster:47",
+      "importCount": 1
+    },
+    {
+      "id": "edge:214",
+      "source": "cluster:53",
+      "target": "cluster:48",
+      "importCount": 11
+    },
+    {
+      "id": "edge:215",
+      "source": "cluster:53",
+      "target": "cluster:49",
+      "importCount": 40
+    },
+    {
+      "id": "edge:216",
+      "source": "cluster:53",
+      "target": "cluster:54",
+      "importCount": 1
+    },
+    {
+      "id": "edge:217",
+      "source": "cluster:53",
+      "target": "cluster:56",
+      "importCount": 1
+    },
+    {
+      "id": "edge:218",
+      "source": "cluster:53",
+      "target": "cluster:57",
+      "importCount": 7
+    },
+    {
+      "id": "edge:219",
+      "source": "cluster:53",
+      "target": "cluster:58",
+      "importCount": 1
+    },
+    {
+      "id": "edge:220",
+      "source": "cluster:53",
+      "target": "cluster:59",
+      "importCount": 1
+    },
+    {
+      "id": "edge:221",
+      "source": "cluster:53",
+      "target": "cluster:60",
+      "importCount": 1
+    },
+    {
+      "id": "edge:222",
+      "source": "cluster:53",
+      "target": "cluster:61",
+      "importCount": 1
+    },
+    {
+      "id": "edge:223",
+      "source": "cluster:53",
+      "target": "cluster:67",
+      "importCount": 4
+    },
+    {
+      "id": "edge:224",
+      "source": "cluster:54",
+      "target": "cluster:57",
+      "importCount": 1
+    },
+    {
+      "id": "edge:225",
+      "source": "cluster:54",
+      "target": "cluster:59",
+      "importCount": 1
+    },
+    {
+      "id": "edge:226",
+      "source": "cluster:55",
+      "target": "cluster:60",
+      "importCount": 1
+    },
+    {
+      "id": "edge:227",
+      "source": "cluster:56",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:228",
+      "source": "cluster:56",
+      "target": "cluster:46",
+      "importCount": 1
+    },
+    {
+      "id": "edge:229",
+      "source": "cluster:56",
+      "target": "cluster:48",
+      "importCount": 1
+    },
+    {
+      "id": "edge:230",
+      "source": "cluster:56",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:231",
+      "source": "cluster:56",
+      "target": "cluster:57",
+      "importCount": 1
+    },
+    {
+      "id": "edge:232",
+      "source": "cluster:56",
+      "target": "cluster:59",
+      "importCount": 1
+    },
+    {
+      "id": "edge:233",
+      "source": "cluster:56",
+      "target": "cluster:64",
+      "importCount": 1
+    },
+    {
+      "id": "edge:234",
+      "source": "cluster:56",
+      "target": "cluster:67",
+      "importCount": 2
+    },
+    {
+      "id": "edge:235",
+      "source": "cluster:57",
+      "target": "cluster:39",
+      "importCount": 3
+    },
+    {
+      "id": "edge:236",
+      "source": "cluster:57",
+      "target": "cluster:46",
+      "importCount": 8
+    },
+    {
+      "id": "edge:237",
+      "source": "cluster:57",
+      "target": "cluster:47",
+      "importCount": 4
+    },
+    {
+      "id": "edge:238",
+      "source": "cluster:57",
+      "target": "cluster:48",
+      "importCount": 2
+    },
+    {
+      "id": "edge:239",
+      "source": "cluster:57",
+      "target": "cluster:49",
+      "importCount": 5
+    },
+    {
+      "id": "edge:240",
+      "source": "cluster:57",
+      "target": "cluster:50",
+      "importCount": 2
+    },
+    {
+      "id": "edge:241",
+      "source": "cluster:57",
+      "target": "cluster:51",
+      "importCount": 5
+    },
+    {
+      "id": "edge:242",
+      "source": "cluster:57",
+      "target": "cluster:56",
+      "importCount": 2
+    },
+    {
+      "id": "edge:243",
+      "source": "cluster:57",
+      "target": "cluster:59",
+      "importCount": 7
+    },
+    {
+      "id": "edge:244",
+      "source": "cluster:57",
+      "target": "cluster:62",
+      "importCount": 1
+    },
+    {
+      "id": "edge:245",
+      "source": "cluster:57",
+      "target": "cluster:64",
+      "importCount": 4
+    },
+    {
+      "id": "edge:246",
+      "source": "cluster:57",
+      "target": "cluster:67",
+      "importCount": 8
+    },
+    {
+      "id": "edge:247",
+      "source": "cluster:57",
+      "target": "cluster:72",
+      "importCount": 2
+    },
+    {
+      "id": "edge:248",
+      "source": "cluster:58",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:249",
+      "source": "cluster:58",
+      "target": "cluster:46",
+      "importCount": 1
+    },
+    {
+      "id": "edge:250",
+      "source": "cluster:58",
+      "target": "cluster:47",
+      "importCount": 1
+    },
+    {
+      "id": "edge:251",
+      "source": "cluster:58",
+      "target": "cluster:49",
+      "importCount": 5
+    },
+    {
+      "id": "edge:252",
+      "source": "cluster:58",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:253",
+      "source": "cluster:58",
+      "target": "cluster:57",
+      "importCount": 1
+    },
+    {
+      "id": "edge:254",
+      "source": "cluster:58",
+      "target": "cluster:59",
+      "importCount": 1
+    },
+    {
+      "id": "edge:255",
+      "source": "cluster:58",
+      "target": "cluster:62",
+      "importCount": 1
+    },
+    {
+      "id": "edge:256",
+      "source": "cluster:58",
+      "target": "cluster:67",
+      "importCount": 1
+    },
+    {
+      "id": "edge:257",
+      "source": "cluster:58",
+      "target": "cluster:74",
+      "importCount": 1
+    },
+    {
+      "id": "edge:258",
+      "source": "cluster:59",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:259",
+      "source": "cluster:59",
+      "target": "cluster:46",
+      "importCount": 1
+    },
+    {
+      "id": "edge:260",
+      "source": "cluster:59",
+      "target": "cluster:47",
+      "importCount": 1
+    },
+    {
+      "id": "edge:261",
+      "source": "cluster:59",
+      "target": "cluster:48",
+      "importCount": 1
+    },
+    {
+      "id": "edge:262",
+      "source": "cluster:59",
+      "target": "cluster:49",
+      "importCount": 1
+    },
+    {
+      "id": "edge:263",
+      "source": "cluster:59",
+      "target": "cluster:50",
+      "importCount": 1
+    },
+    {
+      "id": "edge:264",
+      "source": "cluster:59",
+      "target": "cluster:54",
+      "importCount": 1
+    },
+    {
+      "id": "edge:265",
+      "source": "cluster:59",
+      "target": "cluster:57",
+      "importCount": 5
+    },
+    {
+      "id": "edge:266",
+      "source": "cluster:59",
+      "target": "cluster:62",
+      "importCount": 1
+    },
+    {
+      "id": "edge:267",
+      "source": "cluster:59",
+      "target": "cluster:64",
+      "importCount": 1
+    },
+    {
+      "id": "edge:268",
+      "source": "cluster:59",
+      "target": "cluster:67",
+      "importCount": 2
+    },
+    {
+      "id": "edge:269",
+      "source": "cluster:60",
+      "target": "cluster:67",
+      "importCount": 1
+    },
+    {
+      "id": "edge:270",
+      "source": "cluster:61",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:271",
+      "source": "cluster:61",
+      "target": "cluster:47",
+      "importCount": 1
+    },
+    {
+      "id": "edge:272",
+      "source": "cluster:61",
+      "target": "cluster:57",
+      "importCount": 3
+    },
+    {
+      "id": "edge:273",
+      "source": "cluster:61",
+      "target": "cluster:62",
+      "importCount": 1
+    },
+    {
+      "id": "edge:274",
+      "source": "cluster:63",
+      "target": "cluster:75",
+      "importCount": 1
+    },
+    {
+      "id": "edge:275",
+      "source": "cluster:66",
+      "target": "cluster:39",
+      "importCount": 5
+    },
+    {
+      "id": "edge:276",
+      "source": "cluster:66",
+      "target": "cluster:41",
+      "importCount": 2
+    },
+    {
+      "id": "edge:277",
+      "source": "cluster:66",
+      "target": "cluster:43",
+      "importCount": 1
+    },
+    {
+      "id": "edge:278",
+      "source": "cluster:66",
+      "target": "cluster:46",
+      "importCount": 1
+    },
+    {
+      "id": "edge:279",
+      "source": "cluster:66",
+      "target": "cluster:64",
+      "importCount": 2
+    },
+    {
+      "id": "edge:280",
+      "source": "cluster:66",
+      "target": "cluster:67",
+      "importCount": 10
+    },
+    {
+      "id": "edge:281",
+      "source": "cluster:66",
+      "target": "cluster:72",
+      "importCount": 1
+    },
+    {
+      "id": "edge:282",
+      "source": "cluster:66",
+      "target": "cluster:74",
+      "importCount": 2
+    },
+    {
+      "id": "edge:283",
+      "source": "cluster:67",
+      "target": "cluster:41",
+      "importCount": 1
+    },
+    {
+      "id": "edge:284",
+      "source": "cluster:67",
+      "target": "cluster:74",
+      "importCount": 1
+    },
+    {
+      "id": "edge:285",
+      "source": "cluster:68",
+      "target": "cluster:39",
+      "importCount": 1
+    },
+    {
+      "id": "edge:286",
+      "source": "cluster:68",
+      "target": "cluster:46",
+      "importCount": 1
+    },
+    {
+      "id": "edge:287",
+      "source": "cluster:68",
+      "target": "cluster:47",
+      "importCount": 1
+    },
+    {
+      "id": "edge:288",
+      "source": "cluster:68",
+      "target": "cluster:49",
+      "importCount": 1
+    },
+    {
+      "id": "edge:289",
+      "source": "cluster:68",
+      "target": "cluster:51",
+      "importCount": 1
+    },
+    {
+      "id": "edge:290",
+      "source": "cluster:68",
+      "target": "cluster:57",
+      "importCount": 4
+    },
+    {
+      "id": "edge:291",
+      "source": "cluster:68",
+      "target": "cluster:58",
+      "importCount": 1
+    },
+    {
+      "id": "edge:292",
+      "source": "cluster:68",
+      "target": "cluster:59",
+      "importCount": 1
+    },
+    {
+      "id": "edge:293",
+      "source": "cluster:68",
+      "target": "cluster:62",
+      "importCount": 1
+    },
+    {
+      "id": "edge:294",
+      "source": "cluster:68",
+      "target": "cluster:64",
+      "importCount": 2
+    },
+    {
+      "id": "edge:295",
+      "source": "cluster:68",
+      "target": "cluster:66",
+      "importCount": 1
+    },
+    {
+      "id": "edge:296",
+      "source": "cluster:68",
+      "target": "cluster:67",
+      "importCount": 1
+    },
+    {
+      "id": "edge:297",
+      "source": "cluster:69",
+      "target": "cluster:40",
+      "importCount": 1
+    },
+    {
+      "id": "edge:298",
+      "source": "cluster:69",
+      "target": "cluster:48",
+      "importCount": 2
+    },
+    {
+      "id": "edge:299",
+      "source": "cluster:69",
+      "target": "cluster:53",
+      "importCount": 1
+    },
+    {
+      "id": "edge:300",
+      "source": "cluster:69",
+      "target": "cluster:55",
+      "importCount": 2
+    },
+    {
+      "id": "edge:301",
+      "source": "cluster:69",
+      "target": "cluster:57",
+      "importCount": 3
+    },
+    {
+      "id": "edge:302",
+      "source": "cluster:69",
+      "target": "cluster:59",
+      "importCount": 1
+    },
+    {
+      "id": "edge:303",
+      "source": "cluster:69",
+      "target": "cluster:60",
+      "importCount": 2
+    },
+    {
+      "id": "edge:304",
+      "source": "cluster:69",
+      "target": "cluster:67",
+      "importCount": 1
+    },
+    {
+      "id": "edge:305",
+      "source": "cluster:69",
+      "target": "cluster:70",
+      "importCount": 1
+    },
+    {
+      "id": "edge:306",
+      "source": "cluster:69",
+      "target": "cluster:72",
+      "importCount": 2
+    },
+    {
+      "id": "edge:307",
+      "source": "cluster:70",
+      "target": "cluster:42",
+      "importCount": 2
+    },
+    {
+      "id": "edge:308",
+      "source": "cluster:70",
+      "target": "cluster:48",
+      "importCount": 7
+    },
+    {
+      "id": "edge:309",
+      "source": "cluster:70",
+      "target": "cluster:49",
+      "importCount": 1
+    },
+    {
+      "id": "edge:310",
+      "source": "cluster:70",
+      "target": "cluster:53",
+      "importCount": 2
+    },
+    {
+      "id": "edge:311",
+      "source": "cluster:70",
+      "target": "cluster:57",
+      "importCount": 8
+    },
+    {
+      "id": "edge:312",
+      "source": "cluster:70",
+      "target": "cluster:59",
+      "importCount": 6
+    },
+    {
+      "id": "edge:313",
+      "source": "cluster:71",
+      "target": "cluster:66",
+      "importCount": 1
+    },
+    {
+      "id": "edge:314",
+      "source": "cluster:72",
+      "target": "cluster:57",
+      "importCount": 2
+    },
+    {
+      "id": "edge:315",
+      "source": "cluster:72",
+      "target": "cluster:59",
+      "importCount": 2
+    },
+    {
+      "id": "edge:316",
+      "source": "cluster:72",
+      "target": "cluster:67",
+      "importCount": 2
+    },
+    {
+      "id": "edge:317",
+      "source": "cluster:72",
+      "target": "cluster:70",
+      "importCount": 1
+    },
+    {
+      "id": "edge:318",
+      "source": "cluster:73",
+      "target": "cluster:62",
+      "importCount": 1
+    }
+  ],
+  "findings": [
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../shared/errors.js\" in packages/svelte/scripts/process-messages/templates/client-errors.js:3",
+      "file": "packages/svelte/scripts/process-messages/templates/client-errors.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./state.js\" in packages/svelte/scripts/process-messages/templates/compile-warnings.js:1",
+      "file": "packages/svelte/scripts/process-messages/templates/compile-warnings.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./utils/compile_diagnostic.js\" in packages/svelte/scripts/process-messages/templates/compile-warnings.js:2",
+      "file": "packages/svelte/scripts/process-messages/templates/compile-warnings.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"./utils/compile_diagnostic.js\" in packages/svelte/scripts/process-messages/templates/compile-errors.js:1",
+      "file": "packages/svelte/scripts/process-messages/templates/compile-errors.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-unresolved",
+      "severity": "error",
+      "message": "Cannot resolve import \"../shared/errors.js\" in packages/svelte/scripts/process-messages/templates/server-errors.js:1",
+      "file": "packages/svelte/scripts/process-messages/templates/server-errors.js",
+      "path": []
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (23 nodes in cycle): packages/svelte/src/internal/client/legacy.js → packages/svelte/src/internal/client/dom/elements/misc.js → packages/svelte/src/internal/client/dom/elements/bindings/shared.js → packages/svelte/src/reactivity/create-subscriber.js → packages/svelte/src/internal/client/dom/blocks/boundary.js → packages/svelte/src/internal/client/reactivity/async.js → packages/svelte/src/internal/client/context.js → packages/svelte/src/internal/client/reactivity/deriveds.js → packages/svelte/src/internal/client/dev/debug.js → packages/svelte/src/store/shared/index.js → packages/svelte/src/store/utils.js → packages/svelte/src/internal/client/reactivity/store.js → packages/svelte/src/internal/client/error-handling.js → packages/svelte/src/internal/client/dom/task.js → packages/svelte/src/internal/client/reactivity/batch.js → packages/svelte/src/internal/client/dev/tracing.js → packages/svelte/src/internal/client/proxy.js → packages/svelte/src/internal/client/dev/equality.js → packages/svelte/src/internal/client/dom/hydration.js → packages/svelte/src/internal/client/dom/operations.js → packages/svelte/src/internal/client/reactivity/effects.js → packages/svelte/src/internal/client/runtime.js → packages/svelte/src/internal/client/reactivity/sources.js",
+      "file": "packages/svelte/src/internal/client/legacy.js",
+      "path": [
+        "packages/svelte/src/internal/client/runtime.js",
+        "packages/svelte/src/internal/client/reactivity/effects.js"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (2 nodes in cycle): packages/svelte/src/compiler/utils/builders.js → packages/svelte/src/compiler/utils/ast.js",
+      "file": "packages/svelte/src/compiler/utils/builders.js",
+      "path": [
+        "packages/svelte/src/compiler/utils/builders.js",
+        "packages/svelte/src/compiler/utils/ast.js"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (3 nodes in cycle): packages/svelte/src/index-client.js → packages/svelte/src/internal/client/index.js → packages/svelte/src/attachments/index.js",
+      "file": "packages/svelte/src/index-client.js",
+      "path": [
+        "packages/svelte/src/internal/client/index.js",
+        "packages/svelte/src/attachments/index.js"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (2 nodes in cycle): packages/svelte/src/compiler/phases/2-analyze/visitors/shared/utils.js → packages/svelte/src/compiler/phases/scope.js",
+      "file": "packages/svelte/src/compiler/phases/2-analyze/visitors/shared/utils.js",
+      "path": [
+        "packages/svelte/src/compiler/phases/2-analyze/visitors/shared/utils.js",
+        "packages/svelte/src/compiler/phases/scope.js"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (2 nodes in cycle): packages/svelte/src/compiler/phases/3-transform/client/visitors/shared/element.js → packages/svelte/src/compiler/phases/3-transform/client/visitors/RegularElement.js",
+      "file": "packages/svelte/src/compiler/phases/3-transform/client/visitors/shared/element.js",
+      "path": [
+        "packages/svelte/src/compiler/phases/3-transform/client/visitors/shared/element.js",
+        "packages/svelte/src/compiler/phases/3-transform/client/visitors/RegularElement.js"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (2 nodes in cycle): packages/svelte/src/reactivity/url.js → packages/svelte/src/reactivity/url-search-params.js",
+      "file": "packages/svelte/src/reactivity/url.js",
+      "path": [
+        "packages/svelte/src/reactivity/url.js",
+        "packages/svelte/src/reactivity/url-search-params.js"
+      ]
+    },
+    {
+      "ruleId": "no-cycles",
+      "severity": "error",
+      "message": "Circular dependency detected (3 nodes in cycle): packages/svelte/src/internal/server/dev.js → packages/svelte/src/internal/server/renderer.js → packages/svelte/src/internal/server/index.js",
+      "file": "packages/svelte/src/internal/server/dev.js",
+      "path": [
+        "packages/svelte/src/internal/server/renderer.js",
+        "packages/svelte/src/internal/server/index.js"
+      ]
+    }
+  ]
+}

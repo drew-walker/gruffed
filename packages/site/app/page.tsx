@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import Link from "next/link";
+import { ArchitectureXRay } from "../components/architecture-xray";
 import { FeatureGrid } from "../components/feature-grid";
 import { Hero } from "../components/hero";
 import { TerminalOutput } from "../components/terminal-output";
@@ -17,6 +18,7 @@ export default function HomePage() {
   return (
     <main className={styles.main}>
       <Hero />
+      <ArchitectureXRay compact />
       <FeatureGrid />
       <section className={styles.showcaseBand}>
         <div className={styles.showcaseInner}>
