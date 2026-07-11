@@ -103,7 +103,7 @@ export const architectureDemoCases: readonly DemoCase[] = [
     summary:
       "An import leaves the known module graph, identifying the source location and missing specifier.",
     command: "gruffed --root fixtures/unresolved",
-    terminalOutput: `gruffed v0.1.0 — module graph analysis\n\n  Nodes:      1    Edges:      0    Build: 0ms    Analyze: 0ms\n\n  ✖ 1 error\n\n  error  no-unresolved\n         Cannot resolve import \"./missing\" in src/index.ts:1\n`,
+    terminalOutput: `gruffed v0.1.0 — module graph analysis\n\n  Nodes:      1    Edges:      0    Build: 0ms    Analyze: 0ms\n\n  ✖ 1 error\n\n  error  no-unresolved\n         Cannot resolve import "./missing" in src/index.ts:1\n`,
     graph: {
       id: "fixture-unresolved",
       semanticZoomLevel: "module",

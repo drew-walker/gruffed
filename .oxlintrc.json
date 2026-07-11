@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "oxc"
+  ],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {},
+  "env": {
+    "builtin": true
+  },
+  "ignorePatterns": [
+    "node_modules/**",
+    ".pnpm-store/**",
+    ".next/**",
+    "out/**",
+    "coverage/**",
+    "docs/repo-trials/**",
+    "crates/gruffed-node/npm/**",
+    "native-artifacts/**",
+    "npm-packs/**",
+    "**/*.tsbuildinfo",
+    "**/*.log",
+    "crates/gruffed-node/*.node"
+  ]
+}
