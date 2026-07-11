@@ -24,7 +24,8 @@ export const navGroups: NavGroup[] = [
         title: "Config",
         href: "/docs/config",
         summary: "JSONC schema, defaults, and rule settings.",
-        content: "gruffed jsonc root entrypoints exclude extensions rules off error warning options.",
+        content:
+          "gruffed jsonc root entrypoints exclude extensions rules off error warning options.",
       },
     ],
   },
@@ -64,7 +65,8 @@ export const navGroups: NavGroup[] = [
         title: "Node",
         href: "/docs/api/node",
         summary: "napi exports and TypeScript usage.",
-        content: "Node API buildModuleGraph analyzeGraph renderReport freeGraph graphHandle warnings.",
+        content:
+          "Node API buildModuleGraph analyzeGraph renderReport freeGraph graphHandle warnings.",
       },
       {
         title: "Architecture",

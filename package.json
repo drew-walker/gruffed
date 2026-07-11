@@ -14,6 +14,8 @@
     }
   },
   "scripts": {
+    "format": "oxfmt --write \"packages/**/*.{js,mjs,ts,tsx}\" \"crates/gruffed-node/**/*.{js,mjs}\" \"scripts/**/*.mjs\"",
+    "format:check": "oxfmt --check \"packages/**/*.{js,mjs,ts,tsx}\" \"crates/gruffed-node/**/*.{js,mjs}\" \"scripts/**/*.mjs\"",
     "docs:dev": "pnpm --filter @gruffed/docs dev",
     "docs:build": "pnpm --filter @gruffed/docs build",
     "docs:typecheck": "pnpm --filter @gruffed/docs typecheck",
@@ -30,6 +32,7 @@
     "trials:trace": "node scripts/run-public-repo-traces.mjs"
   },
   "devDependencies": {
+    "oxfmt": "0.58.0",
     "typescript": "^5.9.3"
   }
 }

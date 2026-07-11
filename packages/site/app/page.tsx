@@ -26,8 +26,8 @@ export default function HomePage() {
             <p className={styles.kicker}>Report shape</p>
             <h2 className={styles.title}>Readable locally, structured enough for CI.</h2>
             <p className={styles.copy}>
-              The terminal reporter gives developers the graph size, timings, and grouped
-              findings at a glance. JSON output uses the same report model for automation.
+              The terminal reporter gives developers the graph size, timings, and grouped findings
+              at a glance. JSON output uses the same report model for automation.
             </p>
             <div className={styles.links}>
               <Link className={styles.primary} href="/demo">

@@ -1,12 +1,24 @@
 import styles from "./page.module.css";
 
 const crates = [
-  ["gruffed-core", "Graph data model, strongly typed IDs, report structures, and shared primitives."],
-  ["gruffed-builder", "Source discovery, import parsing with oxc, resolution, and graph construction."],
-  ["gruffed-analyzer", "Rules engine plus built-in graph rules for cycles, unresolved imports, and chain depth."],
+  [
+    "gruffed-core",
+    "Graph data model, strongly typed IDs, report structures, and shared primitives.",
+  ],
+  [
+    "gruffed-builder",
+    "Source discovery, import parsing with oxc, resolution, and graph construction.",
+  ],
+  [
+    "gruffed-analyzer",
+    "Rules engine plus built-in graph rules for cycles, unresolved imports, and chain depth.",
+  ],
   ["gruffed-config", "JSONC config parsing and rule setting normalization."],
   ["gruffed-console-reporter", "Terminal and JSON rendering for reports."],
-  ["gruffed", "The command-line binary that wires config, builder, analyzer, and reporter together."],
+  [
+    "gruffed",
+    "The command-line binary that wires config, builder, analyzer, and reporter together.",
+  ],
 ] as const;
 
 export default function RustApiPage() {
@@ -14,8 +26,8 @@ export default function RustApiPage() {
     <article className={styles.page}>
       <h1 className={styles.title}>Rust API</h1>
       <p className={styles.lead}>
-        gruffed is a Rust workspace organized around build, analyze, and report phases.
-        Pre-1.0 APIs are intentionally unstable while the tool settles through real usage.
+        gruffed is a Rust workspace organized around build, analyze, and report phases. Pre-1.0 APIs
+        are intentionally unstable while the tool settles through real usage.
       </p>
 
       <section className={styles.grid} aria-label="Rust crates">

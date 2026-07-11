@@ -1,19 +1,12 @@
 #!/usr/bin/env node
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-import {
-  analyzeGraph,
-  buildModuleGraph,
-  freeGraph,
-  renderReport,
-} from '../src/index.js';
+import { analyzeGraph, buildModuleGraph, freeGraph, renderReport } from "../src/index.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const packageJson = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'),
-);
+const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../package.json"), "utf8"));
 
 function printHelp() {
   process.stdout.write(`gruffed ${packageJson.version}
@@ -36,9 +29,9 @@ Options:
 
 function parseArgs(argv) {
   const options = {
-    root: '.',
+    root: ".",
     config: undefined,
-    format: 'terminal',
+    format: "terminal",
     color: undefined,
   };
 
@@ -46,30 +39,30 @@ function parseArgs(argv) {
     const arg = argv[index];
 
     switch (arg) {
-      case '--help':
-      case '-h':
+      case "--help":
+      case "-h":
         options.help = true;
         break;
-      case '--version':
-      case '-V':
+      case "--version":
+      case "-V":
         options.version = true;
         break;
-      case '--root':
+      case "--root":
         options.root = readValue(argv, index, arg);
         index += 1;
         break;
-      case '--config':
+      case "--config":
         options.config = readValue(argv, index, arg);
         index += 1;
         break;
-      case '--format':
+      case "--format":
         options.format = readValue(argv, index, arg);
         index += 1;
         break;
-      case '--color':
+      case "--color":
         options.color = true;
         break;
-      case '--no-color':
+      case "--no-color":
         options.color = false;
         break;
       default:
@@ -77,7 +70,7 @@ function parseArgs(argv) {
     }
   }
 
-  if (options.format !== 'terminal' && options.format !== 'json') {
+  if (options.format !== "terminal" && options.format !== "json") {
     throw new Error(`unsupported format: ${options.format}`);
   }
 
@@ -86,7 +79,7 @@ function parseArgs(argv) {
 
 function readValue(argv, index, arg) {
   const value = argv[index + 1];
-  if (!value || value.startsWith('-')) {
+  if (!value || value.startsWith("-")) {
     throw new Error(`${arg} requires a value`);
   }
   return value;
@@ -97,7 +90,7 @@ function readConfig(configPath) {
     return undefined;
   }
 
-  return fs.readFileSync(path.resolve(configPath), 'utf8');
+  return fs.readFileSync(path.resolve(configPath), "utf8");
 }
 
 function run() {
@@ -129,13 +122,13 @@ function run() {
     result = buildModuleGraph(root, configJson);
     const report = analyzeGraph(result.graphHandle, result.warnings, configJson ?? '{"rules":{}}');
 
-    if (options.format === 'json') {
+    if (options.format === "json") {
       process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
     } else {
       process.stdout.write(renderReport(report, result.graphHandle, useColor));
     }
 
-    return report.findings.some((finding) => finding.severity === 'Error') ? 1 : 0;
+    return report.findings.some((finding) => finding.severity === "Error") ? 1 : 0;
   } catch (error) {
     process.stderr.write(`Error: ${error.message}\n`);
     return 1;

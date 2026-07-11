@@ -66,6 +66,8 @@ packages/site     product site
 Root scripts:
 
 ```sh
+pnpm format:check
+pnpm format
 pnpm typecheck
 pnpm build:sites
 pnpm docs:typecheck

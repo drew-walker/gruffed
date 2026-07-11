@@ -26,7 +26,12 @@ export function TerminalOutput({
           <Terminal size={16} aria-hidden="true" />
           {label}
         </span>
-        <button className={styles.copy} type="button" onClick={copy} aria-label="Copy terminal output">
+        <button
+          className={styles.copy}
+          type="button"
+          onClick={copy}
+          aria-label="Copy terminal output"
+        >
           {copied ? <Check size={16} /> : <Copy size={16} />}
         </button>
       </div>

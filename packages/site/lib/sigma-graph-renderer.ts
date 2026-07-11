@@ -75,10 +75,12 @@ export class SigmaGraphRenderer implements GraphRenderer {
     if (nodeIds.length === 1) {
       const position = this.sigma.getNodeDisplayData(nodeIds[0]);
       if (position) {
-        this.sigma.getCamera().animate(
-          { x: position.x, y: position.y, ratio: 0.45 },
-          { duration: this.options?.reducedMotion ? 0 : 320 },
-        );
+        this.sigma
+          .getCamera()
+          .animate(
+            { x: position.x, y: position.y, ratio: 0.45 },
+            { duration: this.options?.reducedMotion ? 0 : 320 },
+          );
         return;
       }
     }

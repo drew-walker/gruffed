@@ -16,7 +16,12 @@ export function InstallCommand({ command }: Readonly<{ command: string }>) {
   return (
     <div className={styles.wrap}>
       <code className={styles.command}>{command}</code>
-      <button className={styles.button} type="button" onClick={copy} aria-label="Copy install command">
+      <button
+        className={styles.button}
+        type="button"
+        onClick={copy}
+        aria-label="Copy install command"
+      >
         {copied ? <Check size={17} /> : <Copy size={17} />}
       </button>
     </div>

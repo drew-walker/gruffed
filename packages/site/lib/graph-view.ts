@@ -77,7 +77,10 @@ export function validateDemoCases(cases: readonly DemoCase[]): void {
     const nodes = new Set(demo.graph.visibleNodes.map((node) => node.id));
     const edges = new Map(demo.graph.visibleEdges.map((edge) => [edge.id, edge]));
 
-    if (nodes.size !== demo.graph.visibleNodes.length || edges.size !== demo.graph.visibleEdges.length) {
+    if (
+      nodes.size !== demo.graph.visibleNodes.length ||
+      edges.size !== demo.graph.visibleEdges.length
+    ) {
       throw new Error(`Duplicate graph identifiers in demo case ${demo.id}`);
     }
 
