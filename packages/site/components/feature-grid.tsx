@@ -24,9 +24,12 @@ export function FeatureGrid() {
     <section className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Graph linting for structural problems, not style debates.</h2>
+          <h2 className={styles.title}>
+            Graph linting for structural problems, not style debates.
+          </h2>
           <p className={styles.copy}>
-            gruffed keeps the analyzer focused: build the graph, inspect it immutably, report findings for humans.
+            gruffed keeps the analyzer focused: build the graph, inspect it immutably, report
+            findings for humans.
           </p>
         </div>
         <div className={styles.grid}>

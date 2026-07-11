@@ -20,8 +20,8 @@ export function Hero() {
           <p className={styles.eyebrow}>Rust speed for TypeScript structure</p>
           <h1 className={styles.title}>gruffed</h1>
           <p className={styles.copy}>
-            Fast module-graph analysis for JavaScript and TypeScript codebases.
-            Find cycles, unresolved imports, and dependency chains before they harden.
+            Fast module-graph analysis for JavaScript and TypeScript codebases. Find cycles,
+            unresolved imports, and dependency chains before they harden.
           </p>
           <div className={styles.actions}>
             <InstallCommand command="cargo install gruffed" />

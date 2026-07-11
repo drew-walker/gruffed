@@ -45,7 +45,9 @@ export function Search() {
           {results.map((item) => (
             <Link className={styles.result} href={item.href} key={item.href}>
               <span className={styles.resultTitle}>{item.title}</span>
-              <span className={styles.resultMeta}>{item.group} / {item.summary}</span>
+              <span className={styles.resultMeta}>
+                {item.group} / {item.summary}
+              </span>
             </Link>
           ))}
         </div>

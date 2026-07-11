@@ -1,9 +1,4 @@
-export {
-  buildModuleGraph,
-  analyzeGraph,
-  renderReport,
-  freeGraph,
-} from '@gruffed/node';
+export { buildModuleGraph, analyzeGraph, renderReport, freeGraph } from "@gruffed/node";
 
 export type {
   BuildResultJs,
@@ -12,4 +7,4 @@ export type {
   JsBuildStats,
   JsBuildWarning,
   JsGraphStats,
-} from '@gruffed/node';
+} from "@gruffed/node";
