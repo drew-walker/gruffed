@@ -28,7 +28,7 @@
     "gruffed": "./bin/gruffed.js"
   },
   "scripts": {
-    "test:smoke": "node test/smoke.mjs"
+    "test": "vitest run"
   },
   "dependencies": {
     "@gruffed/node": "workspace:*"
