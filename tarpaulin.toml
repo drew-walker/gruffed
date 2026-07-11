@@ -1,0 +1,12 @@
+[report]
+fail-under = 90
+
+[coverage]
+workspace = true
+exclude = ["gruffed-node"]
+exclude-files = [
+  "crates/gruffed-node/src/lib.rs",
+  "crates/gruffed/src/main.rs",
+  "crates/gruffed-builder/src/parse.rs",
+  "crates/gruffed-config/src/lib.rs",
+]

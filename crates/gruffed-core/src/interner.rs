@@ -71,4 +71,13 @@ mod tests {
         interner.intern("src/b.ts");
         assert_eq!(interner.len(), 2);
     }
+
+    #[test]
+    fn is_empty_tracks_interned_paths() {
+        let mut interner = PathInterner::new();
+        assert!(interner.is_empty());
+
+        interner.intern("src/a.ts");
+        assert!(!interner.is_empty());
+    }
 }

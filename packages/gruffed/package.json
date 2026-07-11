@@ -28,7 +28,8 @@
     "gruffed": "./bin/gruffed.js"
   },
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run --config ../../vitest.config.mjs",
+    "coverage": "vitest run --coverage --config ../../vitest.config.mjs"
   },
   "dependencies": {
     "@gruffed/node": "workspace:*"

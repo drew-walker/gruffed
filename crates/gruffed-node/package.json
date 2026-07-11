@@ -23,6 +23,7 @@
   "files": [
     "index.js",
     "index.d.ts",
+    "lib",
     "types",
     "*.node"
   ],
@@ -33,7 +34,8 @@
     "artifacts": "napi artifacts",
     "pre-publish": "napi pre-publish --tag-style npm --no-gh-release",
     "pre-publish:dry-run": "napi pre-publish --tag-style npm --no-gh-release --dry-run",
-    "test": "vitest run"
+    "test": "vitest run --config ../../vitest.config.mjs",
+    "coverage": "vitest run --coverage --config ../../vitest.config.mjs"
   },
   "napi": {
     "binaryName": "gruffed-node",
