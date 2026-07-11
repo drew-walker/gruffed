@@ -48,7 +48,7 @@ console.log(`Using temporary preflight directory: ${workDir}`);
 run("cargo", ["build"]);
 run("cargo", ["test"]);
 run("pnpm", ["node:build"]);
-run("pnpm", ["node:test"]);
+run("pnpm", ["test"]);
 
 run("cargo", ["package", "-p", "gruffed-core", "--allow-dirty", "--no-verify", "--offline"]);
 
