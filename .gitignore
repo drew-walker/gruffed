@@ -3,6 +3,7 @@ node_modules/
 .pnpm-store/
 .next/
 out/
+coverage/
 docs/repo-trials/
 crates/gruffed-node/npm/
 native-artifacts/
