@@ -63,13 +63,20 @@ packages/docs     docs website
 packages/site     product site
 ```
 
-Root scripts:
+Root quality scripts are Node-side only:
 
 ```sh
 pnpm format:check
 pnpm format
 pnpm lint
 pnpm typecheck
+pnpm test
+pnpm coverage
+```
+
+Package and site scripts:
+
+```sh
 pnpm build:sites
 pnpm docs:typecheck
 pnpm docs:build
@@ -98,6 +105,38 @@ Then open:
 
 - Docs: `http://localhost:3002/docs/cli`
 - Product site: `http://localhost:3001`
+
+## Quality Boundaries
+
+Keep Rust and Node quality gates walled off.
+
+- pnpm scripts are for JavaScript, TypeScript, npm packages, and Next.js apps.
+- Cargo commands are for Rust crates, benchmarks, and Rust coverage.
+- CI may run both ecosystems, but it should do so with separate commands rather
+  than hiding Rust work behind pnpm scripts.
+
+Current Node-side gates:
+
+```sh
+pnpm format:check
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm coverage
+```
+
+Current Rust-side gates:
+
+```sh
+cargo fmt --all -- --check
+cargo build
+cargo test
+cargo tarpaulin --fail-under 90
+```
+
+The Rust coverage gate uses `tarpaulin.toml` to exclude FFI/CLI/config/parser
+adapter surfaces from the threshold. Those areas are still tested through Rust
+integration tests or Node/Vitest smoke coverage where appropriate.
 
 ## Docs App
 
@@ -135,18 +174,23 @@ The product site lives in `packages/site`.
 
 ## Before Hand-Off
 
-Run:
+Run Node-side quality gates:
 
 ```sh
+pnpm format:check
+pnpm lint
 pnpm typecheck
-pnpm build:sites
+pnpm test
+pnpm coverage
+```
+
+Run Rust-side quality gates:
+
+```sh
+cargo fmt --all -- --check
 cargo build
 cargo test
+cargo tarpaulin --fail-under 90
 ```
 
-For substantial Rust changes, also run:
-
-```sh
-cargo bench
-cargo tarpaulin
-```
+For substantial Rust performance changes, also run `cargo bench`.
